@@ -2,7 +2,7 @@
 
 .page{
     &__item{
-        margin-top: rem(96);
+        margin-top: fluid(96, 72);
 
         &-color{
             position: relative;
@@ -27,6 +27,18 @@
 
         &-first{
             margin-top: rem(8);
+
+            padding-bottom: 1px;
+        }
+
+        &-wrapper{
+            margin-top: fluid(40, 32);
+        }
+
+        &-title{
+            font-size: fluid(36, 28);
+            font-weight: 600;
+            line-height: fluid(45,37.8); /* 45px */
         }
     }
 

@@ -29,6 +29,7 @@ body{
     // background-color: var(--background-body);
 
     background-color: gainsboro;
+    color: var(--Text-Black);
 }
 
 h1, .h1,
@@ -37,7 +38,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6{
-    color: #000;
+    color: var(--Text-Black);
 }
 
 h1, .h1{
