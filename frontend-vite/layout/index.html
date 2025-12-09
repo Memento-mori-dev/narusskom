@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Name</title>
+  <link rel="stylesheet" href="./src/styles/main.scss">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <a href="/" class="header__logo">
+          <img src="./src/assets/svg/Logo.svg" alt="" width="117" height="32">
+        </a>
+
+        <menu class="header__menu">
+          <ul>
+            <li>
+              <a href="">Тренажер</a>
+            </li>
+
+            <li>
+              <a href="">Жизнь в России</a>
+            </li>
+
+            <li>
+              <a href="">О проекте</a>
+            </li>
+
+            <li>
+              <a href="">Как сдать экзамен</a>
+            </li>
+          </ul>
+        </menu>
+
+        <div class="header__setting">
+          <div class="header__lang">
+            <button class="header__lang-open btn">
+              <span class="icon">
+                <img src="./src/assets/svg/lang-Icon.svg" alt="world" width="18" height="18">
+              </span>
+
+              ru
+
+              <span class="icon">
+                <img src="./src/assets/svg/arrow.svg" alt="arrow" width="7" height="4">
+              </span>
+            </button>
+
+            <div class="header__lang-wrapper">
+              <div class="header__lang-content">
+                <ul>
+                  <li>
+                    <a href="">ENG</a>
+                  </li>
+                  <li>
+                    <a href="">FN</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn--base btn--orange">
+            Войти
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- <section class="hero">
+      <div class="hero__main">
+        <h1 class="hero__title">
+          Говорите с Россией на одном языке
+        </h1>
+
+        <p class="hero__text">
+          Бесплатная обучающая платформа для изучения языка и адаптации в России при поддержке Министерства науки и
+          высшего образования Российской Федерации
+        </p>
+
+        <button class="btn">
+          Начать обучение
+        </button>
+      </div>
+
+      <div class="hero__gallery">
+        <img src="/assets/img/hero/1.jpg" alt="Галерея 1" class="hero__gallery-item">
+        <img src="/assets/img/hero/2.jpg" alt="Галерея 2" class="hero__gallery-item">
+        <img src="/assets/img/hero/3.jpg" alt="Галерея 3" class="hero__gallery-item">
+        <img src="/assets/img/hero/4.jpg" alt="Галерея 4" class="hero__gallery-item">
+        <img src="/assets/img/hero/5.jpg" alt="Галерея 5" class="hero__gallery-item">
+      </div>
+    </section> -->
+
+    <!-- <section class="page__item">
+      <h2 class="page__item-title">
+        Русский язык — для всех
+      </h2>
+
+      <div class="page__item-wrapper">
+        <div class="everyone">
+          <div class="everyone__item">
+            <img src="/assets/img/everyone/1.jpg" alt="Иностранным специалистам" class="everyone__item-img">
+
+            <div class="everyone__item-content">
+              <p class="everyone__item-title">Иностранным специалистам</p>
+
+              <p class="everyone__item-text">Изучайте язык и готовьтесь к экзамену на патент, РВП, ВНЖ.</p>
+            </div>
+          </div>
+          <div class="everyone__item">
+            <img src="/assets/img/everyone/2.jpg" alt="Студентам" class="everyone__item-img">
+
+            <div class="everyone__item-content">
+              <p class="everyone__item-title">Студентам</p>
+
+              <p class="everyone__item-text">Поступайте в вузы и готовьтесь к учёбе на русском языке.</p>
+            </div>
+          </div>
+          <div class="everyone__item">
+            <img src="/assets/img/everyone/3.jpg" alt="Туристам и гостям" class="everyone__item-img">
+
+            <div class="everyone__item-content">
+              <p class="everyone__item-title">Туристам и гостям</p>
+
+              <p class="everyone__item-text">Погрузитесь в традиции и обычаи русского общества.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+    <!-- <section class="page__item">
+      <h2 class="page__item-title">
+        Четыре простых шага для изучения русского языка
+      </h2>
+
+      <div class="page__item-wrapper">
+        <div class="step">
+          <div class="step__item">
+            <div class="step__item-content">
+              <p class="step__item-title">
+                <span>1.</span>
+
+                Регистрация
+              </p>
+
+              <p class="step__item-text">
+                Заполните простую форму и выберите язык интерфейса.
+              </p>
+            </div>
+
+            <div class="step__item-img">
+              <img src="/assets/img/steps/1.png" alt="Регистрация">
+            </div>
+          </div>
+          <div class="step__item">
+            <div class="step__item-content">
+              <p class="step__item-title">
+                <span>2.</span>
+
+                Определение уровня
+              </p>
+
+              <p class="step__item-text">
+                Пройдите тест и система сформирует индивидуальный план обучения.
+              </p>
+            </div>
+
+            <div class="step__item-img">
+              <img src="/assets/img/steps/2.png" alt="Определение уровня">
+            </div>
+          </div>
+          <div class="step__item">
+            <div class="step__item-content">
+              <p class="step__item-title">
+                <span>3.</span>
+
+                Обучение
+              </p>
+
+              <p class="step__item-text">
+                Изучайте курсы, выполняйте задания и отслеживайте прогресс.
+              </p>
+            </div>
+
+            <div class="step__item-img">
+              <img src="/assets/img/steps/3.png" alt="Обучение">
+            </div>
+          </div>
+          <div class="step__item">
+            <div class="step__item-content">
+              <p class="step__item-title">
+                <span>4.</span>
+
+                Практика
+              </p>
+
+              <p class="step__item-text">
+                Проверяйте свои знания в тренажёрах на реальных ситуациях из жизни.
+              </p>
+            </div>
+
+            <div class="step__item-img">
+              <img src="/assets/img/steps/4.png" alt="Практика">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page__item-btn">
+        <button class="btn">
+          Начать учиться
+        </button>
+      </div>
+    </section> -->
+
+  </main>
+
+  <!-- <footer class="footer">
+    <div class="container">
+      <div class="footer__header">
+        <div class="footer__header-left">
+          <a href="" class="footer__logo">
+            <img src="" alt="">
+          </a>
+
+          <p class="footer__slogan">
+            Говорите с Россией на одном языке — живите и работайте в России!
+          </p>
+        </div>
+
+        <ul class="footer__header-menu">
+          <li><a href="">Тренажер</a></li>
+          <li><a href="">Как сдать эказмен?</a></li>
+          <li><a href="">Жизнь в России</a></li>
+          <li><a href="">О проекте</a></li>
+        </ul>
+
+        <div class="footer__header-right">
+          <a href="" class="btn">Блог</a>
+
+          <a href="" class="btn">Войти</a>
+        </div>
+      </div>
+
+      <div class="footer__content">
+        <p class="footer__content-tile">О проекте</p>
+
+        <p class="footer__content-text">
+          Материалы разработаны командой экспертов в области русского языка как иностранного и специалистами в области
+          дистанционного образования Национального исследовательского Томского государственного университета совместно с
+          EdTech-партнерами Enbisys (системы адаптивного обучения) и Palex (переводы и локализация) при государственной
+          поддержке Министерства науки и высшего образования Российской Федерации.
+        </p>
+      </div>
+
+      <div class="footer__footer">
+        <a href="" class="footer__link">Политика использования cookie-файлов</a>
+
+        <a href="" class="footer__link">Политика в отношении обработки персональных данных</a>
+      </div>
+    </div>
+  </footer> -->
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+@use 'helpers' as *;
+
+:root{
+    // color
+    --Text-White:#F1F1F1;
+    --Text-Black:#020202;
+    --text-grey:#4D4D4D;
+    --Text-Orange:#E1401C;
+
+    --Background-White:#F1F1F1;
+    --Background-Body:#F6F7F9;
+    --background-blue:#4E1BE0;
+    --background-orange:#E1401C;
+
+    --border-radius-16: 16px;
+    --border-radius-12: 12px;
+
+    --Button-Red: linear-gradient(90deg, #E1401C 0%, #FB3F15 50%, #FA4E28 100%);
+
+    // font
+    --font-family: "Noto Sans", sans-serif;
+    --second-family: "Montserrat", sans-serif;
+
+    // width and padding
+    --container-width: #{rem(1170)};
+    --container-padding-x: #{rem(20)};
+
+    // animation
+    --transition-duration: .2s;
+    --transition: all var(--transition-duration);
+}

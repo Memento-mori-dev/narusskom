@@ -1,0 +1,33 @@
+@use '../helpers' as *;
+
+.btn{
+    text-decoration: none;
+    border: none;
+    background: none;
+
+    & > .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    transition: var(--transition);
+
+    &--base{
+        padding: rem(8.5) rem(24);
+
+        font-weight: 600;
+        line-height: 145%; /* 23.2px */
+
+        border-radius: var(--border-radius-12);
+    }
+
+    &--orange{
+        background: var(--Button-Red);
+        color: var(--Text-White);
+
+        @include hover{
+            opacity: 0.8;
+        }
+    }
+}
