@@ -2,6 +2,8 @@
 
 .page{
     &__item{
+        
+
         margin-top: rem(96);
 
         &-color{
@@ -24,5 +26,21 @@
                 background-color: var(--Background-Blue);
             }
         }
+    }
+
+    @include laptop{
+        &__item{
+            width: 100%;
+            overflow: hidden;
+
+            &-color{
+                &::after{
+                    left: calc(var(--container-padding-x) * -1);
+
+                    width: calc(100% + var(--container-padding-x) * 2);
+                }
+            }
+        }
+        
     }
 }

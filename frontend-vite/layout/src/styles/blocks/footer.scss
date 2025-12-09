@@ -9,7 +9,8 @@
     }
 
     &__header{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
         justify-content: space-between;
         align-items: center;
 
@@ -28,6 +29,8 @@
 
             & a{
                 text-decoration: none;
+
+                display: inline-block;
 
                 padding: rem(4) rem(8);
 
@@ -49,8 +52,10 @@
     }
 
     &__logo{
+        display: inline-block;
+
         width: rem(117);
-        height: 32;
+        height: rem(32);
 
         display: flex;
         justify-content: center;
@@ -111,6 +116,83 @@
 
         @include hover{
             color: var(--Text-Orange);
+        }
+    }
+
+    @include laptop{
+        &__header{
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas: 
+                "left right"
+                "menu menu";
+            gap: rem(32);
+
+            &-left{
+                grid-area: left;
+            }
+
+            &-menu{
+                grid-area: menu;
+            }
+
+            &-right{
+                grid-area: right;
+            }
+        }
+    }
+
+    @include mobile{
+        &__header{
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: 
+                "left"
+                "menu"
+                "right";
+            gap: rem(32);
+
+            &-left{
+                flex-direction: column;
+                align-items: start;
+                gap: rem(24);
+            }
+
+            &-menu{
+                flex-direction: column;
+                align-items: start;
+
+                & a{
+                    padding-left: 0;
+
+                    line-height: 155%; /* 24.8px */
+                }
+            }
+
+            &-right{
+                & .btn{
+                    width: calc(50% - rem(4));
+
+                    text-align: center;
+                }
+            }
+        }
+
+        &__content{
+            &-text{
+                line-height: 135%; /* 18.9px */
+            }
+        }
+
+        &__footer{
+            flex-direction: column;
+            align-items: start;
+            gap: rem(8);
+        }
+
+        &__link{
+            font-size: rem(12);
+            line-height: 135%; /* 16.2px */
         }
     }
 }
