@@ -13,6 +13,10 @@
 
     transition: var(--transition);
 
+    & *{
+        transition: var(--transition);
+    }
+
     &--base{
         padding: rem(8.5) rem(24);
 
@@ -29,5 +33,59 @@
         @include hover{
             opacity: 0.8;
         }
+    }
+
+    &--white{
+        background-color: var(--Background-White);
+        color: var(--Text-Black)
+    }
+
+    &--phone{
+        @include square(rem(40));
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(3);
+
+        border-radius: var(--border-radius-12);
+
+        & > span{
+            background-color: var(--white);
+
+            width: rem(24);
+            height: rem(2);
+
+            border-radius: 20px;
+
+            &:nth-child(2){
+                width: rem(14);
+            }
+        }
+
+        &.is-active{
+            & > span{
+                &:nth-child(2){
+                    width: 0;
+                }
+
+                &:nth-child(1){
+                    transform: translateY(5px) rotate(45deg);
+                }
+                &:nth-child(3){
+                    transform: translateY(-5px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &--add-phone{
+        padding: rem(16);
+
+        border-radius: var(--border-radius-16);
+
+        font-weight: 600;
+        line-height: 145%; /* 23.2px */
     }
 }

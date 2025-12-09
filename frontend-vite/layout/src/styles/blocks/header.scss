@@ -146,4 +146,76 @@
         }
     }
 
+    &__open-menu,
+    &__phone-menu{
+        display: none;
+    }
+
+    @include tablet{
+        &__content{
+            padding-left: rem(16);
+        }
+
+        &__setting{
+            & > .btn--base{
+                display: none;
+            }
+        }
+
+        &__open-menu,
+        &__phone-menu{
+            display: block;
+        }
+
+        &__phone-menu{
+            overflow: hidden;
+            z-index: -1;
+
+            position: absolute;
+            top: rem(-20);
+            left: 0;
+
+            height: 0;
+            width: 100%;
+
+            border-radius: 0 0 var(--border-radius-24) var(--border-radius-24);
+
+            transition: var(--transition);
+
+            &-wrapper{
+                padding: rem(132) rem(30) rem(35) rem(30);
+
+                background-color: var(--Background-Body);
+
+                display: flex;
+                flex-direction: column;
+                gap: rem(32);
+            }
+
+            &-footer{
+                display: flex;
+                flex-direction: column;
+                gap: rem(10);
+            }
+        }
+
+        &__menu{
+            margin-top: rem(9);
+            margin-left: 0;
+
+            & ul{
+                flex-direction: column;
+
+                align-items: start;
+                gap: rem(20);
+            }
+
+            & a{
+                padding: 0;
+
+                font-size: rem(20);
+                line-height: 135%; /* 27px */
+            }
+        }
+    }
 }
