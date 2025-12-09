@@ -2,8 +2,6 @@
 
 .page{
     &__item{
-        
-
         margin-top: rem(96);
 
         &-color{
@@ -25,6 +23,10 @@
 
                 background-color: var(--Background-Blue);
             }
+        }
+
+        &-first{
+            margin-top: rem(8);
         }
     }
 

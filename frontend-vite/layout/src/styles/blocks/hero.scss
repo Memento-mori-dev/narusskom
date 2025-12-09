@@ -1,0 +1,82 @@
+@use '../helpers' as *;
+
+.hero{
+    & .page__item-color::after{
+        background-image: url(../assets/svg/Background.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__container{
+        padding-top: rem(144);
+    }
+
+    &__main{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(32);
+    }
+
+    &__title{
+        max-width: rem(612);
+
+        font-size: fluid(64, 36);
+        font-weight: 400;
+        line-height: 105%; /* 67.2px */
+
+        color: var(--Text-White);
+
+        text-align: center;
+    }
+
+    &__text{
+        max-width: rem(540);
+
+        font-weight: 500;
+        line-height: 145%;
+
+        color: var(--Text-White);
+
+        text-align: center;
+    }
+
+    &__gallery{
+        margin-top: rem(72);
+        margin-bottom: rem(72);     
+
+        height: rem(123);
+
+        position: relative;
+
+        &-content{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem(20);
+
+            & > img{
+                object-fit: cover;
+
+                &:nth-child(odd){
+                    @include square(rem(132))
+                }
+                &:nth-child(even){
+                    width: rem(172);
+                    height: rem(195);
+                }
+            }
+        }
+
+        
+    }
+}

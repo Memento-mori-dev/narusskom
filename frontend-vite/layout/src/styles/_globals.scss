@@ -25,22 +25,10 @@ body{
     font-family: var(--font-family);
 
     position: relative;
-    &::after{
-        content: "";
 
-        position: absolute;
-        top: 0;
-        left: 0;
+    // background-color: var(--background-body);
 
-        width: 100%;
-        height: 100%;
-
-        z-index: -1000;
-
-        // background-color: var(--background-body);
-
-        background-color: gainsboro;
-    }
+    background-color: gainsboro;
 }
 
 h1, .h1,

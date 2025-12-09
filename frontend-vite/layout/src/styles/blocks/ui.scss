@@ -84,6 +84,12 @@
         }
     }
 
+    &--page{
+        padding: rem(20.5) rem(48);
+
+        border-radius: var(--border-radius-16);
+    }
+
     &--add-phone{
         padding: rem(16);
 
