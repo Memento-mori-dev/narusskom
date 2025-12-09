@@ -36,7 +36,7 @@
 
         &-text{
             line-height: 155%;
-            
+
             color: var(--Text-Grey);
         }
 
@@ -54,5 +54,49 @@
             justify-content: center;
             align-items: end;
         }
+    }
+
+    @media (width <= rem(1200)) {
+        &__item{
+            padding: rem(24);
+
+            flex-direction: column;
+            justify-content: space-between;
+
+            &-img{
+                width: 100%;
+            }
+        }
+    }
+
+    @include mobile{
+        &__item{
+            width: 100%;
+        }
+    }
+
+    @include mobile-s{
+        &__item{
+            &-img{
+                height: rem(190);
+
+                & > img{
+                    object-fit: cover;
+                    object-position: center 31px;
+                }
+            }
+
+            &:last-child{
+                .step__item-img{
+                    & > img{
+                        height: 100%;
+
+                        object-fit: none;
+                        object-position: center;
+                    }
+                }
+            }
+        }
+        
     }
 }
