@@ -22,6 +22,8 @@
     }
 
     &__title{
+        margin: 0;
+
         max-width: rem(612);
 
         font-size: fluid(64, 36);
@@ -45,10 +47,10 @@
     }
 
     &__gallery{
-        margin-top: rem(72);
-        margin-bottom: rem(72);     
+        margin-top: fluid(72, 64);
+        margin-bottom: fluid(72, 59);     
 
-        height: rem(123);
+        height: fluid(123, 59);
 
         position: relative;
 
@@ -62,21 +64,41 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: rem(20);
+            gap: fluid(20, 4);
 
             & > img{
                 object-fit: cover;
 
                 &:nth-child(odd){
-                    @include square(rem(132))
+                    @include square(fluid(132, 67.69))
                 }
                 &:nth-child(even){
-                    width: rem(172);
-                    height: rem(195);
+                    width: fluid(172, 88.21);
+                    height: fluid(195, 100);
                 }
             }
+        }        
+    }
+
+    @include laptop{
+        &__gallery{
+            &-content{
+                left: calc(var(--container-padding-x) * -1);
+                width: calc(100% + var(--container-padding-x) * 2);
+            }
+        }
+    }
+
+    @include mobile{
+        & .page__item-color::after{
+            background-image: url(../assets/svg/Background-phone.svg);
         }
 
-        
+        & .page__item-first{
+            margin-top: 0;
+        }
+        & .page__item-color::after{
+
+        }
     }
 }

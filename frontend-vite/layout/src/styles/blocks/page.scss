@@ -45,4 +45,22 @@
         }
         
     }
+
+    @include tablet{
+        &__item-first{
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    @include mobile{
+        &__item-first{
+            margin-top: 0;
+
+            & .page__item-color::after{
+                border-radius: 0;
+            }
+        }
+        
+    }
 }
