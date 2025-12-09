@@ -40,6 +40,13 @@
             font-weight: 600;
             line-height: fluid(45,37.8); /* 45px */
         }
+
+        &-btn{
+            margin-top: rem(40);
+
+            display: flex;
+            justify-content: center;
+        }
     }
 
     @include laptop{

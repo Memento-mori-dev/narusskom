@@ -1,3 +1,58 @@
 @use '../helpers' as *;
 
-.step{}
+.step{
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(20);
+
+    &__item{
+        width: calc(50% - rem(10));
+
+        padding: rem(8) rem(8) rem(8) rem(24);
+
+        border-radius: var(--border-radius-24);
+
+        background-color: var(--Background-White);
+
+        display: flex;
+        gap: rem(24);
+
+        &-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: rem(16);
+        }
+
+        &-title{
+            font-size: rem(20);
+            font-weight: 500;
+            line-height: 145%;
+
+            & > span{
+                color: var(--Text-Grey-bb);
+            }
+        }
+
+        &-text{
+            line-height: 155%;
+            
+            color: var(--Text-Grey);
+        }
+
+        &-img{
+            flex-shrink: 0;
+
+            width: rem(269);
+            height: rem(220);
+
+            background: var(--Gradient-Grey);
+
+            border-radius: var(--border-radius-20);
+
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+    }
+}
