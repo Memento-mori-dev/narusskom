@@ -1,0 +1,116 @@
+@use '../helpers' as *;
+
+.footer{
+    margin-bottom: rem(8);
+
+    &__container{
+        padding: rem(32) 0;
+        color: var(--Text-White);
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-left{
+            display: flex;
+            align-items: center;
+            gap: rem(24);
+        }
+
+        &-menu{
+            list-style-type: none;
+
+            display: flex;
+            align-items: center;
+            gap: rem(4);
+
+            & a{
+                text-decoration: none;
+
+                padding: rem(4) rem(8);
+
+                color: var(--Text-White);
+
+                transition: var(--transition);
+
+                @include hover{
+                    color: var(--Text-Orange);
+                }
+            }
+        }
+
+        &-right{
+            display: flex;
+            align-items: center;
+            gap: rem(8);
+        }
+    }
+
+    &__logo{
+        width: rem(117);
+        height: 32;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: var(--transition);
+
+        @include hover{
+            opacity: .8;
+        }
+    }
+
+    &__slogan{
+        max-width: rem(360);
+
+        font-size: rem(13);
+        font-weight: 600;
+        line-height: 135%; 
+    }
+
+    &__content{
+        margin-top: rem(50);
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+
+        &-title{
+            font-weight: 600;
+            line-height: 145%; /* 23.2px */
+        }
+
+        &-text{
+            max-width: rem(1135);
+
+            font-size: rem(14);
+            font-weight: 400;
+            line-height: 135%; /* 18.9px */ 
+        }
+    }
+
+    &__footer{
+        margin-top: rem(24);
+
+        display: flex;
+        align-items: center;
+        gap: rem(28);
+    }
+
+    &__link{
+        font-size: rem(14);
+        font-weight: 400;
+        line-height: 135%; /* 18.9px */
+
+        color: var(--Text-White);
+
+        transition: var(--transition);
+
+        @include hover{
+            color: var(--Text-Orange);
+        }
+    }
+}

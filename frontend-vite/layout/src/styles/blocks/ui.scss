@@ -37,7 +37,11 @@
 
     &--white{
         background-color: var(--Background-White);
-        color: var(--Text-Black)
+        color: var(--Text-Black);
+
+        @include hover{
+            opacity: 0.8;
+        }
     }
 
     &--phone{

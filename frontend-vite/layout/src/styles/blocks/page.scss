@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+.page{
+    &__item{
+        margin-top: rem(96);
+
+        &-color{
+            position: relative;
+
+            &::after{
+                z-index: -20;
+
+                content: '';
+
+                position: absolute;
+                top: 0;
+                left: rem(-95);
+
+                width: calc(100% + rem(95) * 2);
+                height: 100%;
+
+                border-radius: var(--border-radius-24);
+
+                background-color: var(--Background-Blue);
+            }
+        }
+    }
+}
