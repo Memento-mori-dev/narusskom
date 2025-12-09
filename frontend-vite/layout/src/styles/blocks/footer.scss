@@ -143,6 +143,8 @@
     }
 
     @include mobile{
+        margin-bottom: 0;
+
         &__header{
             grid-template-columns: 100%;
             grid-template-rows: repeat(3, auto);
@@ -193,6 +195,10 @@
         &__link{
             font-size: rem(12);
             line-height: 135%; /* 16.2px */
+        }
+
+        & .page__item-color::after{
+            border-radius: var(--border-radius-24) var(--border-radius-24) 0 0;
         }
     }
 }
