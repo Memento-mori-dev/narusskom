@@ -28,7 +28,7 @@ export class Menu{
     }
 
     stateSwitch(){
-        if (this.state.move){
+        if (!this.state.move){
             this.state.move = true;
         }else{
             this.setTimeout(() => {

@@ -1,6 +1,7 @@
 import { useDynamicAdapt } from './script/dynamicAdapt';
 import { Menu } from './script/Menu';
 import { Tabs } from './script/Tabs';
+import { Answers } from './script/Answers';
 
 useDynamicAdapt();
 
@@ -18,6 +19,10 @@ if (document.querySelector('.tabs')) {
     new Tabs('[data-js-tab]', '[data-js-tab-btn]', '[data-js-tab-state]', '[data-js-tab-item]');
 
     new Menu('[data-js-tabs-list]', '[data-js-tabs-list-open]', '[data-js-tabs-list-wrapper]', '[data-js-tabs-list-content]');
+}
+
+if (document.querySelector('.answers')) {
+    new Answers('[data-js-answers]', '[data-js-answers-item]', '[data-js-answers-btn]', '[data-js-answers-wrapper]', '[data-js-answers-content]')
 }
 
 

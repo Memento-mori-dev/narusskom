@@ -22,9 +22,9 @@ export class Tabs{
 
     trigger(){
         this.btns.forEach((btn, index) => {
-            if (this.state.move) return;
-
             btn.onclick = () => {
+                if (this.state.move) return;
+
                 this.open(index);
 
                 this.btns.forEach((item, indexThis) => {
@@ -58,7 +58,7 @@ export class Tabs{
     }
 
     stateSwitch(){
-        if (this.state.move){
+        if (!this.state.move){
             this.state.move = true;
         }else{
             this.setTimeout(() => {
@@ -70,6 +70,6 @@ export class Tabs{
     setTimeout(fn){
         setTimeout(() => {
             fn();
-        }, 200);
+        }, 1200);
     }
 }
