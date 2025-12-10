@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .btn{
+    display: inline-block;
+
     text-decoration: none;
     border: none;
     background: none;
@@ -101,6 +103,8 @@
 
     &--per-100{
         width: 100%;
+
+        text-align: center;
     }
 }
 

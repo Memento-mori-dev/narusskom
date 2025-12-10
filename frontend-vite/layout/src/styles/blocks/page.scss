@@ -4,6 +4,8 @@
     &__item{
         margin-top: fluid(96, 72);
 
+        color: var(--Text-White);
+
         &-color{
             position: relative;
 
@@ -22,6 +24,15 @@
                 border-radius: var(--border-radius-24);
 
                 background-color: var(--Background-Blue);
+            }
+
+            .page__item-title{
+                color: var(--Text-White);
+            }
+
+            &--main{
+                padding-top: rem(72);
+                padding-bottom: rem(76);
             }
         }
 
