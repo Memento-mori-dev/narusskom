@@ -1,7 +1,20 @@
 import { useDynamicAdapt } from './script/dynamicAdapt';
+import { Menu } from './script/Menu';
 
 useDynamicAdapt();
 
+// Подключение классов для блоков
+
+if (document.querySelector('.header')) {
+    new Menu('.header', '[data-js-open-menu]', '[data-js-menu-wrapper]', '[data-js-menu-content]');
+}
+
+if (document.querySelector('.header__lang')) {
+    new Menu('.header', '[data-js-open-menu]', '[data-js-menu-wrapper]', '[data-js-menu-content]');
+}
+
+
+// swiper
 const swiperEveryone = new Swiper('.everyone', {
     slidesPerView: 3,
     spaceBetween: 20,
