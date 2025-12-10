@@ -31,8 +31,8 @@
             }
 
             &--main{
-                padding-top: rem(72);
-                padding-bottom: rem(76);
+                padding-top: fluid(72, 48);
+                padding-bottom: fluid(76, 48);
             }
         }
 
