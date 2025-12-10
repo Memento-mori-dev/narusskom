@@ -60,6 +60,8 @@
     }
 
     @include tablet{
+        gap: rem(8);
+
         &__item{
             &-header{
                 align-items: start;
@@ -67,7 +69,7 @@
 
             &-content{
                 padding-top: rem(16);
-                
+
                 line-height: 135%;
             }
         }
