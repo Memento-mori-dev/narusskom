@@ -35,12 +35,12 @@ const swiperHistory = new Swiper('.history', {
     // And if we need scrollbar
     breakpoints: {
         0:   { 
-            slidesPerView: 1.1,
-            spaceBetween: 12,
+            slidesPerView: 1,
+            spaceBetween: 20,
         },
         560:   { 
             slidesPerView: 1.8,
-            spaceBetween: 12,
+            spaceBetween: 20,
         },
         760:   { 
             slidesPerView: 2,

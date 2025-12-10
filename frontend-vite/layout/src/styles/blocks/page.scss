@@ -95,13 +95,21 @@
     }
 
     @include mobile{
-        &__item-first{
-            margin-top: 0;
+        &__item{
+            &-first{
+                margin-top: 0;
 
-            & .page__item-color::after{
-                border-radius: 0;
+                & .page__item-color::after{
+                    border-radius: 0;
+                }
+            }
+
+            &-header{
+                flex-direction: column;
+                gap: rem(24);
             }
         }
         
+
     }
 }
