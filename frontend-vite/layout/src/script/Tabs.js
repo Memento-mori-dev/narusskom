@@ -70,6 +70,6 @@ export class Tabs{
     setTimeout(fn){
         setTimeout(() => {
             fn();
-        }, 1200);
+        }, 200);
     }
 }
