@@ -85,5 +85,26 @@
         }
     }
 
-    
+    @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, rem(400)) rem(240);
+        grid-template-areas: 
+            "one two"
+            "three four"
+            "five five";
+
+        &__item{
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5){
+                & .special__item-img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include mobile{
+        
+    }
 }

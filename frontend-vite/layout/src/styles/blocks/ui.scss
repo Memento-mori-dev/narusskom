@@ -103,3 +103,33 @@
         width: 100%;
     }
 }
+
+.swiper{
+    &--height-item{
+        .swiper-slide{
+            display: flex;
+            align-items: stretch;
+        }
+
+        .swiper-slide{
+            height: auto;
+        }
+    }
+    &--scroll-drag{
+        .swiper-scrollbar{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            display: block;
+
+            .swiper-scrollbar-drag{
+                background: var(--Background-Blue);
+            }
+        }
+
+        @include tablet{
+            padding-bottom: rem(36);
+        }
+    }
+}

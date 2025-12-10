@@ -45,38 +45,9 @@
         display: none;
     }
 
-    @include mobile{
-        padding-bottom: rem(36);
-
-        &__item{
-            height: 100%;
-
-            padding: rem(8);
-
-            &-content{
-                padding: rem(18) rem(8) rem(8);
-            }
-        }
-
-        .swiper-slide{
-            display: flex;
-            align-items: stretch;
-        }
-
-        .swiper-slide{
-            height: auto;
-        }
-
+    @include tablet{
         .swiper-scrollbar{
-            position: absolute;
-            left: 0;
-            bottom: 0;
-
             display: block;
-
-            .swiper-scrollbar-drag{
-                background: var(--Background-Blue);
-            }
         }
     }
 }
