@@ -26,28 +26,60 @@ export class Answers{
             btn.onclick = () => {
                 if (this.state.move) return;
 
-                console.log(this.state.move);
-
-
                 this.stateSwitch();
 
-                this.open(index);
+                this.toggle(index);
 
                 this.stateSwitch();
             }
         });
     }
 
-    open(index){
+    toggle(index){
         this.arrItem.forEach((item, indexThis) => {
             if (index == indexThis) {
-                item.classList.add(this.stateClasses.isActive);
+                if (!item.classList.contains(this.stateClasses.isActive)) {
+                    this.open(indexThis, item);
+                }else{
+                    this.close(indexThis, item);
+                }
+                
             }else{
-                if (item.classList.contains) {
-                    item.classList.remove(this.stateClasses.isActive);
+                if (item.classList.contains(this.stateClasses.isActive)) {
+                    this.close(indexThis, item);
                 }
             }
         });
+    }
+
+    open(index, item){
+        const wrapper = this.arrWrapperItem[index];
+        const content = this.arrContentItem[index];
+
+        item.classList.add(this.stateClasses.isActive);
+
+        const newHeight = content.offsetHeight + 'px';
+
+        wrapper.style.height = newHeight;
+
+        this.setTimeout(()=> {
+            wrapper.style.height = 'auto';
+        })
+    }
+
+    close(index, item){
+        const wrapper = this.arrWrapperItem[index];
+        const content = this.arrContentItem[index];
+
+        item.classList.remove(this.stateClasses.isActive);
+
+        const newHeight = content.offsetHeight + 'px';
+
+        wrapper.style.height = newHeight;
+
+        this.setTimeout(() =>{
+            wrapper.style.height = 0 + 'px';
+        })
     }
 
     stateSwitch(){
@@ -63,6 +95,6 @@ export class Answers{
     setTimeout(fn){
         setTimeout(() => {
             fn();
-        }, 1000);
+        }, 200);
     }
 }
