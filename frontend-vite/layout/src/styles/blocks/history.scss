@@ -1,3 +1,87 @@
 @use '../helpers' as *;
 
-.history{}
+.history{
+    &__item{
+        padding: rem(24);
+
+        background-color: var(--Background-White);
+        border-radius: var(--border-radius-24);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: rem(16);
+
+        &-top{
+            display: flex;
+            flex-direction: column;
+            gap: rem(16);
+        }
+        &-header{
+            display: flex;
+            align-items: center;
+            gap: rem(16);
+
+            &-content{
+                display: flex;
+                flex-direction: column;
+                gap: rem(2);
+            }
+        }
+        &-name{
+            font-weight: 500;
+            line-height: 145%;
+        }
+        &-country{
+            display: flex;
+            align-items: center;
+            gap: rem(8);
+
+            line-height: 155%;
+            color: var(--Text-Grey);
+
+            & > span{
+                
+            }
+        }
+        &-img{
+            flex-shrink: 0;
+
+            @include square(rem(76));
+
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        &-description{
+            overflow: hidden;
+
+            transition: var(--transition);
+
+            &-text{
+                line-height: 155%;
+            }
+        }
+
+        &-bottom{
+            display: flex;
+        }
+
+        &--short{
+            .history__item-description{
+                height: rem(124);
+            }
+
+            .history__item-description-text{
+                display: -webkit-box;
+                -webkit-line-clamp: 5; /* Ограничение в 5 строк */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            &.is-active .history__item-description-text{
+                -webkit-line-clamp: 100; /* Ограничение в 5 строк */
+            }
+        }
+    }
+}

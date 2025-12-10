@@ -127,6 +127,42 @@
             }
         }
     }
+
+    &--open-video{
+        padding: rem(16) rem(24);
+
+        background-color: var(--Background-Body);
+        border-radius: var(--border-radius-16);
+
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+
+        color: var(--Text-Black);
+
+        font-size: rem(14);
+        line-height: 135%;
+
+        & > span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &--open-review{
+        width: 100%;
+
+        padding: rem(8);
+
+        border-radius: var(--border-radius-12);
+        background-color: var(--Background-Body);
+        color: var(--Text-Grey);
+        
+
+        font-size: rem(14);
+        line-height: 135%;
+    }
 }
 
 .swiper{
@@ -155,6 +191,58 @@
 
         @include tablet{
             padding-bottom: rem(36);
+        }
+    }
+
+    &--pagination{
+        padding-bottom: rem(52);
+
+        position: relative;
+
+        .swiper-pagination-bullet{
+            opacity: 1;
+
+            @include square(rem(12));
+
+            background: var(--Background-Grey-e7);
+        }
+
+        .swiper-pagination-bullet.swiper-pagination-bullet-active{
+            background: var(--Background-Blue);
+        }
+    }
+}
+
+.controller-slider{
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+
+    .btn--slider{
+        @include square(rem(50));
+
+        background-color: var(--Background-White);
+        border-radius: 50%;
+
+        transition: var(--transition);
+
+        & *{
+            transition: var(--transition);
+        }
+
+        @include hover{
+            background-color: var(--background-orange);
+
+            & svg *{
+                fill: var(--Text-White)
+            }
+        }
+
+        &.swiper-button-disabled{
+            pointer-events: none;
+
+            background-color: var(--Background-Body);
+            opacity: 0.7;
         }
     }
 }
