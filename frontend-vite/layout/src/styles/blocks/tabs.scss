@@ -260,6 +260,9 @@
             &-img{
                 width: 130%;
                 height: 59%;
+
+                object-fit: contain;
+                object-position: right bottom;
             }
         }
     }
