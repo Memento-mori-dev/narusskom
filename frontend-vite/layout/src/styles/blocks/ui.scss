@@ -106,6 +106,27 @@
 
         text-align: center;
     }
+
+    &--answers{
+        @include square(rem(32));
+
+        background-color: var(--Background-Body);
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: var(--transition);
+
+        @include hover{
+            background-color: var(--Background-Blue);
+
+            & svg *{
+                fill: var(--Text-White)
+            }
+        }
+    }
 }
 
 .swiper{

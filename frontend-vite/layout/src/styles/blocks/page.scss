@@ -4,10 +4,11 @@
     &__item{
         margin-top: fluid(96, 72);
 
-        color: var(--Text-White);
-
         &-color{
             position: relative;
+
+            color: var(--Text-White);
+
 
             &::after{
                 z-index: -20;

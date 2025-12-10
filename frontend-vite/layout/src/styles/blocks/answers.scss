@@ -1,3 +1,75 @@
 @use '../helpers' as *;
 
-.answers{}
+.answers{
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+
+    &__item{
+        padding: rem(24);
+
+        background-color: var(--Background-White);
+
+        border-radius: var(--border-radius-24);
+
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: rem(24);
+
+            & > .btn{
+                flex-shrink: 0;
+            }
+        }
+        &-title{
+            font-size: fluid(20, 16);
+            font-weight: 600;
+            line-height: 145%;
+        }
+
+        &-wrapper{
+            height: 0;
+            overflow: hidden;
+
+            transition: var(--transition);
+        }
+        &-content{
+            padding-top: rem(24);
+
+            font-size: fluid(16, 14);
+
+            line-height: 155%;
+
+            & a{
+                color: var(--Background-Blue);
+
+                transition: var(--transition);
+
+                @include hover{
+                    color: var(--Text-Orange);
+                }
+            }
+        }
+
+        &.is-active{
+            .btn{
+                transform: rotate(-180deg)
+            }
+        }
+    }
+
+    @include tablet{
+        &__item{
+            &-header{
+                align-items: start;
+            }
+
+            &-content{
+                padding-top: rem(16);
+                
+                line-height: 135%;
+            }
+        }
+    }
+}
