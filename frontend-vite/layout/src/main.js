@@ -1,5 +1,6 @@
 import { useDynamicAdapt } from './script/dynamicAdapt';
 import { Menu } from './script/Menu';
+import { Tabs } from './script/Tabs';
 
 useDynamicAdapt();
 
@@ -10,7 +11,13 @@ if (document.querySelector('.header')) {
 }
 
 if (document.querySelector('.header__lang')) {
-    new Menu('.header', '[data-js-open-menu]', '[data-js-menu-wrapper]', '[data-js-menu-content]');
+    new Menu('[data-js-lang]', '[data-js-lang-btn]', '[data-js-lang-wrapper]', '[data-js-lang-content]');
+}
+
+if (document.querySelector('.tabs')) {
+    new Tabs('[data-js-tab]', '[data-js-tab-btn]', '[data-js-tab-state]', '[data-js-tab-item]');
+
+    new Menu('[data-js-tabs-list]', '[data-js-tabs-list-open]', '[data-js-tabs-list-wrapper]', '[data-js-tabs-list-content]');
 }
 
 

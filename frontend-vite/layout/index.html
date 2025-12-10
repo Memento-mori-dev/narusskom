@@ -49,8 +49,8 @@
         </menu>
 
         <div class="header__setting">
-          <div class="header__lang">
-            <button class="header__lang-open btn">
+          <div class="header__lang" data-js-lang>
+            <button class="header__lang-open btn" data-js-lang-btn>
               <span class="icon">
                 <img src="./src/assets/svg/lang-Icon.svg" alt="world" width="18" height="18">
               </span>
@@ -62,8 +62,8 @@
               </span>
             </button>
 
-            <div class="header__lang-wrapper">
-              <div class="header__lang-content">
+            <div class="header__lang-wrapper" data-js-lang-wrapper>
+              <div class="header__lang-content" data-js-lang-content>
                 <ul>
                   <li>
                     <a href="">ENG</a>
@@ -298,10 +298,10 @@
         <h2 class="page__item-title">Выберите курс русского языка для вашей цели</h2>
 
         <div class="page__item-wrapper">
-          <div class="tabs">
-            <div class="tabs__controller">
-              <button class="btn tabs__controller-phone">
-                <span>
+          <div class="tabs" data-js-tab>
+            <div class="tabs__controller" data-js-tabs-list>
+              <button class="btn tabs__controller-phone" data-js-tabs-list-open>
+                <span data-js-tab-state>
                   Для жизни: начинающий
                 </span>
                 
@@ -312,18 +312,18 @@
                 </span>
               </button>
 
-              <div class="tabs__controller-wrapper">
-                <div class="tabs__controller-content">
-                  <button class="btn tabs__controller-item is-active">Для жизни: начинающий</button>
-                  <button class="btn tabs__controller-item">Для жизни: продолжающий</button>
-                  <button class="btn tabs__controller-item">Для учебы в университете</button>
-                  <button class="btn tabs__controller-item">Для работы</button>
+              <div class="tabs__controller-wrapper" data-js-tabs-list-wrapper>
+                <div class="tabs__controller-content" data-js-tabs-list-content>
+                  <button class="btn tabs__controller-item is-active" data-js-tab-btn>Для жизни: начинающий</button>
+                  <button class="btn tabs__controller-item" data-js-tab-btn>Для жизни: продолжающий</button>
+                  <button class="btn tabs__controller-item" data-js-tab-btn>Для учебы в университете</button>
+                  <button class="btn tabs__controller-item" data-js-tab-btn>Для работы</button>
                 </div>
               </div>
             </div>
 
             <div class="tabs__content">
-              <div class="tabs__item is-active">
+              <div class="tabs__item is-active" data-js-tab-item>
                 <ul class="tabs__item-tags">
                   <li>
                     <p>Уровень: начинающий</p>
@@ -356,7 +356,7 @@
 
                 <img src="./src/assets/img/tabs/img-1.png" alt="Курс для жизни — начинающий" class="tabs__item-img">
               </div>
-              <div class="tabs__item">
+              <div class="tabs__item" data-js-tab-item>
                 <ul class="tabs__item-tags">
                   <li>
                     <p>Уровень: продолжающий</p>
@@ -390,7 +390,7 @@
                 <img src="./src/assets/img/tabs/img-2.png" alt="Курс для жизни — продолжающий"
                   class="tabs__item-img">
               </div>
-              <div class="tabs__item">
+              <div class="tabs__item" data-js-tab-item>
                 <ul class="tabs__item-tags">
                   <li>
                     <p>Уровень: начинающий</p>
@@ -424,7 +424,7 @@
                 <img src="./src/assets/img/tabs/img-3.png" alt="Курс для учебы в университете"
                   class="tabs__item-img">
               </div>
-              <div class="tabs__item">
+              <div class="tabs__item" data-js-tab-item>
                 <ul class="tabs__item-tags">
                   <li>
                     <p>Уровень: начинающий</p>

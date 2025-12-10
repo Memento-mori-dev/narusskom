@@ -184,6 +184,12 @@
 
                 font-weight: 600;
                 line-height: 145%; /* 23.2px */
+
+                &.is-active{
+                    & span:last-child svg{
+                        transform: rotate(-180deg);
+                    }
+                }
             }
 
             &-item{
