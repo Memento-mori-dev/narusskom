@@ -70,9 +70,10 @@
         display: none;
 
         &.is-active{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto 1fr;
+            gap: rem(40);
         }
 
         height: rem(560);
@@ -129,20 +130,23 @@
         &-title{
             max-width: rem(560);
 
-            font-size: rem(42);
+            font-size: fluid(42, 26);
             font-weight: 600;
             line-height: 125%; /* 52.5px */
-            letter-spacing: rem(-0.42);
+            letter-spacing: fluid(-0.42, -0.26);
         }
         &-text{
             max-width: rem(409);
 
-            font-size: rem(20);
+            font-size: fluid(20, 16);
             font-weight: 600;
             line-height: 145%; /* 29px */
         }
 
-        &-bottom{}
+        &-bottom{
+            display: flex;
+            align-items: end;
+        }
 
         &-img{
             z-index: -5;
@@ -158,7 +162,7 @@
         }
     }
 
-    @include tablet {
+    @include tablet{
         flex-direction: column;
 
         &__controller{
@@ -186,6 +190,76 @@
                 &.is-active{
                     display: none;
                 }
+
+                font-weight: 500;
+
+                padding: rem(16) rem(24);
+                border-radius: var(--border-radius-12);
+            }
+
+            &-wrapper{
+                overflow: hidden;
+
+                height: 0;
+
+                transition: var(--transition);
+            }
+            &-content{
+                padding: rem(8);
+
+                background-color: var(--Background-Body);
+                border-radius: var(--border-radius-16);
+            }
+        }
+    }
+
+    @include mobile{
+        &__item{
+            &::after{
+                background-position-y: rem(210);
+                background-size: rem(445);
+            }
+
+            &.is-active{
+                padding: rem(24);
+
+                grid-template-rows: auto auto 1fr;
+                gap: rem(24);
+                grid-template-areas:
+                    "top"
+                    "btn"
+                    "tags";
+            }
+
+            &-tags{
+                grid-area: tags;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: start;
+                gap: rem(4);
+
+                & p{
+                    font-size: rem(14);
+                    line-height: 135%;
+                }
+            }
+
+            &-top{
+                grid-area: top;
+            }
+            &-text{
+                font-weight: 500;
+            }
+
+            &-bottom{
+                grid-area: btn;
+            }
+
+            &-img{
+                width: 130%;
+                height: 59%;
             }
         }
     }
