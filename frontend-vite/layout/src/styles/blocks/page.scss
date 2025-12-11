@@ -74,6 +74,10 @@
             gap: rem(10);
         }
 
+        &-text{
+            line-height: 155%;
+        }
+
         &--wrapper{
             width: 100%;
             overflow: hidden;
