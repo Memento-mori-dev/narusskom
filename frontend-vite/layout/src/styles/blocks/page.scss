@@ -76,6 +76,10 @@
 
         &-text{
             line-height: 155%;
+
+            .container &{
+                margin-top: rem(24);
+            }
         }
 
         &--wrapper{

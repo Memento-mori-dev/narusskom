@@ -88,3 +88,30 @@ const swiperHistory = new Swiper('.history', {
         el: '.swiper-pagination',
     },
 });
+
+const swiperExams = new Swiper('.exams', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    // And if we need scrollbar
+    breakpoints: {
+        0:   { 
+            slidesPerView: 1.24,
+            spaceBetween: 20,
+        },
+        600:   { 
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        860:   { 
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1200:   { 
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
