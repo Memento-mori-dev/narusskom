@@ -41,6 +41,13 @@
             margin-top: rem(8);
 
             padding-bottom: 1px;
+
+            & .page__item-color::after{
+                background-image: url(../../assets/svg/Background.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
         }
 
         &-wrapper{
@@ -101,6 +108,10 @@
 
                 & .page__item-color::after{
                     border-radius: 0;
+                }
+
+                & .page__item-color::after{
+                    background-image: url(../../assets/svg/Background-phone.svg);
                 }
             }
 

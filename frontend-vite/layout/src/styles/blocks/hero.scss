@@ -1,13 +1,6 @@
 @use '../helpers' as *;
 
 .hero{
-    & .page__item-color::after{
-        background-image: url(../assets/svg/Background.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
     &__container{
         padding-top: rem(144);
     }
@@ -90,15 +83,6 @@
     }
 
     @include mobile{
-        & .page__item-color::after{
-            background-image: url(../assets/svg/Background-phone.svg);
-        }
 
-        & .page__item-first{
-            margin-top: 0;
-        }
-        & .page__item-color::after{
-
-        }
     }
 }
