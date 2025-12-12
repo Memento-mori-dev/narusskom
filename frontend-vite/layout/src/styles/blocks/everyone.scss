@@ -29,6 +29,14 @@
             flex-direction: column;
             gap: rem(8);
         }
+        
+        &-pre-title{
+            font-size: rem(20);
+            font-weight: 500;
+            line-height: 145%;
+
+            color: var(--Text-Grey-bb);
+        }
 
         &-title{
             font-size: rem(20);
@@ -45,9 +53,41 @@
         display: none;
     }
 
+    &--all{
+        .everyone__item-img{
+            height: rem(190);
+        }
+
+        .swiper-wrapper{
+            flex-wrap: wrap;
+
+            gap: rem(20);
+        }
+
+        .swiper-slide{
+            width: calc(33.33% - rem(13.33));
+        }
+    }
+
     @include tablet{
         .swiper-scrollbar{
             display: block;
+        }
+
+        &--all{
+            .swiper-wrapper{
+                flex-wrap: nowrap;
+
+                gap: 0;
+            }
+
+            .swiper-slide{
+                width: auto;
+            }
+
+            .everyone__item{
+                width: 100%;
+            }
         }
     }
 }

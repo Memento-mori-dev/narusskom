@@ -6,6 +6,8 @@ import { History } from './script/History';
 
 useDynamicAdapt();
 
+const width = window.innerWidth;
+
 // Подключение классов для блоков
 
 if (document.querySelector('.header')) {
@@ -32,32 +34,67 @@ if (document.querySelector('.history')) {
 
 // swiper
 if (document.querySelector('.everyone')) {
-    const swiperEveryone = new Swiper('.everyone', {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-        breakpoints: {
-            0:   { 
-                slidesPerView: 1.1,
-                spaceBetween: 12,
+    if (!document.querySelector('.everyone--all')) {
+        const swiperEveryone = new Swiper('.everyone', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
             },
-            560:   { 
-                slidesPerView: 1.8,
-                spaceBetween: 12,
-            },
-            760:   { 
-                slidesPerView: 2,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 12,
+                },
+                560: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 12,
+                },
+                760: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1023: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            }
+        });
+    } else {
+        if (width < 1023) {
+            const swiperEveryone = new Swiper('.everyone', {
+                slidesPerView: 16,
                 spaceBetween: 20,
-            },
-            1023:   { 
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1.16,
+                        spaceBetween: 12,
+                    },
+                    560: {
+                        slidesPerView: 1.8,
+                        spaceBetween: 12,
+                    },
+                    760: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1023: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    1200: {
+                        slidesPerView: 16,
+                        spaceBetween: 20,
+                    },
+                }
+            });
         }
-    });
+    }
 }
 
 if (document.querySelector('.history')) {
@@ -66,19 +103,19 @@ if (document.querySelector('.history')) {
         spaceBetween: 20,
         // And if we need scrollbar
         breakpoints: {
-            0:   { 
+            0: {
                 slidesPerView: 1,
                 spaceBetween: 20,
             },
-            560:   { 
+            560: {
                 slidesPerView: 1.8,
                 spaceBetween: 20,
             },
-            760:   { 
+            760: {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
-            1023:   { 
+            1023: {
                 slidesPerView: 3,
                 spaceBetween: 20,
             },
@@ -90,7 +127,7 @@ if (document.querySelector('.history')) {
         pagination: {
             el: '.swiper-pagination',
         },
-    }); 
+    });
 }
 
 
@@ -100,19 +137,19 @@ if (document.querySelector('.exams')) {
         spaceBetween: 20,
         // And if we need scrollbar
         breakpoints: {
-            0:   { 
+            0: {
                 slidesPerView: 1.24,
                 spaceBetween: 20,
             },
-            600:   { 
+            600: {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
-            860:   { 
+            860: {
                 slidesPerView: 3,
                 spaceBetween: 20,
             },
-            1200:   { 
+            1200: {
                 slidesPerView: 4,
                 spaceBetween: 20,
             },
