@@ -88,6 +88,42 @@
                     max-width: rem(640);
                 }
             }
+
+            &-description{
+                position: relative;
+
+                line-height: 155%;
+                color: var(--Text-Grey);
+
+                &::after{
+                    @include square(rem(24));
+
+                    content: '';
+
+                    position: absolute;
+                    top: calc(50% - rem(12));
+                    left: 0;
+                    
+                    background-image: url(../../public/assets/svg/icon-page-description.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            &--description{
+                position: relative;
+                align-items: end;
+
+                .page__item-title{
+                    max-width: rem(575);
+                }
+
+                .page__item-header-description{
+                    max-width: rem(575);
+
+                    padding-left: rem(40);
+                }
+            }
         }
 
         &-text{
