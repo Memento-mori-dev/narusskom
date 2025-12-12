@@ -50,6 +50,20 @@
                     color: var(--Text-Orange);
                 }
             }
+
+            & p{
+                &:not(:first-child){
+                    margin-top: rem(10);
+                }
+            }
+
+            & ul{
+                &:not(:first-child){
+                    margin-top: rem(10);
+                }
+
+                padding-left: rem(20);
+            }
         }
 
         &.is-active{
