@@ -10,7 +10,7 @@ export class Tabs{
     constructor(main, btns, state, items){
         this.main = document.querySelector(main);
         this.btns = this.main.querySelectorAll(btns);
-        this.state = this.main.querySelector(state);
+        this.stateThis = this.main.querySelector(state);
         this.items = this.main.querySelectorAll(items);
 
         this.init();
@@ -31,7 +31,9 @@ export class Tabs{
                     if (index == indexThis) {
                         item.classList.add(this.stateClasses.isActive);
 
-                        this.state.textContent = item.innerText;
+                        if (this.stateThis) {
+                            this.stateThis.textContent = item.innerText;
+                        }
                         
                     }else{
                         item.classList.remove(this.stateClasses.isActive);

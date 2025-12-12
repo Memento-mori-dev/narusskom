@@ -130,7 +130,6 @@ if (document.querySelector('.history')) {
     });
 }
 
-
 if (document.querySelector('.exams')) {
     const swiperExams = new Swiper('.exams', {
         slidesPerView: 4,
@@ -159,3 +158,21 @@ if (document.querySelector('.exams')) {
         },
     });
 }
+
+if (document.querySelector('.tabs-next')) {
+     new Tabs('[data-js-tab-next]', '[data-js-tab-btn]', '[data-js-tab-state]', '[data-js-tab-item]');
+
+    if (width < 1023) {
+        const swiperNextController = new Swiper('.tabs-next__controller', {
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            freeMode: true,
+            watchOverflow: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
+}
+

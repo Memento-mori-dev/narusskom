@@ -11,11 +11,11 @@
 
         display: flex;
         flex-direction: column;
-        gap: rem(8);
-
 
         &-item{
             position: relative;
+
+            width: 100%;
 
             padding: rem(24);
 
@@ -75,6 +75,20 @@
                     opacity: 1;
                 }
             }
+        }
+
+        .swiper-wrapper{
+            width: 100%;
+            height: auto;
+            
+            display: flex;
+            flex-direction: column;
+            gap: rem(8);
+        }
+
+        .swiper-slide{
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -224,6 +238,111 @@
     }
 
     @include tablet{
-        
+        position: relative;
+        flex-direction: column;
+
+        &::after{
+            @include square(rem(36));
+
+            content: '';
+
+            position: absolute;
+            top: rem(93);
+            left: calc(50% - rem(18));
+
+            background-image: url(../../../public/assets/svg/tabs-next-swipe.svg);
+            background-repeat: no-repeat;
+            background-size: rem(36);
+        }
+
+        &__controller,
+        &__content{
+            width: 100%;
+        }
+
+        &__controller{
+            position: relative;
+
+            padding-bottom: rem(56);
+
+            &-item{
+                &::after{
+                    display: none;
+                }
+            }
+
+            .swiper-wrapper{            
+                display: flex;
+                flex-direction: row;
+                gap: 0;
+            }
+
+            .swiper-slide{
+                width: auto !important;
+                height: auto;
+
+                white-space: nowrap;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next{
+                pointer-events: none;
+
+                top: 0;
+
+                width: rem(73);
+                height: 100%;
+
+                svg{
+                    display: none;
+                }
+
+                transition: var(--transition);
+
+                &.swiper-button-disabled{
+                    opacity: 0;
+                }
+            }
+            .swiper-button-prev{
+                left: calc(var(--container-padding-x) * -1);
+
+                background: var(--Gradient-Grey-left);
+            }
+            .swiper-button-next{
+                right: calc(var(--container-padding-x) * -1);
+
+                background: var(--Gradient-Grey-right);
+            }
+        }
+    }
+
+    @include mobile{
+        &::after{
+            top: rem(78);
+        }
+
+        &__controller{
+            &-item{
+                padding: rem(16);
+            }
+        }
+
+        &__content{
+            
+        }
+
+        &__item{
+            &.is-active{
+                flex-direction: column;
+            }
+
+            padding: rem(24);
+
+            &-right{
+                width: 100%;
+
+                justify-content: center;
+            }
+        }
     }
 }

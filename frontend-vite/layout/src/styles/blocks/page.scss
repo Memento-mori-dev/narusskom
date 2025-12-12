@@ -122,6 +122,10 @@
                     max-width: rem(575);
 
                     padding-left: rem(40);
+
+                    font-size: fluid(16, 14);
+
+                    line-height: 155%;
                 }
             }
         }
@@ -185,6 +189,20 @@
                         right: rem(-30);
                     }
                 }
+
+                &--description{
+                    .page__item-header-description{
+                        line-height: 135%;
+                    }
+                }
+            }
+
+            &--wrapper-mobile{
+                overflow: hidden;
+
+                margin-top: 0;
+
+                padding-top: fluid(96, 72);
             }
         }
         
