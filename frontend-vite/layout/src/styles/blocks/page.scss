@@ -35,6 +35,14 @@
                 padding-top: fluid(72, 48);
                 padding-bottom: fluid(76, 48);
             }
+
+            &--title-center{
+                padding: fluid(72, 48) fluid(83, 0);
+
+                .page__item-title{
+                    text-align: center;
+                }
+            }
         }
 
         &-first{
@@ -203,6 +211,14 @@
                 margin-top: 0;
 
                 padding-top: fluid(96, 72);
+            }
+
+            &-color{
+                &--title-center{
+                    .page__item-title{
+                        text-align: start;
+                    }
+                }
             }
         }
         
