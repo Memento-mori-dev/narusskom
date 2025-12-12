@@ -142,6 +142,13 @@
             &-header{
                 flex-direction: column;
                 gap: rem(24);
+
+                &--img{
+                    .page__item-header-img{
+                        top: rem(-70);
+                        right: rem(-30);
+                    }
+                }
             }
         }
         
