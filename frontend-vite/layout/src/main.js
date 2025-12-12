@@ -1,8 +1,8 @@
-import { useDynamicAdapt } from './script/dynamicAdapt.js';
-import { Menu } from './script/Menu.js';
-import { Tabs } from './script/Tabs.js';
-import { Answers } from './script/Answers.js';
-import { History } from './script/History.js';
+import { useDynamicAdapt } from './script/dynamicAdapt';
+import { Menu } from './script/Menu';
+import { Tabs } from './script/Tabs';
+import { Answers } from './script/Answers';
+import { History } from './script/History';
 
 useDynamicAdapt();
 
@@ -31,87 +31,94 @@ if (document.querySelector('.history')) {
 }
 
 // swiper
-const swiperEveryone = new Swiper('.everyone', {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-    breakpoints: {
-        0:   { 
-            slidesPerView: 1.1,
-            spaceBetween: 12,
+if (document.querySelector('.everyone')) {
+    const swiperEveryone = new Swiper('.everyone', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
         },
-        560:   { 
-            slidesPerView: 1.8,
-            spaceBetween: 12,
-        },
-        760:   { 
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        1023:   { 
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-    }
-});
+        breakpoints: {
+            0:   { 
+                slidesPerView: 1.1,
+                spaceBetween: 12,
+            },
+            560:   { 
+                slidesPerView: 1.8,
+                spaceBetween: 12,
+            },
+            760:   { 
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1023:   { 
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        }
+    });
+}
 
-const swiperHistory = new Swiper('.history', {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    // And if we need scrollbar
-    breakpoints: {
-        0:   { 
-            slidesPerView: 1,
-            spaceBetween: 20,
+if (document.querySelector('.history')) {
+    const swiperHistory = new Swiper('.history', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        // And if we need scrollbar
+        breakpoints: {
+            0:   { 
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            560:   { 
+                slidesPerView: 1.8,
+                spaceBetween: 20,
+            },
+            760:   { 
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1023:   { 
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
         },
-        560:   { 
-            slidesPerView: 1.8,
-            spaceBetween: 20,
+        navigation: {
+            nextEl: '.history-controller .next',
+            prevEl: '.history-controller .prev',
         },
-        760:   { 
-            slidesPerView: 2,
-            spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
         },
-        1023:   { 
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-    },
-    navigation: {
-        nextEl: '.history-controller .next',
-        prevEl: '.history-controller .prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-    },
-});
+    }); 
+}
 
-const swiperExams = new Swiper('.exams', {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    // And if we need scrollbar
-    breakpoints: {
-        0:   { 
-            slidesPerView: 1.24,
-            spaceBetween: 20,
+
+if (document.querySelector('.exams')) {
+    const swiperExams = new Swiper('.exams', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        // And if we need scrollbar
+        breakpoints: {
+            0:   { 
+                slidesPerView: 1.24,
+                spaceBetween: 20,
+            },
+            600:   { 
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            860:   { 
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1200:   { 
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
         },
-        600:   { 
-            slidesPerView: 2,
-            spaceBetween: 20,
+        scrollbar: {
+            el: '.swiper-scrollbar',
         },
-        860:   { 
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        1200:   { 
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
-    },
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
+    });
+}

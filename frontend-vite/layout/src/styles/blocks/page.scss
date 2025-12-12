@@ -68,10 +68,26 @@
         }
 
         &-header{
+            position: relative;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: rem(10);
+
+            &-img{
+                z-index: -10;
+
+                position: absolute;
+                top: rem(-98);
+                right: 0;
+            }
+
+            &--img{
+                .page__item-title{
+                    max-width: rem(640);
+                }
+            }
         }
 
         &-text{

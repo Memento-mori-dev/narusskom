@@ -1,0 +1,189 @@
+@use '../helpers' as *;
+
+.balls{
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+
+    &__item{
+        padding: rem(4) rem(4) rem(24) rem(4);
+
+        border-radius: var(--border-radius-16);
+        background-color: var(--Background-White);
+
+        display: grid;
+        gap: rem(24);
+    }
+
+    &__header{
+        position: relative;
+
+        padding: rem(16) rem(24);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(5);
+
+        &::after{
+            content: '';
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 1px;
+
+            background-color: var(--Background-Grey-e8);
+        }
+    }
+    &__title{
+        font-size: rem(24);
+        font-weight: 600;
+        line-height: 145%;
+    }
+    &__description{
+        font-size: rem(14);
+        line-height: 135%;
+
+        color: var(--Text-Grey);
+    }
+
+    &__content{
+        padding: 0 rem(24);
+
+        display: flex;
+
+        &--patent{
+            & .balls__lesson{
+                &:nth-child(1){
+                    flex-shrink: 0;
+
+                    width: 53%;
+                }
+                &:nth-child(2){
+                    flex-shrink: 0;
+
+                    width: 20%;
+                }
+                &:nth-child(3){
+                    width: 100%;
+                }
+            }
+        }
+
+        &--trp{
+            & .balls__lesson{
+                &:nth-child(1){
+                    flex-shrink: 0;
+
+                    width: 66%;
+                }
+                &:nth-child(2){
+                    flex-shrink: 0;
+
+                    width: 17.5%;
+                }
+                &:nth-child(3){
+                    width: 100%;
+                }
+            }
+        }
+
+        &--rp{
+            & .balls__lesson{
+                &:nth-child(1){
+                    flex-shrink: 0;
+
+                    width: 69%;
+                }
+                &:nth-child(2){
+                    flex-shrink: 0;
+
+                    width: 16%;
+                }
+                &:nth-child(3){
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__lesson{
+        display: grid;
+        gap: rem(16);
+
+        &-title{
+            min-height: rem(38);
+
+            display: flex;
+            justify-content: center;
+            align-items: end;
+
+            font-size: rem(14);
+            font-weight: 700;
+            line-height: 135%;
+
+            text-align: center;
+        }
+        &-chart{
+            display: flex;
+            gap: rem(2);
+
+            & span{
+                width: 100%;
+
+                height: 6px;
+                border-radius: var(--border-radius-24);
+
+                background-color: tomato;
+
+                &.blue-1{
+                    background-color: var(--Background-Blue);
+                }
+                &.blue-2{
+                    background-color: var(--Background-Blue-80);
+                }
+                &.blue-3{
+                    background-color: var(--Background-Blue-3a);
+                }
+
+                &.orange{
+                    background-color: var(--background-orange-db);
+                }
+
+                &.green{
+                    background-color: var(--Background-Green-0e);
+                }
+            }
+        }
+        &-description{
+            line-height: 155%;
+
+            text-align: center;
+        }
+
+        &:not(:first-child){
+            padding-left: rem(16);
+        }
+        &:not(:last-child){
+            padding-right: rem(16);
+
+            position: relative;
+
+            &::after{
+                content: '';
+
+                position: absolute;
+                top: 0;
+                right: -0.5px;
+
+                width: 1px;
+                height: 100%;
+
+                background-color: var(--Text-Grey);
+                opacity: 0.2;
+            }
+        }
+    }
+}
