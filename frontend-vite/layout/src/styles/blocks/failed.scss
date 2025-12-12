@@ -1,0 +1,130 @@
+@use '../helpers' as *;
+
+.failed{
+    position: relative;
+
+    padding: rem(32);
+
+    border-radius: var(--border-radius-12);
+    overflow: hidden;
+
+    &::after{
+        z-index: -10;
+
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: var(--Background-White);
+    }
+
+    &__content{
+        max-width: rem(740);
+
+        &-main{
+            margin-top: rem(32);
+
+            display: grid;
+            gap: rem(24);
+        }
+
+        &-list{
+            display: grid;
+            gap: rem(15);
+        }
+    }
+    &__title{
+        font-size: rem(24);
+        font-weight: 600;
+        line-height: 145%
+    }
+    &__text{
+        font-weight: 500;
+        line-height: 145%;
+
+        span{
+            font-weight: 400;
+            line-height: 155%;
+        }
+    }
+    &__list-ol{
+        counter-reset: item;
+
+        padding-left: rem(24);
+
+        display: grid;
+        gap: rem(15);
+
+        li {
+            counter-increment: item;
+            position: relative;
+            list-style: none;
+
+            line-height: 155%;
+
+            &::before {
+                content: counter(item) ".";
+                position: absolute;
+                top: 0;
+                left: rem(-19);
+            }
+        }
+    }
+    &__list-ul{
+        padding-left: rem(24);
+
+        display: grid;
+        gap: rem(15);
+
+        li{
+            line-height: 155%;
+        }
+    }
+    &__text-big{
+        font-size: fluid(20, 16);
+        font-weight: 500;
+        line-height: 145%;
+    }
+
+    &__img{
+        @include square(rem(512));
+
+        z-index: -5;
+
+        position: absolute;
+        top: calc(50% - rem(256));
+        right: -13%;
+    }
+
+    @include mobile{
+        &__content{
+            &-main{
+                margin-top: rem(25);
+
+                gap: rem(15);
+            }
+
+            &-list{
+                display: grid;
+                gap: rem(11);
+            }
+        }
+
+        &__list-ol{
+            gap: rem(10);
+        }
+
+        &__img{
+            @include square(rem(100));
+
+            top: rem(17);
+            right: rem(-30);
+        }
+
+    }
+}
