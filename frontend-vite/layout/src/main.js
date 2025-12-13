@@ -159,8 +159,8 @@ if (document.querySelector('.exams')) {
     });
 }
 
-if (document.querySelector('.tabs-next')) {
-     new Tabs('[data-js-tab-next]', '[data-js-tab-btn]', '[data-js-tab-state]', '[data-js-tab-item]');
+if (document.querySelector('[data-js-tab-next]')) {
+    new Tabs('[data-js-tab-next]', '[data-js-tab-btn]', '[data-js-tab-state]', '[data-js-tab-item]');
 
     if (width < 1023) {
         const swiperNextController = new Swiper('.tabs-next__controller', {

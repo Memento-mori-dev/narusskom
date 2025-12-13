@@ -61,14 +61,48 @@
                     flex-shrink: 0;
 
                     width: 53%;
+
+                    .balls__lesson-chart{
+                        span{
+                            background-color: var(--Background-Blue);
+
+                            &:nth-child(n+5){
+                                background-color: var(--Background-Blue-3a);
+                            }
+
+                            &:nth-child(n+7){
+                                display: none;
+                            }
+                        }
+                    }
                 }
                 &:nth-child(2){
                     flex-shrink: 0;
 
                     width: 20%;
+
+                    .balls__lesson-chart{
+                        span{
+                            background-color: var(--background-orange-db);
+
+                            &:nth-child(n+3){
+                                display: none;
+                            }
+                        }
+                    }
                 }
                 &:nth-child(3){
                     width: 100%;
+
+                    .balls__lesson-chart{
+                        span{
+                            background-color: var(--Background-Green-0e);
+
+                            &:nth-child(n+4){
+                                display: none;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -79,14 +113,52 @@
                     flex-shrink: 0;
 
                     width: 66%;
+
+                    .balls__lesson-chart{
+                        span{
+                            background-color: var(--Background-Blue);
+
+                            &:nth-child(n+7){
+                                background-color: var(--Background-Blue-80);
+                            }
+
+                            &:nth-child(n+11){
+                                background-color: var(--Background-Blue-3a);
+                            }
+
+                            &:nth-child(n+14){
+                                display: none;
+                            }
+                        }
+                    }
                 }
                 &:nth-child(2){
                     flex-shrink: 0;
 
                     width: 17.5%;
+
+                    .balls__lesson-chart{
+                        span{
+                            background-color: var(--background-orange-db);
+
+                            &:nth-child(n+4){
+                                display: none;
+                            }
+                        }
+                    }
                 }
                 &:nth-child(3){
                     width: 100%;
+
+                    .balls__lesson-chart{
+                        span{
+                            background-color: var(--Background-Green-0e);
+
+                            &:nth-child(n+4){
+                                display: none;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -97,14 +169,48 @@
                     flex-shrink: 0;
 
                     width: 69%;
+
+                    .balls__lesson-chart{
+                        span{
+                            background-color: var(--Background-Blue);
+
+                            &:nth-child(n+8){
+                                background-color: var(--Background-Blue-80);
+                            }
+
+                            &:nth-child(n+12){
+                                background-color: var(--Background-Blue-3a);
+                            }
+                        }
+                    }
                 }
                 &:nth-child(2){
                     flex-shrink: 0;
 
                     width: 16%;
+
+                    .balls__lesson-chart{
+                        span{
+                            background-color: var(--background-orange-db);
+
+                            &:nth-child(n+4){
+                                display: none;
+                            }
+                        }
+                    }
                 }
                 &:nth-child(3){
                     width: 100%;
+
+                    .balls__lesson-chart{
+                        span{
+                            background-color: var(--Background-Green-0e);
+
+                            &:nth-child(n+4){
+                                display: none;
+                            }
+                        }
+                    }
                 }
             }
         }
