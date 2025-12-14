@@ -13,6 +13,8 @@
         border-radius: var(--border-radius-24);
 
         &-header{
+            cursor: pointer;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -20,6 +22,16 @@
 
             & > .btn{
                 flex-shrink: 0;
+            }
+
+            @include hover{
+                & .btn{
+                    background-color: var(--Background-Blue);
+
+                    & svg *{
+                        fill: var(--Text-White)
+                    }
+                }
             }
         }
         &-title{
