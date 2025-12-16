@@ -1,0 +1,97 @@
+@use '../helpers' as *;
+
+.creates{
+    display: flex;
+    gap: rem(20);
+
+    &__main{
+        width: calc(50% - rem(10));
+
+        padding: rem(32);
+
+        background-color: var(--Background-White);
+        border-radius: var(--border-radius-12);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: rem(32);
+
+        &-header{
+            display: flex;
+            flex-direction: column;
+            gap: rem(32);
+        }
+        &-title{
+            font-size: fluid(36, 28);
+            font-weight: 600;
+            line-height: 125%;
+        }
+        &-text{
+            line-height: 155%;
+
+            & > p{
+                &:not(:first-child){
+                    margin-top: rem(18);
+                }
+            }
+        }
+
+        &-footer{
+            display: flex;
+            gap: rem(22);
+        }
+        &-people{
+            display: flex;
+            align-items: end;
+
+            & > img{
+                @include square(fluid(78, 54));
+
+                border: fluid(3,2) solid var(--Background-White);
+                border-radius: 50%;
+
+                &:not(:first-child){
+                    margin-left: rem(-22);
+                }
+                &:first-child{
+                    margin-left: fluid(3, 2);
+                }
+            }
+        }
+        &-teacher{
+            padding-bottom: rem(4);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            &-title{
+                font-size: rem(36);
+                font-weight: 700;
+                line-height: 125%;
+                color: var(--Text-Orange);
+            }
+            &-text{
+                font-size: rem(14);
+                line-height: 135%;
+                color: var(--Text-Grey);
+            }
+        }
+    }
+
+    &__img{
+        width: calc(50% - rem(10));
+
+        padding: rem(8);
+
+        background-color: var(--Background-White);
+        border-radius: var(--border-radius-12);
+
+        & > img{
+            @include square(100%);
+
+            border-radius: var(--border-radius-12);
+        }
+    }
+}
