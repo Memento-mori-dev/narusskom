@@ -32,6 +32,8 @@
         background: var(--Button-Red);
         color: var(--Text-White);
 
+        box-shadow: 0 6px 16px 0 rgba(251, 63, 21, 0.20);
+
         @include hover{
             opacity: 0.8;
         }
@@ -77,10 +79,16 @@
                 }
 
                 &:nth-child(1){
+                    width: rem(18);
+
                     transform: translateY(5px) rotate(45deg);
+                    height: rem(3);
                 }
                 &:nth-child(3){
-                    transform: translateY(-5px) rotate(-45deg);
+                    width: rem(18);
+
+                    transform: translateY(-6px) rotate(-45deg);
+                    height: rem(3);
                 }
             }
         }
@@ -88,6 +96,8 @@
 
     &--page{
         padding: rem(20.5) rem(48);
+
+        line-height: 145%;
 
         border-radius: var(--border-radius-16);
     }
@@ -162,6 +172,14 @@
 
         font-size: rem(14);
         line-height: 135%;
+    }
+
+    @include mobile{
+        &--per-100-phone{
+            width: 100%;
+
+            text-align: center;
+        }
     }
 }
 
@@ -246,3 +264,30 @@
         }
     }
 }
+
+
+// Доп элементы
+.br-laptop-above{
+    display: block;
+
+    @include tablet{
+        display: none;
+    }
+}
+
+.br-tablet{
+    display: none;
+
+    @include tablet{
+        display: block;
+    }
+}
+
+.br-mobile{
+    display: none;
+
+    @include mobile{
+        display: block;
+    }
+}
+

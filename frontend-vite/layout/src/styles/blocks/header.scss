@@ -225,5 +225,21 @@
                 line-height: 135%; /* 27px */
             }
         }
+
+        &__lang{
+            &-open{
+                font-size: rem(12);
+
+                .icon:first-child{
+                    img{
+                        @include square(rem(16));
+                    }
+                }
+            }
+
+            &-content ul a{
+                font-size: rem(12);
+            }
+        }
     }
 }

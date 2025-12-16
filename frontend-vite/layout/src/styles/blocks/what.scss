@@ -10,6 +10,9 @@
     flex-direction: column;
     gap: rem(32);
 
+    & .page__item-text{
+        margin-top: 0;
+    }
 
     &__content{
         display: flex;
