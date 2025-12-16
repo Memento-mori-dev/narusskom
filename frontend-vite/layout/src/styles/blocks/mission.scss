@@ -77,7 +77,7 @@
                 line-height: 145%
             }
             &-text{
-                font-size: rem(16);
+                font-size: fluid(16, 14);
                 line-height: 155%;
 
                 color: var(--Text-Grey);
@@ -92,5 +92,43 @@
             object-fit: cover;
             object-position: center right;
         }
+    }
+
+    @include tablet{
+        &__main{
+            flex-direction: column;
+
+            &-content{
+                width: 100%;
+            }
+            &-img{
+                width: 100%;
+            }
+        }
+    }
+
+    @include mobile{
+        padding: rem(24);
+
+        &__main{
+            &-content{
+                &-item{
+                    flex-direction: column;
+                    align-items: start;
+
+                    padding: rem(16);
+                    gap: rem(16);
+                }
+
+                &-text{
+                    line-height: 135%;
+                }
+            }
+            &-img{
+                height: 57vw;
+            }
+        }
+
+        
     }
 }
