@@ -38,7 +38,7 @@
             gap: rem(4);
 
             li{
-                padding: rem(5) rem(12);
+                padding: rem(5) rem(12) rem(7);
 
                 font-size: rem(14);
                 line-height: 135%;
@@ -57,7 +57,7 @@
         &-bottom{
             display: flex;
             flex-direction: column;
-            gap: rem(31.5);
+            gap: rem(24);
         }
         &-img{
             height: rem(220);
@@ -95,5 +95,9 @@
                 gap: rem(16);
             }
         }
+    }
+
+    .page__item-color &{
+        color: var(--Text-Black);
     }
 }
