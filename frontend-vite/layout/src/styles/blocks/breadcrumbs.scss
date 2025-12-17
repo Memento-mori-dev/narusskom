@@ -1,0 +1,54 @@
+@use '../helpers' as *;
+
+.breadcrumbs{
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+
+    font-size: fluid(16, 14);
+    line-height: 155%;
+
+    & > li{
+        &:not(:first-child){
+            margin-left: rem(22);
+        }
+
+        &:not(:last-child){
+            position: relative;
+
+            &::after{
+                content: '/';
+
+                position: absolute;
+                right: rem(-15);
+
+                line-height: 155%;
+
+                opacity: .3;
+            }
+        }
+    }
+
+    & a{
+        text-decoration: none;
+
+        color: var(--Text-White);
+        opacity: .6;
+
+        transition: var(--transition);
+
+        @include hover{
+            opacity: 1;
+        }
+    }
+
+    & p{
+        font-weight: 600;
+        line-height: 145%;
+    }
+
+    @include mobile{
+
+    }
+}
