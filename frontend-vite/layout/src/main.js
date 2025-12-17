@@ -176,3 +176,41 @@ if (document.querySelector('[data-js-tab-next]')) {
     }
 }
 
+if (document.querySelector('.partners')) {
+    const swiperPartners = new Swiper('.partners', {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        freeMode: true,
+        watchOverflow: true,
+        navigation: {
+            nextEl: '.partners-controller .next',
+            prevEl: '.partners-controller .prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+                spaceBetween: 16,
+            },
+            390: {
+                slidesPerView: 1.6,
+                spaceBetween: 16,
+            },
+            600: {
+                slidesPerView: 2.6,
+                spaceBetween: 20,
+            },
+            900: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+        },
+    });
+}
+
