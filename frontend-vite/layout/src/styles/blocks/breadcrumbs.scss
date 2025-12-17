@@ -49,6 +49,10 @@
     }
 
     @include mobile{
-
+        & p{
+            white-space: nowrap;      /* запрет переноса строки */
+            overflow: hidden;         /* скрыть лишнее */
+            text-overflow: ellipsis;  /* троеточие */
+        }
     }
 }
