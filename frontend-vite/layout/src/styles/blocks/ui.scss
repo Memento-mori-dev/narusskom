@@ -186,6 +186,46 @@
         }
     }
 
+    &--ajax{
+        padding: rem(16) rem(32);
+
+        border-radius: var(--border-radius-8);
+
+        font-weight: 600;
+
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+
+        transition: var(--transition);
+
+        * {
+            transition: var(--transition);
+        }
+
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include hover{
+            opacity: 1;
+
+            color: var(--Text-Orange);
+
+            & svg * {
+                fill: var(--Text-Orange);
+            }
+        }
+
+        @include mobile{
+            width: 100%;
+
+            justify-content: center;
+        }
+    }
+
     @include mobile{
         &--per-100-phone{
             width: 100%;

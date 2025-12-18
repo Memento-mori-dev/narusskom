@@ -53,6 +53,10 @@ if (document.querySelector('[data-js-catalog-tags]')) {
     TAGS_CLOSE.onclick = () => {
         TAGS_MAIN.classList.remove(STATE_CLASSES.isActive);
     }
+
+    if (width < 767.98) {
+        renderOpenToggle('[data-js-catalog-tags]', '[data-js-catalog-tags-open]');
+    }
 }
 
 // swiper
