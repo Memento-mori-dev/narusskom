@@ -79,8 +79,14 @@
                 overflow: hidden;
             }
 
-            &.is-active .history__item-description-text{
-                -webkit-line-clamp: 100; /* Ограничение в 5 строк */
+            &.is-active {
+                .history__item-description{
+                    height: auto;
+                }
+
+                .history__item-description-text{
+                    -webkit-line-clamp: 100; /* Ограничение в 5 строк */
+                }
             }
         }
     }

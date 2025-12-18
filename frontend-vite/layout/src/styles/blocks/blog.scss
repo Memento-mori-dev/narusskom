@@ -1,0 +1,108 @@
+@use '../helpers' as *;
+
+.blog{
+    &__catalog{
+        margin-top: fluid(96, 72);
+
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: rem(10);
+
+            &-link{
+                flex-shrink: 0;
+
+                text-decoration: none;
+
+                padding: rem(8) rem(24);
+
+                background-color: var(--Background-Blue);
+                border-radius: var(--border-radius-8);
+
+                font-weight: 600;
+                line-height: 145%;
+                color: var(--Text-White);
+
+                transition: var(--transition);
+
+                @include hover{
+                    opacity: .8;
+                }
+            }
+        }
+
+        &-tags{
+            height: rem(41);
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(8);
+
+            &-item{
+                &:nth-child(n + 6){
+                    display: none;
+                }
+
+                display: inline-block;
+                text-decoration: none;
+
+                padding: rem(8) rem(16);
+
+                line-height: 155%;
+
+                background-color: var(--Background-White);
+                border-radius: rem(96);
+
+                color: var(--Text-Black);
+                line-height: 155%;
+
+                transition: var(--transition);
+
+                @include hover{
+                    color: var(--Text-Orange);
+                }
+
+                &.is-active{
+                    background-color: var(--Background-Blue);
+                    color: var(--Text-White);
+
+                    @include hover{
+                        opacity: .8;
+                    }
+                }
+
+                &--close{
+                    padding: rem(7) rem(15);
+
+                    background: none;
+                    border: rem(1) solid var(--Background-Grey-e7);
+                }
+            }
+
+            &-add{
+                display: none;
+            }
+
+            &.is-active{
+                .blog__catalog-tags{
+                    &-item{
+                        &:nth-child(n + 6){
+                            display: block;
+                        }
+                        &:nth-child(5){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-content{
+            margin-top: fluid(40, 24);
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(20);
+        }
+    }
+}

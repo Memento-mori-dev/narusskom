@@ -158,6 +158,12 @@
             justify-content: center;
             align-items: center;
         }
+
+        transition: var(--transition);
+
+        @include hover{
+            opacity: .8;
+        }
     }
 
     &--open-review{
@@ -172,6 +178,12 @@
 
         font-size: rem(14);
         line-height: 135%;
+
+        transition: var(--transition);
+
+        @include hover{
+            color: var(--Text-Orange);
+        }
     }
 
     @include mobile{
@@ -262,6 +274,19 @@
             background-color: var(--Background-Body);
             opacity: 0.7;
         }
+    }
+}
+
+.no-scroll{
+    /* Firefox */
+    scrollbar-width: none;
+
+    /* IE 10+ */
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        /* Chrome, Safari, Edge */
+        display: none;
     }
 }
 
