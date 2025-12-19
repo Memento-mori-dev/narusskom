@@ -1,0 +1,176 @@
+@use '../helpers' as *;
+
+.long{
+    // общие
+    &-item{
+        margin-top: rem(24);
+
+        position: relative;
+        &::after{
+            z-index: -1;
+
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: rem(-95);
+
+            width: calc(100% + rem(95) * 2);
+            height: 100%;
+
+            background-color: var(--Background-White);
+            border-radius: var(--border-radius-24);
+        }
+
+        color: var(--Text-Black);
+    }
+
+    // блоки
+    &-links{
+        position: relative;
+
+        padding: rem(32) 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+
+        &__title{
+            line-height: 155%;
+
+            opacity: .5;
+        }
+
+        &__main{
+            .swiper-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                gap: rem(8);
+            }
+            .swiper-slide{
+                width: auto;
+            }
+        }
+        &__item{
+            text-decoration: none;
+
+            display: inline-block;
+
+            padding: rem(8) rem(16);
+
+            background-color: var(--Background-Body);
+            border-radius: rem(96);
+
+            line-height: 155%;
+            color: var(--Text-Black);
+
+            transition: var(--transition);
+
+            @include hover{
+                color: var(--Text-Orange);
+            }
+        }
+    }
+
+    &-slider-color{}
+
+    &-box{
+        
+    }
+
+
+    @include laptop{
+        &-item{
+        
+            &::after{
+                left: calc(var(--container-padding-x) * -1);
+
+                width: calc(100% + var(--container-padding-x) * 2);
+            }
+
+        }
+    }
+
+    @include mobile{
+        &-item{
+            &--phone-none{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+
+        &-links{
+            padding: rem(24) 0;
+
+            &::after{
+                @include square(rem(26));
+
+                content: '';
+
+                position: absolute;
+                top: rem(22);
+                right: rem(4);
+
+                background-image: url(../../../public/assets/svg/tabs-next-swipe.svg);
+                background-size: cover;
+            }
+
+            &__title{
+                line-height: 155%;
+
+                opacity: .5;
+            }
+
+            &__main{
+                position: relative;
+
+                .swiper-wrapper{
+                    flex-wrap: nowrap;
+                    gap: 0;
+                }
+                .swiper-slide{
+                    width: auto;
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next{
+                    pointer-events: none;
+
+                    bottom: 0;
+
+                    width: rem(73);
+                    height: rem(40);
+
+                    svg{
+                        display: none;
+                    }
+
+                    transition: var(--transition);
+
+                    &.swiper-button-disabled{
+                        opacity: 0;
+                    }
+                }
+                .swiper-button-prev{
+                    left: calc(var(--container-padding-x) * -1);
+
+                    background: var(--Gradient-Grey-left);
+                }
+                .swiper-button-next{
+                    right: calc(var(--container-padding-x) * -1);
+
+                    background: var(--Gradient-Grey-right);
+                }
+            }
+            &__item{
+                flex-shrink: 0;
+
+                font-size: rem(14);
+                line-height: 135%;
+
+                background-color: var(--Background-White);
+            }
+        }
+    }
+}

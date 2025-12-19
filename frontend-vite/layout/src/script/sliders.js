@@ -177,4 +177,19 @@ export function sliders(width) {
             },
         });
     }
+
+    if (document.querySelector('.long-links')) {
+        if (width < 767.98) {
+            const swiperLongLinks = new Swiper('.long-links__main', {
+                slidesPerView: 'auto',
+                spaceBetween: 8,
+                freeMode: true,
+                watchOverflow: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+    }
 }

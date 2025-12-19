@@ -109,6 +109,48 @@
         }
     }
 
+    &--long{
+        .hero-next__main,
+        .hero-next__text{
+            max-width: 100%;
+        }
+
+        .hero-next__title{
+            font-size: fluid(64, 36);
+            font-weight: 600;
+            line-height: 115%;
+        }
+
+        .hero-next__text{
+            margin-top: rem(24);
+
+            font-size: fluid(20, 16);
+            font-weight: 500;
+            line-height: 145%;
+        }
+
+        .hero-next__container{
+            overflow: visible;
+
+            height: rem(720);
+
+            padding-bottom: rem(48);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+
+        .hero-next__img{
+            left: rem(-95);
+
+            width: calc(100% + rem(95) * 2);
+            height: 100%;
+
+            border-radius: var(--border-radius-24);
+        } 
+    }
+
     @include laptop{
         &__img{
             max-height: rem(400);
@@ -122,6 +164,22 @@
         &--about{
             .hero-next__img{
                 right: rem(0);
+            }
+        }
+
+        &--long{
+            .hero-next__img{
+                top: 0;
+                left: calc(var(--container-padding-x) * -1);
+                right: auto;
+
+                max-height: 200%;
+
+                width: calc(100% + var(--container-padding-x) * 2);
+                height: 100%;
+
+                object-position: center;
+                object-fit: cover;
             }
         }
     }
@@ -207,6 +265,35 @@
                 font-weight: 700;
                 line-height: 115%;
                 text-align: center;
+            }
+        }
+
+        &--long{
+            .hero-next__container{
+                height: rem(640);
+
+                padding-bottom: rem(40);
+            }
+
+            .hero-next__title{
+                font-weight: 400;
+                line-height: 105%;
+            }
+
+            .hero-next__img{
+                top: 0;
+                left: calc(var(--container-padding-x) * -1);
+                right: auto;
+
+                max-height: 200%;
+
+                width: calc(100% + var(--container-padding-x) * 2);
+                height: 100%;
+
+                object-position: center;
+                object-fit: cover;
+
+                border-radius: 0 0 var(--border-radius-24) var(--border-radius-24);
             }
         }
     }

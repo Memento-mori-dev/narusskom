@@ -8,6 +8,16 @@
     @include laptop{
         width: 100%;
     }
+
+    &--wrapper{
+        overflow: hidden;
+    }
+
+    @include mobile{
+        &--wrapper-phone{
+            overflow: hidden;
+        }
+    }
 }
 
 .visually-hidden{
