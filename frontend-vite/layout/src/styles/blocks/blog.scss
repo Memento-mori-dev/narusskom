@@ -396,6 +396,10 @@
 
         &__catalog-item{
             width: 100%;
+
+            &-img{
+                height: 56.6vw;
+            }
         }
     }
 }
