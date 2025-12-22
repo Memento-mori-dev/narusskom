@@ -119,3 +119,22 @@ function renderArrActive(arr, indexActive, cssClass){
         }
     });
 }
+
+if (document.querySelector('.long-video')) {
+    document.querySelectorAll('.long-video').forEach(video => {
+        const VIDEO = video.querySelector('video');
+
+        video.querySelector('.long-video__banner-button').onclick = () => {
+            video.classList.add('active');
+
+            VIDEO.play();
+            VIDEO.controls = true;
+        }
+
+        VIDEO.addEventListener('pause', () => {
+            video.classList.remove('active');
+
+            VIDEO.controls = false;
+        });
+    });
+}
