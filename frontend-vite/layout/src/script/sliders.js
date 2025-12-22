@@ -192,4 +192,35 @@ export function sliders(width) {
             });
         }
     }
+
+    if (document.querySelector('.long-slider')) {
+        const ARR_LONG_SLIDER = document.querySelectorAll('.long-slider');
+
+        ARR_LONG_SLIDER.forEach((slider, index) => {
+            new Swiper(slider, {
+                slidesPerView: 3,
+                spaceBetween: 16,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                300: {
+                    slidesPerView: 1.24,
+                },
+                560: {
+                    slidesPerView: 1.8,
+                },
+                760: {
+                    slidesPerView: 2.5,
+                },
+                1023: {
+                    slidesPerView: 3,
+                },
+            },
+            });
+        });
+    }
 }
