@@ -344,6 +344,31 @@
         }
     }
 
+    &-author{
+        background: var(--Gradient-Brown-right);
+        border-radius: var(--border-radius-16);
+
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+
+        color: var(--Text-White);
+
+        &__img{
+            flex-shrink: 0;
+
+            width: rem(296);
+        }
+
+        &__text{
+            padding: rem(32) rem(48);
+
+            display: flex;
+            flex-direction: column;
+            gap: rem(24);
+        }
+    }
+
     @include laptop{
         &-item{
         
@@ -565,6 +590,20 @@
             &__img{
                 width: rem(102);
                 height: rem(100);
+            }
+        }
+
+        &-author{
+            flex-direction: column-reverse;
+            gap: 0;
+
+
+            &__text{
+                padding: rem(32) rem(24);
+            }
+
+            .long-text-big{
+                line-height: 145%;
             }
         }
     }
