@@ -1,13 +1,26 @@
 @use '../helpers' as *;
 
 .long{
+    // текст
+    &-title{
+        font-size: fluid(36, 24);
+        font-weight: 500;
+        line-height: 145%;
+    }
+
+    &-text{
+        font-size: fluid(20, 16);
+        font-weight: 500;
+        line-height: 145%;
+    }
+
     // общие
     &-item{
         margin-top: rem(24);
 
         position: relative;
         &::after{
-            z-index: -1;
+            z-index: -50;
 
             content: '';
 
@@ -72,6 +85,38 @@
         }
     }
 
+    &-color{
+        display: flex;
+        gap: rem(32);
+
+        color: var(--Text-White);
+
+        h1,h2,h3,h4,h5,h6{
+            color: var(--Text-White);
+        }
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            gap: fluid(24, 16);
+        }
+
+        &__img{
+            object-fit: cover;
+
+            border-radius: var(--border-radius-24);
+        }
+
+
+        &--50{
+            padding: fluid(72, 32) 0;
+
+            & > *{
+                width: calc(50% - rem(10));
+            }
+        }
+    }
+
     &-slider-color{}
 
     &-box{
@@ -91,7 +136,29 @@
         }
     }
 
+    @include tablet{
+        &-color{
+            &__img{
+                height: 59vw;
+            }
+
+
+            &--50{
+                flex-direction: column;
+
+                & > *{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
     @include mobile{
+        &-title{
+            font-weight: 600;
+            line-height: 135%;
+        }
+
         &-item{
             &--phone-none{
                 &::after{
@@ -172,5 +239,7 @@
                 background-color: var(--Background-White);
             }
         }
+
+        
     }
 }
