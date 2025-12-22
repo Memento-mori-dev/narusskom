@@ -59,7 +59,7 @@
     }
 
     &-block{
-        margin-top: fluid(72, 48);
+        padding-top: fluid(72, 48);
 
         display: flex;
         flex-direction: column;
@@ -317,6 +317,33 @@
         object-position: center;
     }
 
+    &-block-color{
+        padding: rem(48);
+
+        border-radius: var(--border-radius-16);
+        background-color: var(--Background-Body);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20);
+
+        &__text{
+            max-width: rem(600);
+
+            display: flex;
+            flex-direction: column;
+            gap: fluid(24, 16);
+        }
+
+        &__img{
+            width: rem(201);
+            height: rem(199);
+
+            object-fit: cover;
+        }
+    }
+
     @include laptop{
         &-item{
         
@@ -383,6 +410,20 @@
                 position: static;
 
                 padding: 0;
+            }
+        }
+
+        &-block-color{
+            padding: rem(24);
+
+            flex-direction: column-reverse;
+
+            .long-title{
+                font-size: fluid(24, 16);
+            }
+
+            .long-text-bold{
+                font-size: fluid(24, 16);
             }
         }
     }
@@ -509,6 +550,22 @@
 
         &-img{
             height: 59vw;
+        }
+
+        &-block-color{
+            .long-title{
+                line-height: 145%;
+            }
+
+            .long-text-bold{
+                line-height: 155%;
+            }
+
+
+            &__img{
+                width: rem(102);
+                height: rem(100);
+            }
         }
     }
 }
