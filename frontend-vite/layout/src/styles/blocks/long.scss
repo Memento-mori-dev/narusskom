@@ -3,15 +3,24 @@
 .long{
     // текст
     &-title{
-        font-size: fluid(36, 24);
+        font-size: fluid(36, 28);
         font-weight: 500;
         line-height: 145%;
+
+        &--small{
+            font-size: fluid(36, 24);
+        }
     }
 
     &-text{
         font-size: fluid(20, 16);
         font-weight: 500;
         line-height: 145%;
+
+        &--small{
+            font-weight: 400;
+            line-height: 135%;
+        }
     }
 
     &-text-big{
@@ -55,6 +64,10 @@
         display: flex;
         flex-direction: column;
         gap: rem(32);
+
+        &--gap-48{
+            gap: fluid(48, 32);
+        }
     }
 
     // блоки
@@ -242,6 +255,41 @@
         }
     }
 
+    &-block-text{
+        position: relative;
+
+        width: 100%;
+        height: rem(660);
+
+        border-radius: var(--border-radius-24);
+        overflow: hidden;
+
+        &__img{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: top;
+        }
+
+
+        &__text{
+            position: absolute;
+            left: 8px;
+            bottom: 8px;
+
+            width: calc(100% - 16px);
+            
+            padding: rem(32);
+
+            background-color: var(--Background-White);
+            border-radius: var(--border-radius-16);
+        }
+    }
 
     @include laptop{
         &-item{
@@ -270,9 +318,43 @@
                 }
             }
         }
+
+        &-block-text{
+            overflow: visible;
+            position: relative;
+
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+            gap: fluid(32, 24);
+
+            &__img{
+                position: static;
+
+                height: 59vw;
+
+                border-radius: var(--border-radius-24);
+            }
+
+
+            &__text{
+                position: static;
+
+                padding: 0;
+            }
+        }
     }
 
     @include mobile{
+        &-text{
+            
+
+            &--small{
+                line-height: 155%;
+            }
+        }
+
         &-text-big{
             line-height: 155%;
         }

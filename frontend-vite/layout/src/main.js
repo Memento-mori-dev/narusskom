@@ -120,6 +120,8 @@ function renderArrActive(arr, indexActive, cssClass){
     });
 }
 
+
+
 if (document.querySelector('.long-video')) {
     document.querySelectorAll('.long-video').forEach(video => {
         const VIDEO = video.querySelector('video');
