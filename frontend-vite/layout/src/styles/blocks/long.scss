@@ -420,6 +420,80 @@
             flex-direction: column;
             gap: rem(24);
         }
+
+        &--horizon{
+            flex-direction: row;
+        }
+
+        &--center{
+            align-items: center;
+        }
+    }
+
+    &-picture{
+        padding: rem(48);
+
+        border-radius: var(--border-radius-16);
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(32);
+
+        &__frame{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(10);
+
+            &-img{
+                max-width: 100%;
+            }
+
+            &-name{
+                opacity: 0.7;
+
+                font-size: rem(16);
+                line-height: 155%;
+                color: var(--Text-Black-00);
+            }
+        }
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            gap: rem(24);
+        }
+    }
+
+    &-ballet{
+        padding: rem(48);
+
+        border-radius: var(--border-radius-16);
+
+        display: flex;
+        justify-content: space-between;
+        gap: rem(32);
+
+        &__text{
+            padding: rem(24) 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            color: var(--Text-White);
+
+            .long-title{
+                font-weight: 600;
+                line-height: 125%;
+
+                color: var(--Text-White);
+            }
+        }
+
+        &__img{
+
+        }
     }
 
     @include laptop{
@@ -502,6 +576,18 @@
 
             .long-text-bold{
                 font-size: fluid(24, 16);
+            }
+        }
+
+        &-ballet{
+            flex-direction: column;
+            
+            &__text{
+                gap: rem(24);
+            }
+
+            &__img{
+                max-width: 100%;
             }
         }
     }
@@ -682,6 +768,59 @@
                     font-weight: 400;
                     line-height: 155%;
                 }
+            }
+
+            &--horizon{
+                flex-direction: column;
+
+                .long-text-big{
+                    line-height: 145%;
+                    font-weight: 500;
+                }
+            }
+
+            &--center{
+                gap: rem(32);
+
+                .long-text-big{
+                    font-weight: 400;
+                    line-height: 155%;
+                }
+            }
+        }
+
+        &-picture{
+            padding: rem(24);
+
+            &__frame{
+
+                &-img{
+                    border-radius: var(--border-radius-16);
+                }
+
+                &-name{
+                    text-align: center;
+                }
+            }
+        }
+
+        &-ballet{
+            padding: rem(24);
+
+            gap: rem(16);
+            
+            &__text{
+                padding: 0;
+
+                .long-title{
+                    font-size: rem(16);
+                    font-weight: 500;
+                    line-height: 145%;
+                }
+            }
+
+            &__img{
+                max-width: 100%;
             }
         }
     }
