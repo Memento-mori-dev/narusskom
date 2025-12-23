@@ -56,6 +56,10 @@
         }
 
         color: var(--Text-Black);
+
+        &--content-bottom-72{
+            padding-bottom: rem(72);
+        }
     }
 
     &-block{
@@ -496,6 +500,10 @@
         }
     }
 
+    &-city-​heritage{
+        
+    }
+
     @include laptop{
         &-item{
         
@@ -593,6 +601,12 @@
     }
 
     @include mobile{
+        &-item{
+            &--content-bottom-72{
+                padding-bottom: rem(32);
+            }
+        }
+
         &-text{
             
 
