@@ -344,6 +344,26 @@
             }
         }
 
+        &-prov{
+            padding-bottom: rem(68);
+
+            .swiper-pagination{
+                bottom: rem(18);
+            }
+
+            .swiper-button-prev{
+                left: rem(28);
+            }
+            .swiper-button-next{
+                right: rem(28);
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next{
+                bottom: calc(50% - rem(10));
+            }
+        }
+
         @include laptop{
             .swiper-button-prev,
             .swiper-button-next{
@@ -354,6 +374,13 @@
                 .swiper-button-prev,
                 .swiper-button-next{
                     bottom: calc(50% + rem(1));
+                }
+            }
+
+            &-prov{
+                .swiper-button-prev,
+                .swiper-button-next{
+                    bottom: 50%;
                 }
             }
         }
@@ -388,6 +415,26 @@
                 .swiper-button-prev,
                 .swiper-button-next{
                     bottom: calc(50% + rem(47));
+                }
+            }
+
+            &-prov{
+                padding-bottom: rem(44);
+
+                .swiper-pagination{
+                    bottom: rem(-4);
+                }
+
+                .swiper-button-prev{
+                    left: rem(111);
+                }
+                .swiper-button-next{
+                    right: rem(111);
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next{
+                    bottom: rem(90);
                 }
             }
         }
