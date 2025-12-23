@@ -240,4 +240,22 @@ export function sliders(width) {
             });
         });
     }
+
+    if (document.querySelector('.long-fairy-tales')) {
+        const ARR_LONG_SLIDER_FAIRY = document.querySelectorAll('.long-fairy-tales');
+
+        ARR_LONG_SLIDER_FAIRY.forEach((slider, index) => {
+            new Swiper(slider, {
+                slidesPerView: 1,
+                spaceBetween: 100,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    }
 }

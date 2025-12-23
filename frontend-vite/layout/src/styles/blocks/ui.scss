@@ -308,18 +308,39 @@
             *{
                 transition: var(--transition);
             }
-
-            @include hover{
-                & > svg *{
-                    fill: var(--Text-Orange);
-                }
-            }
         }
 
         &-grey{
             .swiper-button-prev,
             .swiper-button-next{
                 background-color: var(--Background-White);
+
+                @include hover{
+                    & > svg *{
+                        fill: var(--Text-Orange);
+                    }
+                }
+            }
+        }
+
+        &-orange{
+            .swiper-button-prev,
+            .swiper-button-next{
+                background-color: var(--background-orange);
+            }
+        }
+
+        &-add{
+            .swiper-button-prev{
+                left: rem(-23);
+            }
+            .swiper-button-next{
+                right: rem(-23);
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next{
+                bottom: calc(50% + rem(1));
             }
         }
 
@@ -327,6 +348,13 @@
             .swiper-button-prev,
             .swiper-button-next{
                 bottom: 37%;
+            }
+
+            &-add{
+                .swiper-button-prev,
+                .swiper-button-next{
+                    bottom: calc(50% + rem(1));
+                }
             }
         }
 
@@ -346,6 +374,20 @@
 
                 & > svg{
                     width: rem(11);
+                }
+            }
+
+            &-add{
+                .swiper-button-prev{
+                    left: rem(-21);
+                }
+                .swiper-button-next{
+                    right: rem(-21);
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next{
+                    bottom: calc(50% + rem(47));
                 }
             }
         }
