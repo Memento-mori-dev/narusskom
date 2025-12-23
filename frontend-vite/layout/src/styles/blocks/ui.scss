@@ -281,6 +281,75 @@
             background: var(--Background-Blue);
         }
     }
+
+    &--controller{
+        .swiper-button-prev{
+            left: rem(37);
+        }
+        .swiper-button-next{
+            right: rem(37);
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next{
+            @include square(rem(50));
+
+            top: auto;
+            bottom: rem(327);
+
+            border-radius: 50%;
+
+            & > svg{
+                width: rem(14);
+            }
+
+            transition: var(--transition);
+
+            *{
+                transition: var(--transition);
+            }
+
+            @include hover{
+                & > svg *{
+                    fill: var(--Text-Orange);
+                }
+            }
+        }
+
+        &-grey{
+            .swiper-button-prev,
+            .swiper-button-next{
+                background-color: var(--Background-White);
+            }
+        }
+
+        @include laptop{
+            .swiper-button-prev,
+            .swiper-button-next{
+                bottom: 37%;
+            }
+        }
+
+        @include mobile{
+            .swiper-button-prev{
+                left: rem(6);
+            }
+            .swiper-button-next{
+                right: rem(6);
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next{
+                @include square(rem(36));
+
+                bottom: 35vw;
+
+                & > svg{
+                    width: rem(11);
+                }
+            }
+        }
+    }
 }
 
 .controller-slider{
@@ -314,6 +383,12 @@
             background-color: var(--Background-Body);
             opacity: 0.7;
         }
+    }
+}
+
+.text{
+    &-center{
+        text-align: center;
     }
 }
 

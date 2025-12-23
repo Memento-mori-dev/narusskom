@@ -76,6 +76,10 @@
         &--gap-48{
             gap: fluid(48, 32);
         }
+
+        &--no-top{
+            padding-top: 0;
+        }
     }
 
     // блоки
@@ -190,6 +194,10 @@
             display: flex;
             flex-direction: column;
             gap: fluid(24, 16);
+        }
+
+        &--gap-48{
+            gap: rem(48);
         }
     }
 
@@ -542,6 +550,28 @@
             & > *{
                 color: var(--Text-White);
             }
+        }
+    }
+
+    &-slider-2{
+        overflow: hidden;
+
+        position: relative;
+
+        .swiper-slide{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+
+        &__item{
+            display: flex;
+            flex-direction: column;
+            gap: rem(48);
+        }
+
+        &__img{
+            border-radius: var(--border-radius-16);
         }
     }
 
@@ -906,6 +936,23 @@
                     font-size: rem(24);
                     line-height: 135%;
                 }
+            }
+        }
+
+        &-slider-2{
+            .swiper-slide{
+                
+            }
+
+            &__item{
+                gap: rem(24);
+            }
+
+            &__img{
+                height: 51.5vw;
+
+                object-fit: cover;
+                object-position: top center;
             }
         }
     }

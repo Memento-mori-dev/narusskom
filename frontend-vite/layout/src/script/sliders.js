@@ -223,4 +223,21 @@ export function sliders(width) {
             });
         });
     }
+
+    if (document.querySelector('.long-slider-2')) {
+        const ARR_LONG_SLIDER_2 = document.querySelectorAll('.long-slider-2');
+
+        ARR_LONG_SLIDER_2.forEach((slider, index) => {
+            new Swiper(slider, {
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    }
 }
