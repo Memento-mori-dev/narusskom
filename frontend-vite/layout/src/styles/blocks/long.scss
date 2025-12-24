@@ -597,6 +597,12 @@
                 background: var(--Gradient-Dark-top);
             }
         }
+
+        &--width{
+            margin-left: rem(-95);
+
+            width: calc(100% + rem(95) * 2);
+        }
     }
 
     &-slider-2{
@@ -765,6 +771,12 @@
             margin-left: 0;
 
             width: 100%;
+
+            &--width{
+                margin-left: calc(var(--container-padding-x) * -1);
+
+                width: calc(100% + var(--container-padding-x) * 2);
+            }
         }
     }
 
@@ -1155,6 +1167,10 @@
                     font-size: rem(24);
                     line-height: 135%;
                 }
+            }
+
+            &--width{
+                height: rem(520);
             }
         }
 

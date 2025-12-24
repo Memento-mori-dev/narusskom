@@ -6,6 +6,11 @@
     box-sizing: border-box
 }
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: rem(90);
+}
+
 /* Глобально убираем выделение и tap-highlight */
 html, body {
     -webkit-tap-highlight-color: transparent;
