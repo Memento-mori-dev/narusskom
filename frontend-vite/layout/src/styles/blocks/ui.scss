@@ -72,7 +72,7 @@
             }
         }
 
-        &.is-active{
+        .show &{
             & > span{
                 &:nth-child(2){
                     width: 0;

@@ -67,7 +67,7 @@
                     color: var(--Text-Orange);
                 }
 
-                &.is-active{
+                &.active{
                     background-color: var(--Background-Blue);
                     color: var(--Text-White);
 
@@ -88,7 +88,7 @@
                 display: none;
             }
 
-            &.is-active{
+            &.show{
                 .blog__catalog-tags{
                     &-item{
                         &:nth-child(n + 6){
@@ -334,7 +334,7 @@
                     font-weight: 500;
                     line-height: 145%;
 
-                    &.is-active{
+                    .show &{
                         & > span{
                             transform: rotate(180deg);
                         }
@@ -360,9 +360,9 @@
 
                     padding: 0;
 
-                    &.is-active{
+                    &.active{
                         background-color: var(--Background-White);
-                        color: var(--Text-Black);
+                        color: var(--Text-Orange);
                     }
 
                     &:nth-child(n + 6){
@@ -373,13 +373,9 @@
                     &:last-child{
                         display: none;
                     }
-
-                    &.is-active{
-                        color: var(--Text-Orange);
-                    }
                 }
 
-                &.is-active{
+                &.show{
                     .blog__catalog-tags-wrapper{
                         display: flex;
                     }

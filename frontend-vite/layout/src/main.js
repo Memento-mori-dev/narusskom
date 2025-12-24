@@ -1,6 +1,5 @@
 import { useDynamicAdapt } from './script/dynamicAdapt.js';
 import { sliders } from './script/sliders.js';
-import * as utils from './script/utils.js';
 
 const width = window.innerWidth;
 
@@ -8,108 +7,115 @@ const width = window.innerWidth;
 // https://github.com/FreelancerLifeStyle/dynamic_adapt
 useDynamicAdapt();
 
-const STATE_CLASSES = {
-    isActive: 'is-active',
-};
-
-
-
-if (document.querySelector('[data-js-lang]')) {
-    renderOpenToggle('[data-js-lang]', '[data-js-lang-btn]');
-}
-if (document.querySelector('.header') && width < 1023.98) {
-    renderOpenToggle('[data-js-menu-wrapper]', '[data-js-open-menu]');
+if (document.querySelector('.header')) {
+    showElement('.header', '.btn--phone');
 }
 
-if (document.querySelector('[data-js-tab]')) {
-    renderTabs('[data-js-tab]', '[data-js-tab-item]', '[data-js-tab-btn]');
-
-    if (width < 1023.98) {
-        renderOpenToggle('[data-js-tabs-list]', '[data-js-tabs-list-open]');
-    }
-}
-
-if (document.querySelector('[data-js-answers]')) {
-    renderAnswers('[data-js-answers]', '[data-js-answers-item]', '[data-js-answers-btn]');
+if (document.querySelector('.header__lang')) {
+    showElement('.header__lang', '.header__lang-open');
 }
 
 if (document.querySelector('.history')) {
-    renderAnswers('.history', '.history__item--short', '.btn--open-review')
+    showElement('.history__item.history__item--short', '.btn--open-review');
 }
 
-if (document.querySelector('[data-js-tab-next]')) {
-    renderTabs('[data-js-tab-next]', '[data-js-tab-item]', '[data-js-tab-btn]')
+if (document.querySelector('.answers')) {
+    showElement('.answers__item', '.answers__item-header');
+
+    showControllerOne('.answers', '.answers__item');
 }
 
-if (document.querySelector('[data-js-catalog-tags]')) {
-    const TAGS_MAIN = document.querySelector('[data-js-catalog-tags]'),
-        TAGS_OPEN = TAGS_MAIN.querySelector('[data-js-open]'),
-        TAGS_CLOSE = TAGS_MAIN.querySelector('[data-js-close]');
+if (document.querySelector('.tabs')) {
+    toggleTabs('.tabs', '.tabs__item', '.tabs__controller-item');
 
-    TAGS_OPEN.onclick = () => {
-        TAGS_MAIN.classList.add(STATE_CLASSES.isActive);
+    if (width < 1023.98) {
+        showElement('.tabs__controller', '.tabs__controller-phone');
+
+        getState('.tabs', '.tabs__controller-item', '.tabs__controller-phone-span')
+    }
+}
+
+if (document.querySelector('.tabs-next')) {
+    toggleTabs('.tabs-next', '.tabs-next__item', '.tabs-next__controller-item');
+}
+
+if (document.querySelector('.blog__catalog-tags')) {
+    let tagsMain = document.querySelector('.blog__catalog-tags'),
+        tagsOpen = tagsMain.querySelector('.open'),
+        tagsClose = tagsMain.querySelector('.blog__catalog-tags-item--close');
+
+    tagsOpen.onclick = () => {
+        tagsMain.classList.add('show');
     }
 
-    TAGS_CLOSE.onclick = () => {
-        TAGS_MAIN.classList.remove(STATE_CLASSES.isActive);
+    tagsClose.onclick = () => {
+        tagsMain.classList.remove('show');
     }
 
     if (width < 767.98) {
-        renderOpenToggle('[data-js-catalog-tags]', '[data-js-catalog-tags-open]');
+        showElement('.blog__catalog-tags', '.blog__catalog-tags-button');
     }
 }
-
-// swiper
-sliders(width);
 
 // Функции для страниц
+function showElement(main, button){
+    let arrMainShow = document.querySelectorAll(main);
 
-function renderOpenToggle(main, button) {
-    const MAIN = document.querySelector(main),
-        BUTTON = document.querySelector(button);
+    arrMainShow.forEach(main => {
+        let btnShow = main.querySelector(button);
 
-    BUTTON.onclick = () => {
-        MAIN.classList.toggle(STATE_CLASSES.isActive);
-        BUTTON.classList.toggle(STATE_CLASSES.isActive);
+        btnShow.onclick = (e) => {
+            if (main.classList.contains('show')) {
+                e.stopPropagation();
+            }
+
+            setTimeout(() => {
+                main.classList.toggle('show')
+            }, 0);
+        }
+    });
+    
+
+    // использую setTimeout чтобы точно срабатывала после showControllerOne
+}
+
+function showControllerOne(main, item){
+    let thisMain = document.querySelector(main),
+        arrItem = thisMain.querySelectorAll(item);
+    
+    thisMain.onclick = () => {
+        arrItem.forEach(item => {
+            item.classList.remove('show');
+        });
     }
 }
 
-function renderTabs(main, item, button) {
-    const MAIN = document.querySelector(main),
-        ARR_ITEMS = MAIN.querySelectorAll(item),
-        ARR_BUTTONS = MAIN.querySelectorAll(button);
+function toggleTabs(main, item, button) {
+    let thisMain = document.querySelector(main),
+        arrItems = thisMain.querySelectorAll(item),
+        arrButtons = thisMain.querySelectorAll(button);
 
-    ARR_BUTTONS.forEach((button, index) => {
-        button.onclick = () => {
-            renderArrActive(ARR_ITEMS, index, STATE_CLASSES.isActive);
-            renderArrActive(ARR_BUTTONS, index, STATE_CLASSES.isActive);
-        }
+    arrButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            renderArrActive(arrItems, index, 'active');
+            renderArrActive(arrButtons, index, 'active');
+        });
     });
 }
 
-function renderAnswers(main, item, button) {
-    const MAIN = document.querySelector(main),
-        ARR_ITEMS = MAIN.querySelectorAll(item),
-        ARR_BUTTONS = MAIN.querySelectorAll(button);
-
-    ARR_BUTTONS.forEach((button, index) => {
-        button.onclick = () => {
-            console.log(ARR_ITEMS[index]);
-            
-
-            if (ARR_ITEMS[index].classList.contains(STATE_CLASSES.isActive)) {
-                ARR_ITEMS[index].classList.remove(STATE_CLASSES.isActive);
-            }else{
-                renderArrActive(ARR_ITEMS, index, STATE_CLASSES.isActive);
-            }
-        }
+function getState(main, button,  state) {
+    let thisMain = document.querySelector(main),
+        arrButtons = thisMain.querySelectorAll(button),
+        thisState = thisMain.querySelector(state);
+    
+    arrButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            thisState.textContent = button.textContent;
+        });
     });
 }
-
-
 
 // Прочие функции
-
 function renderArrActive(arr, indexActive, cssClass){
     arr.forEach((item, index) => {
         if (index == indexActive) {
@@ -120,23 +126,5 @@ function renderArrActive(arr, indexActive, cssClass){
     });
 }
 
-
-
-if (document.querySelector('.long-video')) {
-    document.querySelectorAll('.long-video').forEach(video => {
-        const VIDEO = video.querySelector('video');
-
-        video.querySelector('.long-video__banner-button').onclick = () => {
-            video.classList.add('active');
-
-            VIDEO.play();
-            VIDEO.controls = true;
-        }
-
-        VIDEO.addEventListener('pause', () => {
-            video.classList.remove('active');
-
-            VIDEO.controls = false;
-        });
-    });
-}
+// swiper
+sliders(width);

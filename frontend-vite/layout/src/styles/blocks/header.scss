@@ -152,7 +152,7 @@
             }
         }
 
-        &.is-active{
+        &.show{
             .header__lang-open{
                 & span:last-child{
                     transform: rotate(-180deg);
@@ -219,7 +219,7 @@
                 gap: rem(10);
             }
 
-            &.is-active{
+            .show &{
                 opacity: 1;
                 pointer-events: auto;
             }

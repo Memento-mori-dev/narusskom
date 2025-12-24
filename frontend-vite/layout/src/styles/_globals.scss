@@ -6,6 +6,22 @@
     box-sizing: border-box
 }
 
+/* Глобально убираем выделение и tap-highlight */
+html, body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* Все элементы */
+*,
+*::before,
+*::after {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 html, body {
     height: 100%;
 }
