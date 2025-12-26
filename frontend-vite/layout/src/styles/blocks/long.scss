@@ -190,6 +190,24 @@
             }
 
         }
+
+        &--auto{
+            padding: fluid(72, 32) 0;
+            
+            & > *{
+                &:first-child{
+                    width: auto;
+                }
+
+                &:last-child{
+                    width: auto;
+                }
+            }
+
+            .long-color__img{
+                object-fit: contain;
+            }
+        }
     }
 
     &-border{
