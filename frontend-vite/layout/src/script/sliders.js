@@ -248,6 +248,7 @@ export function sliders(width) {
             new Swiper(slider, {
                 slidesPerView: 1,
                 spaceBetween: 100,
+                autoHeight: true,
                 pagination: {
                     el: '.swiper-pagination',
                 },

@@ -82,6 +82,10 @@
         &--content-bottom-24{
             padding-bottom: rem(24);
         }
+
+        &--hidden{
+            overflow: hidden;
+        }
     }
 
     &-block{
@@ -93,6 +97,10 @@
 
         &--gap-48{
             gap: fluid(48, 32);
+        }
+
+        &--gap-10{
+            gap: rem(10);
         }
 
         &--no-top{
@@ -664,6 +672,17 @@
 
             width: calc(100% + rem(95) * 2);
         }
+
+        &--big-width{
+            margin-left: rem(-143);
+
+            width: calc(100% + rem(143) * 2);
+        }
+
+        &--margin-16{
+            margin-top: rem(16);
+            margin-bottom: rem(16);
+        }
     }
 
     &-slider-2{
@@ -721,6 +740,12 @@
                 flex-shrink: 0;
 
                 border-radius: var(--border-radius-16);
+            }
+        }
+
+        &--column{
+            .long-fairy-tales__item{
+                flex-direction: column;
             }
         }
     }
@@ -951,6 +976,24 @@
         }
     }
 
+    &-line{
+        position: relative;
+
+        height: rem(18);
+
+        &::after{
+            content: '';
+
+            position: absolute;
+            top: calc(50% - 1px);
+            left: 0;
+
+            width: 100%;
+            height: 2px;
+            background-color: var(--Background-Body);
+        }
+    }
+
     @include laptop{
         &-item{
         
@@ -1130,6 +1173,10 @@
         &-title{
             font-weight: 600;
             line-height: 135%;
+
+            &--phone-24{
+                font-size: rem(24);
+            }
         }
 
         &-item{
@@ -1399,6 +1446,39 @@
             &--width{
                 height: rem(520);
             }
+
+            &--big-width{
+                left: 0;
+
+                margin: 0;
+
+                width: 100%;
+            }
+
+            &--phone-full-color{
+                .long-banner__content{
+                    background: var(--Gradient-Blue-Banner-full);
+                }
+            }
+
+            &--phone-compact{
+                .long-banner__content{
+                    padding: rem(32) var(--container-padding-x);
+
+                    gap: rem(8);
+                }
+
+                .long-banner__img{
+                    min-height: rem(584);
+                    height: auto;
+                }
+
+                .long-title{
+                    font-size: rem(20);
+                    font-weight: 500;
+                    line-height: 145%;
+                }
+            }
         }
 
         &-slider-2{
@@ -1431,7 +1511,9 @@
                 padding: rem(24);
 
                 &-text{
-
+                    &--phone-gap-24{
+                        gap: rem(24);
+                    }
                 }
 
                 &-img{
@@ -1440,6 +1522,10 @@
                     width: 100%;
 
                     object-fit: cover;
+
+                    &--phone-height-210{
+                        height: rem(210);
+                    }
                 }
             }
         }
