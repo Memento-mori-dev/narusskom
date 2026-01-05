@@ -692,6 +692,12 @@
             margin-top: rem(16);
             margin-bottom: rem(16);
         }
+
+        &--full-gradient{
+            .long-banner__content{
+                background: var(--Gradient-Blue-Banner-full);
+            }
+        }
     }
 
     &-slider-2{
