@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./src/styles/main.scss">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="/" class="header__logo">
+                    <img src="./public/assets/svg/Logo.svg" alt="" width="117" height="32">
+                </a>
+
+                <menu class="header__menu" data-da=".header__phone-menu-wrapper,1023.98,0">
+                    <ul>
+                        <li>
+                            <a href="">Тренажер</a>
+                        </li>
+
+                        <li>
+                            <a href="">Жизнь в России</a>
+                        </li>
+
+                        <li>
+                            <a href="">О проекте</a>
+                        </li>
+
+                        <li>
+                            <a href="">Как сдать экзамен</a>
+                        </li>
+                    </ul>
+                </menu>
+
+                <div class="header__setting">
+                    <div class="header__lang" data-js-lang>
+                        <button class="header__lang-open btn" data-js-lang-btn>
+                            <span class="icon">
+                                <img src="./public/assets/svg/lang-Icon.svg" alt="world" width="18" height="18">
+                            </span>
+
+                            ru
+
+                            <span class="icon">
+                                <img src="./public/assets/svg/arrow.svg" alt="arrow" width="7" height="4">
+                            </span>
+                        </button>
+
+                        <div class="header__lang-wrapper" data-js-lang-wrapper>
+                            <div class="header__lang-content" data-js-lang-content>
+                                <ul>
+                                    <li>
+                                        <a href="">ENG</a>
+                                    </li>
+                                    <li>
+                                        <a href="">FN</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--base btn--orange">
+                        Войти
+                    </button>
+
+                    <div class="header__open-menu">
+                        <button class="btn btn--orange btn--phone" data-js-open-menu>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__phone-menu" data-js-menu-wrapper>
+            <div class="header__phone-menu-wrapper" data-js-menu-content>
+                <div class="header__phone-menu-footer">
+                    <button class="btn btn--orange btn--add-phone">Начать обучение</button>
+                    <button class="btn btn--white btn--add-phone">Войти</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page__item-first">
+            <div class="hero-next hero-next--long">
+                <div class="container">
+                    <div class="hero-next__container">
+
+                        <div class="hero-next__main">
+                            <h1 class="hero-next__title">
+                                Правовая грамотность. Какие права у иностранца в России?
+                            </h1>
+
+                            <p class="hero-next__text">
+                                Затронем очень важные для иностранного гражданина темы, с которыми, наверняка, сталкивается каждый, кто приезжает в Россию жить, работать и учиться. Здесь мы поможем вам разобраться в том, какие права и свободы есть у каждого мигранта, как избежать административных правонарушений на территории РФ, как максимально эффективно пользоваться цифровыми инструментами для получения документов, справок и нужной информации, а также научим правильно заполнять бланки и заявления.
+                            </p>
+                        </div>
+
+                        <img src="./public/assets/img/long/five/first.png" alt="" class="hero-next__img">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container container--wrapper-phone">
+            <div class="long-item long-item--phone-none">
+                <div class="long-links">
+                    <p class="long-links__title">
+                        Навигация по странице:
+                    </p>
+
+                    <div class="long-links__main no-scroll">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="long-links__item">Права, свободы и обязанности</a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#" class="long-links__item">Административные правонарушения</a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#" class="long-links__item">Сервис «Госуслуги»</a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#" class="long-links__item">Как заполнять формы и документы</a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page__item--wrapper">
+            <div class="container">
+                <div class="long-item long-item--content-bottom-72">
+                    <div class="long-block long-block--gap-48" id="Литература">
+                        <h3 class="long-title">
+                            Права, свободы и обязанности
+                        </h3>
+
+                        <p class="long-text-big">
+                            Согласно Конституции РФ, иностранцы наделены теми же правами, что и граждане России, за исключением отдельных случаев, установленных федеральным законом или международным договором. Иностранные граждане, которые находятся в РФ, делятся на три категории:
+                        </p>
+
+                        <img src="./public/assets/img/long/five/freedoms-responsibilities.png" alt="" class="long-img">
+
+                        <div class="long-box-color long-box-color--gap-32 long-box-color--phone-gap-16" style="background-color: #F6F7F9;">
+                            <p class="long-text-bold">
+                                Права и свободы
+                            </p>
+
+                            <div class="long-column-two long-column-two-phone-gap-8">
+                                <ul class="long-list-dot">
+                                    <li>На жизнь, неприкосновенность частной жизни, личную семейную тайну, защиту своей чести.</li>
+                                    <li>На свободу и личную неприкосновенность.</li>
+                                    <li>На свободу передвижения по территории РФ, выбор места пребывания и жительства.</li>
+                                    <li>На свободу совести и вероисповедания.</li>
+                                    <li>На доступ к культурным ценностям, а также на участие в культурной жизни и пользование учреждениями культуры.</li>
+                                    <li>На обращение в суд и другие государственные органы для защиты, принадлежащих иностранцам личных, имущественных, семейных и иных прав.</li>
+                                    <li>На заключение и расторжение брака с гражданами РФ и другими лицами в соответствии с законодательством РФ.</li>
+                                </ul>
+
+                                <ul class="long-list-dot">
+                                    <li>На политическое убежище в соответствии с общепризнанными нормами международного права.</li>
+                                    <li>На участие в трудовых отношениях.</li>
+                                    <li>На имущество и право собственности на него.</li>
+                                    <li>На возможность наследовать и завещать имущество.</li>
+                                    <li>На предпринимательскую и любую иную не запрещенную законом деятельность.</li>
+                                    <li>На создание юридических лиц самостоятельно или совместно с другими гражданами и юридическими лицами.</li>
+                                    <li>На совершение любых, не противоречащих закону сделок и участие в обязательствах, а также на иные имущественные и личные неимущественные права.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="long-border long-border--gap-32 long-border--phone-gap-24">
+                            <div class="long-border__text">
+                                <p class="long-text-bold">
+                                    Особенности трудовых прав. Для чего оформлять патент и разрешение на работу
+                                </p>
+
+                                <p class="long-text-big">
+                                    Работать в России могут только совершеннолетние иностранцы, которые оформили разрешение на работу или патент. Разрешение на работу нужно тем, у кого есть виза, а патент тем, у кого ее нет.
+                                </p>
+
+                                <p class="long-text-big">
+                                    Из этого правила, однако, есть исключения, согласно части 4 статьи 13 Федерального закона от 25.07. 2002 г. <a href="https://www.consultant.ru/document/cons_doc_LAW_37868/">«О правовом положении иностранных граждан в Российской Федерации»</a> (Федеральный закон «О правовом положении иностранных граждан в РФ»).
+                                </p>
+
+                                <p class="long-text-big">
+                                    Ни патент, ни разрешение на работу не нужны гражданам Кыргызстана, Казахстана, Беларуси и Армении, так как эти страны входят в общий Евразийский экономический союз вместе с Россией.
+                                </p>
+                            </div>
+
+                            <img src="./public/assets/img/long/five/as-patent.png" alt="" class="long-img">
+
+                            <p class="long-text-big">
+                                Патент необходим гражданам стран, кому для пребывания в России не нужна виза, например: Таджикистан, Азербайджан, Узбекистан, Абхазия и даже Македония, ЮАР, Аргентина и др.
+                            </p>
+
+                            <div class="long-border long-border--gap-32 long-border--phone-gap-24">
+                                <div class="long-column-two-flex-center">
+                                    <p class="long-text-big">
+                                        Для оформления патента нужно встать на миграционный учет по месту пребывания, сделать нотариально заверенный перевод паспорта, пройти медосмотр, подтвердить базовые знания русского языка, сделать фото и пройти процедуру дактилоскопии. И патент, и разрешение на работу выдаются в миграционных подразделениях МВД. Подробнее об этом можно узнать здесь: <a href="https://all-migration.com/journal/migratsionnye-dokumenty-tonkosti-i-nyuansy/razreshenie-na-rabotu-i-patent-sravnivaem-dva-dokumenta/">«О разрешении на работу и патент»</a>.
+                                    </p>
+
+                                    <img src="./public/assets/img/long/five/patent.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="long-block long-block--no-top long-block--gap-24 long-block--phone-gap-16">
+                                <p class="long-text-big">Иностранный гражданин, который временно пребывает в России, может устроиться на работу только в том регионе, где был выдан патент и только по специальности, которая в нем указана. Также с разрешением на временное проживание позволяется работать только в том регионе, где был выдан документ.</p>
+
+                                <p class="long-text-big">Вид на жительство дает право на работу в любом регионе России, а также обеспечивает владельца дополнительными социальными гарантиями, например: оплата больничного листа, получение пособий на детей, пенсионные выплаты, пособие по безработице, бесплатная медицинская помощь, право на налоговые вычеты, бесплатные места в детских садах и школах и льготный проезд в общественном транспорте для отдельных категорий граждан.</p>
+
+                                <p class="long-text-big">Иностранцам, которые получили разрешение на временное проживание или вид на жительство, оформление патента или разрешения на работу не требуется.</p>
+
+                                <p class="long-text-big">Также вышеуказанные правила не распространяются:</p>
+                            </div>
+
+                            <div class="long-column-three-gap-8">
+                                <div class="long-box-color long-box-color--padding-32 long-box-color--phone-padding-24" style="background-color: #FDF8E6;">
+                                    <p class="long-text-small">На участников государственной программы по оказанию содействия добровольного переселения в РФ соотечественников, которые проживают за рубежом, и членов их семей, переселяющихся совместно с ними.</p>
+                                </div>
+
+                                <div class="long-box-color long-box-color--padding-32 long-box-color--phone-padding-24" style="background-color: #FDF8E6;">
+                                    <p class="long-text-small">На обучающихся в России в профессиональных образовательных организациях или организациях высшего образования, и работающих на каникулах или в свободное от учебы время.</p>
+                                </div>
+
+                                <div class="long-box-color long-box-color--padding-32 long-box-color--phone-padding-24" style="background-color: #FDF8E6;">
+                                    <p class="long-text-small">На имеющих статус беженца или получивших временное убежище на территории России.</p>
+                                </div>
+                            </div>
+
+                            <p class="long-text-big">
+                                Иностранные граждане при получении разрешений на работу в соответствии со статьями 13.2 и 13.5 настоящего Федерального закона подлежат обязательной государственной дактилоскопической регистрации и фотографированию.
+                            </p>
+                        </div>
+
+                        <div class="long-border long-border--gap-32 long-border--phone-gap-16 long-border--phone-gap-24">
+                            <p class="long-text-bold">
+                                РВП И ВНЖ. Что это такое?
+                            </p>
+
+                            <div class="long-box-border" style="border-color: var(--Background-Blue);">
+                                <div class="long-column-two-flex-center">
+                                    <div class="long-box-border__text">
+                                        <p class="long-text-bold-semi">РВП — разрешение на временное проживание. </p>
+
+                                        <p class="long-text-big">
+                                            Это отметка в заграничном паспорте иностранного гражданина, которая дает право три года жить и работать в России. Это право необходимо подтверждать каждый год. Когда трехлетний срок истечет, необходимо подать документы на ВНЖ или новое РВП.
+                                        </p>
+                                    </div>
+
+                                    <img src="./public/assets/img/long/five/rvp.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="long-box-border" style="border-color: var(--Background-Blue);">
+                                <div class="long-column-two-flex-center">
+                                    <img src="./public/assets/img/long/five/rp.png" alt="">
+
+                                    <div class="long-box-border__text">
+                                        <p class="long-text-bold-semi">ВНЖ — вид на жительство.</p>
+
+                                        <p class="long-text-big">Документ дающий иностранцу право жить в России и беспрепятственно въезжать и выезжать из нее. Получение ВНЖ — важная ступень перед оформлением гражданства. Важно помнить, что этот документ также необходимо подтверждать справкой о доходах каждый год.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="long-box-border long-box-border--padding-32 long-box-border--flex-column long-box-border--gap-24 long-box-border--phone-gap-16" style="border-color: var(--background-orange);">
+                                <p class="long-text-bold-semi">Больше информации о РВП и ВНЖ:</p>
+
+                                <ul class="long-list-link">
+                                    <li>
+                                        <a href="https://t-j.ru/guide/razreshenie-na-vremennoe-prozhivanie/">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8358 6.66667C16.0568 6.66667 16.2688 6.57887 16.4251 6.42259C16.5814 6.26631 16.6692 6.05435 16.6692 5.83333V0.833333C16.6692 0.61232 16.5814 0.400358 16.4251 0.244078C16.2688 0.0877973 16.0568 0 15.8358 0H10.8333C10.6123 0 10.4004 0.0877973 10.2441 0.244078C10.0878 0.400358 10 0.61232 10 0.833333C10 1.05435 10.0878 1.26631 10.2441 1.42259C10.4004 1.57887 10.6123 1.66667 10.8333 1.66667H13.825L6.6525 8.83917C6.5007 8.99634 6.41671 9.20684 6.4186 9.42533C6.4205 9.64383 6.50814 9.85284 6.66265 10.0073C6.81716 10.1619 7.02617 10.2495 7.24467 10.2514C7.46316 10.2533 7.67367 10.1693 7.83083 10.0175L15.0033 2.845V5.83333C15.0033 6.05435 15.0911 6.26631 15.2474 6.42259C15.4037 6.57887 15.6148 6.66667 15.8358 6.66667ZM2.5 2.5C1.83696 2.5 1.20107 2.76339 0.732233 3.23223C0.263392 3.70107 0 4.33696 0 5V14.1667C0 14.8297 0.263392 15.4656 0.732233 15.9344C1.20107 16.4033 1.83696 16.6667 2.5 16.6667H11.6667C12.3297 16.6667 12.9656 16.4033 13.4344 15.9344C13.9033 15.4656 14.1667 14.8297 14.1667 14.1667V9.16667C14.1667 8.94565 14.0789 8.73369 13.9226 8.57741C13.7663 8.42113 13.5543 8.33333 13.3333 8.33333C13.1123 8.33333 12.9004 8.42113 12.7441 8.57741C12.5878 8.73369 12.5 8.94565 12.5 9.16667V14.1667C12.5 14.3877 12.4122 14.5996 12.2559 14.7559C12.0996 14.9122 11.8877 15 11.6667 15H2.5C2.27899 15 2.06702 14.9122 1.91074 14.7559C1.75446 14.5996 1.66667 14.3877 1.66667 14.1667V5C1.66667 4.77899 1.75446 4.56703 1.91074 4.41074C2.06702 4.25446 2.27899 4.16667 2.5 4.16667H7.5C7.72101 4.16667 7.93297 4.07887 8.08926 3.92259C8.24554 3.76631 8.33333 3.55435 8.33333 3.33333C8.33333 3.11232 8.24554 2.90036 8.08926 2.74408C7.93297 2.5878 7.72101 2.5 7.5 2.5H2.5Z" fill="#020202"/>
+                                                </svg>
+                                            </span>
+                                            «Как получить разрешение на временное проживание»</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://emcmo.mosreg.ru/sobytiya/novosti-ministerstva/28-10-2022-14-17-52-otvety-na-chasto-zadavaemye-voprosy-po-oformleniyu">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8358 6.66667C16.0568 6.66667 16.2688 6.57887 16.4251 6.42259C16.5814 6.26631 16.6692 6.05435 16.6692 5.83333V0.833333C16.6692 0.61232 16.5814 0.400358 16.4251 0.244078C16.2688 0.0877973 16.0568 0 15.8358 0H10.8333C10.6123 0 10.4004 0.0877973 10.2441 0.244078C10.0878 0.400358 10 0.61232 10 0.833333C10 1.05435 10.0878 1.26631 10.2441 1.42259C10.4004 1.57887 10.6123 1.66667 10.8333 1.66667H13.825L6.6525 8.83917C6.5007 8.99634 6.41671 9.20684 6.4186 9.42533C6.4205 9.64383 6.50814 9.85284 6.66265 10.0073C6.81716 10.1619 7.02617 10.2495 7.24467 10.2514C7.46316 10.2533 7.67367 10.1693 7.83083 10.0175L15.0033 2.845V5.83333C15.0033 6.05435 15.0911 6.26631 15.2474 6.42259C15.4037 6.57887 15.6148 6.66667 15.8358 6.66667ZM2.5 2.5C1.83696 2.5 1.20107 2.76339 0.732233 3.23223C0.263392 3.70107 0 4.33696 0 5V14.1667C0 14.8297 0.263392 15.4656 0.732233 15.9344C1.20107 16.4033 1.83696 16.6667 2.5 16.6667H11.6667C12.3297 16.6667 12.9656 16.4033 13.4344 15.9344C13.9033 15.4656 14.1667 14.8297 14.1667 14.1667V9.16667C14.1667 8.94565 14.0789 8.73369 13.9226 8.57741C13.7663 8.42113 13.5543 8.33333 13.3333 8.33333C13.1123 8.33333 12.9004 8.42113 12.7441 8.57741C12.5878 8.73369 12.5 8.94565 12.5 9.16667V14.1667C12.5 14.3877 12.4122 14.5996 12.2559 14.7559C12.0996 14.9122 11.8877 15 11.6667 15H2.5C2.27899 15 2.06702 14.9122 1.91074 14.7559C1.75446 14.5996 1.66667 14.3877 1.66667 14.1667V5C1.66667 4.77899 1.75446 4.56703 1.91074 4.41074C2.06702 4.25446 2.27899 4.16667 2.5 4.16667H7.5C7.72101 4.16667 7.93297 4.07887 8.08926 3.92259C8.24554 3.76631 8.33333 3.55435 8.33333 3.33333C8.33333 3.11232 8.24554 2.90036 8.08926 2.74408C7.93297 2.5878 7.72101 2.5 7.5 2.5H2.5Z" fill="#020202"/>
+                                                </svg>
+                                            </span>
+                                            «Оформление вида на жительство»</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="long-box-color long-box-color--gap-24 long-box-color--phone-gap-16" style="background-color: #F6F7F9;">
+                            <p class="long-text-bold long-text-bold--phone-16-600">
+                                Виды профессиональной деятельности, запрещенные для мигрантов
+                            </p>
+
+                            <ul class="long-list-number long-list-number--grey">
+                                <li>Находиться на муниципальной службе.</li>
+                                <li>Занимать должность капитана, старшего помощника капитана, старшего механика и радиоспециалиста в составе экипажа судна под Государственным флагом РФ.</li>
+                                <li>Быть членом экипажа военного корабля РФ или другого судна, используемого в некоммерческих целях.</li>
+                                <li>Быть командиром экспериментального воздушного судна.</li>
+                                <li>Быть принятым на работу на объекты и в организации, деятельность которых связана с обеспечением безопасности РФ.</li>
+                                <li>Быть нотариусом или патентным поверенным.</li>
+                                <li>Занимать должность в государственных судебно-экспертных учреждениях.</li>
+                            </ul>
+                        </div>
+
+                        <div class="long-border long-border--gap-32 long-border--phone-gap-24">
+                            <div class="long-border__text">
+                                <p class="long-text-bold">
+                                    Права на медицинскую помощь
+                                </p>
+
+                                <p class="long-text-big">
+                                    Иностранные граждане в России имеют право на неотложную медицинскую помощь, и на другие медицинские услуги при наличии полиса обязательного или добровольного страхования.
+                                </p>
+
+                                <p class="long-text-big">
+                                    Полис обязательного страхования (ОМС) могут получить граждане Евразийского экономического союза (ЕАЭС), а также временно и постоянно проживающие в РФ иностранцы и беженцы после официального трудоустройства. Такой вид страхования дает доступ к перечню бесплатных медицинских услуг, которые доступны и россиянам.
+                                </p>
+
+                                <p class="long-text-big">
+                                    Полис добровольного страхования (ДМС) должен быть оформлен у каждого иностранца при въезде в Россию, включая детей. Услуги по такому виду страхования, как правило, включают неотложную медицинскую помощь и ряд других медицинских услуг, в том числе посещение частных клиник.
+                                </p>
+                            </div>
+
+                            <img src="./public/assets/img/long/five/medical-care.png" alt="" class="long-img">
+
+                            <div class="long-alert long-alert--padding-40 long-alert--phone-padding-24 long-alert--phone-gap-16">
+                                <div class="long-alert__header long-alert__header--align-start long-alert__header--gap-24">
+                                    <img src="./public/assets/svg/alert-icon-blue.svg" alt="" class="long-alert__header-img">
+
+                                    <div class="long-border__text">
+                                        <p class="long-text-bold-semi">Чтобы избежать штрафа, рекомендуется оформить полис добровольного медицинского страхования (ДМС) в первый день пребывания в России или до въезда в страну. </p>
+
+                                        <p class="long-text-bold-semi">Обратите внимание, что такой полис должен действовать на всей территории России, а сумма страхования должна быть не менее 100 000 рублей. Больше полезной информации здесь: ОМС и ДМС для иностранца</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="long-border long-border--gap-32 long-border--phone-gap-24">
+                            <div class="long-border__text">
+                                <p class="long-text-bold">
+                                    Права на покупку или аренду жилья
+                                </p>
+
+                                <p class="long-text-big">
+                                    Иностранные граждане имеют право на покупку или аренду квартир и загородных участков, но стоит помнить, что покупка любого жилья в России не дает право подать заявление на получение разрешения на временное проживание или вида на жительство. Жилье в собственности не способствует ускорению получения вышеперечисленных документов.
+                                </p>
+
+                                <img src="./public/assets/img/long/five/purchase-lease.png" alt="" class="long-img">
+
+                                <div class="long-box-color long-box-color--gap-24 long-box-color--phone-gap-16" style="background-color: #F6F7F9;">
+                                    <p class="long-text-bold long-text-bold--phone-16-600">
+                                        В правах мигрантов на частную собственность в России есть несколько исключений:
+                                    </p>
+
+                                    <ul class="long-list-ul long-list-ul--gap-16">
+                                        <li>Нельзя владеть земельными участками на приграничных территориях РФ.</li>
+                                        <li>Земельные участки в государственной или муниципальной собственности предоставляются иностранцам только за плату.</li>
+                                        <li>Земельные участки сельскохозяйственного назначения могут быть только арендованы.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="long-border long-border--gap-32 long-border--phone-gap-24">
+                            <div class="long-border__text">
+                                <p class="long-text-bold">
+                                    Обязанности мигрантов
+                                </p>
+
+                                <ul class="long-list-number long-list-number--grey">
+                                    <li>Заполнить миграционную карту при въезде и сдать должностному лицу на выезде с территории РФ.</li>
+                                    <li>Соблюдать правила миграционного учета, а именно:
+                                        <ul class="long-list-ul long-list-ul--gap-16">
+                                            <li>иметь действительные документы, которые подтверждают статус и проживание, то есть российское удостоверение личности или разрешение на временное или постоянное проживание;</li>
+                                            <li>обращаться в миграционный орган для регистрации по месту пребывания с документами, которые подтверждают статус и проживание в стране;</li>
+                                            <li>проходить миграционный учет в месте пребывания, даже если вы временно находитесь в другом городе.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Выехать из РФ по истечении и по сокращению срока, установленного для законного пребывания на территории страны и при аннулировании РВП/ВНЖ (разрешение на временное проживание/вид на жительство).</li>
+                                    <li>В течение двух месяцев по истечении года со дня получения РВП подать уведомление о его подтверждении с приложением документа о размерах и источнике дохода за указанный год. При наличии уважительных причин, например, болезнь или смерть родственника, этот срок может увеличиться до 6 месяцев.</li>
+                                    <li>Вовремя подавать заявление о замене ВНЖ. При достижении возраста 14, 20 и 45 лет, а также при смене фамилии или если документ пришел в негодность.</li>
+                                    <li>В течение двух месяцев, или шести, при наличии уважительных причин, по истечении года со дня получения ВНЖ подтверждать свое постоянное проживание в России.</li>
+                                </ul>
+                            </div>
+
+                            <div class="long-alert long-alert--padding-40 long-alert--phone-padding-24 long-alert--phone-gap-16">
+                                <div class="long-alert__header long-alert__header--gap-24">
+                                    <img src="./public/assets/svg/alert-icon-blue.svg" alt="" class="long-alert__header-img">
+
+                                    <p class="long-text-bold-semi">Подробнее о правах, свободах и обязанностях граждан можно узнать здесь: <a href="http://kremlin.ru/acts/constitution">Конституция России</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page__item">
+                    <div class="banner-width">
+                        <p class="banner__title">Хотите лучше понимать Россию и русский язык?</p>
+
+                        <p class="banner__text">
+                            На платформе “На русском” можно пройти короткий тест и получить бесплатный план обучения - с темами для вас.
+                        </p>
+
+                        <div class="banner__btn">
+                            <button class="btn btn--orange btn--page">
+                                Пройти тест
+                            </button>
+                        </div>
+
+                        <div class="banner__img">
+                            <img src="./public/assets/img/banner/Image-1.webp" alt="Баннер" class="banner__img"
+                                width="536" height="401">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <div class="page__item">
+        <footer class="footer">
+            <div class="container">
+                <div class="page__item-color">
+                    <div class="footer__container">
+                        <div class="footer__header">
+                            <div class="footer__header-left">
+                                <a href="" class="footer__logo">
+                                    <img src="./public/assets/svg/Logo-Footer.svg" alt="logo">
+                                </a>
+
+                                <p class="footer__slogan">
+                                    Говорите с Россией на одном языке — <br>
+                                    живите и работайте в России!
+                                </p>
+                            </div>
+
+                            <ul class="footer__header-menu">
+                                <li><a href="">Тренажер</a></li>
+                                <li><a href="">Как сдать эказмен?</a></li>
+                                <li><a href="">Жизнь в России</a></li>
+                                <li><a href="">О проекте</a></li>
+                            </ul>
+
+                            <div class="footer__header-right">
+                                <a href="" class="btn btn--base btn--white">Блог</a>
+
+                                <a href="" class="btn btn--base btn--orange">Войти</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__content">
+                            <p class="footer__content-tile">О проекте</p>
+
+                            <p class="footer__content-text">
+                                Материалы разработаны командой экспертов в области русского языка как иностранного и
+                                специалистами в
+                                области
+                                дистанционного образования Национального исследовательского Томского государственного
+                                университета
+                                совместно с
+                                EdTech-партнерами Enbisys (системы адаптивного обучения) и Palex (переводы и
+                                локализация) при
+                                государственной
+                                поддержке Министерства науки и высшего образования Российской Федерации.
+                            </p>
+                        </div>
+
+                        <div class="footer__footer">
+                            <a href="" class="footer__link">Политика использования cookie-файлов</a>
+
+                            <a href="" class="footer__link">Политика в отношении обработки персональных данных</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
