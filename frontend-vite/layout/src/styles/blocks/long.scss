@@ -35,6 +35,12 @@
         & > a{
             color: var(--Text-Black);
         }
+
+        &--big-span{
+            & > span{
+                font-weight: 600;
+            }
+        }
     }
     &-text-bold{
         font-size: fluid(24, 20);
@@ -364,6 +370,10 @@
             .long-video__banner{
                 display: none;
             }
+        }
+
+        &--margin-top-24{
+            margin-top: rem(24);
         }
     }
 
@@ -769,12 +779,44 @@
 
                 border-radius: var(--border-radius-16);
             }
+
+            &--center{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                gap: rem(16);
+
+                .long-text-bold{
+                    text-align: center;
+                }
+
+                .long-fairy-tales__item-text{
+                    gap: rem(16);
+                }
+            }
         }
 
         &--column{
             .long-fairy-tales__item{
                 flex-direction: column;
             }
+        }
+
+        &__count{
+            @include square(rem(42));
+            flex-shrink: 0;
+
+            border: 1px solid var(--Text-Grey);
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: rem(24);
+            font-weight: 600;
+            line-height: 145%;
         }
     }
 
@@ -911,6 +953,10 @@
 
         &--padding-32{
             padding: rem(30);
+        }
+
+        &--padding-40{
+            padding: rem(40);
         }
 
         &--flex-column{
@@ -1062,6 +1108,10 @@
         &--padding-40{
             padding: rem(40);
         }
+
+        .long-list-ul:not(:first-child){
+            margin-top: rem(16);
+        }
     }
 
     &-img-center{
@@ -1106,6 +1156,16 @@
             flex-direction: column;
 
             gap: fluid(16, 8);
+        }
+
+        &--white{
+            li{
+                color: var(--Text-White);
+
+                &::before{
+                    background-color: var(--Text-White);
+                }
+            }
         }
     }
 
@@ -1167,6 +1227,10 @@
 
         font-size: fluid(24, 16);
         line-height: 145%;
+
+        &--gap-8{
+            gap: rem(8);
+        }
     }
 
     &-column{
@@ -1193,6 +1257,21 @@
                 width: calc(33.33% - rem(5.33));
             }
         }
+
+        &-40-60{
+            display: flex;
+            gap: rem(16);
+
+            & > *{
+                &:first-child{
+                    width: calc(40% - rem(8));
+                }
+
+                &:last-child{
+                    width: calc(60% - rem(8));
+                }
+            }
+        }
     }
 
     &-list-link{
@@ -1200,7 +1279,7 @@
 
         display: flex;
         align-items: start;
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: rem(8);
 
         & a{
@@ -1400,6 +1479,17 @@
                     width: 100%;
                 }
             }
+
+            &-40-60{
+                flex-direction: column;
+
+                & > *{
+                    &:first-child,
+                    &:last-child{
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 
@@ -1437,6 +1527,12 @@
                 font-size: rem(16);
                 font-weight: 600;
                 line-height: 145%;
+            }
+        }
+
+        &-text-bold-semi{
+            &--phone-height-155{
+                line-height: 155%;
             }
         }
 
@@ -1569,6 +1665,10 @@
                         opacity: .8;
                     }
                 }
+            }
+
+            &--phone-margin-top-none{
+                margin-top: 0;
             }
         }
 
@@ -1808,6 +1908,11 @@
                         height: rem(210);
                     }
                 }
+
+                &--phone-padding-hor-15{
+                    padding-left: rem(15);
+                    padding-right: rem(15);
+                }
             }
         }
 
@@ -2019,10 +2124,17 @@
         }
 
         &-box-border{
+            display: flex;
+            flex-direction: column;
+
             padding: rem(22);
 
             &--phone-gap-16{
                 gap: rem(16);
+
+                & .long-alert__header{
+                    gap: rem(16);
+                }
             }
         }
 
