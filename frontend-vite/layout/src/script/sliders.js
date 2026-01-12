@@ -277,4 +277,23 @@ export function sliders(width) {
             });
         });
     }
+
+    if (document.querySelector('.long-slider-necessary')) {
+        const ARR_LONG_SLIDER_NECESSARY = document.querySelectorAll('.long-slider-necessary');
+
+        ARR_LONG_SLIDER_NECESSARY.forEach((slider, index) => {
+            new Swiper(slider, {
+                slidesPerView: 1,
+                spaceBetween: 100,
+                autoHeight: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    }
 }
