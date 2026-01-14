@@ -46,6 +46,10 @@
         font-size: fluid(24, 20);
         font-weight: 600;
         line-height: 145%;
+
+        &--phone-weight-500{
+            font-weight: 500;
+        }
     }
 
     &-text-bold-semi{
@@ -736,6 +740,17 @@
                 background: var(--Gradient-Blue-Banner-full);
             }
         }
+
+        &--phone-small{
+            .long-banner__content{
+                gap: rem(16);
+
+                .long-title{
+                    font-size: rem(20);
+                    line-height: 145%;
+                }
+            }
+        }
     }
 
     &-slider-2{
@@ -895,7 +910,7 @@
                 width: rem(32);
                 height: rem(24.42);
 
-                background-image: url(../../../public/assets/svg/proverbs-top.svg);
+                background-image: url(../images/svg/proverbs-top.svg);
                 background-size: cover;
             }
 
@@ -909,7 +924,7 @@
                 width: rem(32);
                 height: rem(24.42);
 
-                background-image: url(../../../public/assets/svg/proverbs-bottom.svg);
+                background-image: url(../images/svg/proverbs-bottom.svg);
                 background-size: cover;
             }
         }
@@ -1624,6 +1639,10 @@
         }
 
         &-text-bold{
+            &--phone-normal-big{
+                font-size: rem(20);
+                font-weight: 500;
+            }
             &--phone-normal{
                 font-size: rem(16);
                 font-weight: 400;
@@ -1645,10 +1664,23 @@
             &--phone-height-155{
                 line-height: 155%;
             }
+
+            &--phone-600{
+                font-weight: 600;
+            }
+
+            &--phone-400{
+                font-weight: 400;
+            }
         }
 
         &-text-big{
             line-height: 155%;
+
+            &--phone-weight-500{
+                font-weight: 500;
+                line-height: 145%;
+            }
         }
 
         &-title{
@@ -1657,6 +1689,11 @@
 
             &--phone-24{
                 font-size: rem(24);
+            }
+
+            &--phone-20{
+                font-size: rem(20);
+                line-height: 145%;
             }
         }
 
@@ -1680,7 +1717,7 @@
                 top: rem(22);
                 right: rem(4);
 
-                background-image: url(../../../public/assets/svg/tabs-next-swipe.svg);
+                background-image: url(../images/svg/tabs-next-swipe.svg);
                 background-size: cover;
             }
 
@@ -1973,6 +2010,19 @@
                     font-size: rem(20);
                     font-weight: 500;
                     line-height: 145%;
+                }
+            }
+
+            &--phone-micro{
+                height: auto !important;
+
+                .long-banner__img{
+                    height: rem(300);
+                }
+
+                .long-title{
+                    font-size: rem(20) !important;
+                    line-height: 145% !important;
                 }
             }
         }
@@ -2284,6 +2334,12 @@
             &--phone-gap-2{
                 gap: rem(2);
             }
+        }
+
+        &-img-big{
+            margin: 0;
+
+            width: 100%;
         }
     }
 }

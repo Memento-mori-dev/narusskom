@@ -255,8 +255,12 @@
                 }
             }
 
-            &-content ul a{
-                font-size: rem(12);
+            &-content ul {
+                gap: rem(4);
+
+                a{
+                    font-size: rem(14);
+                }
             }
         }
     }

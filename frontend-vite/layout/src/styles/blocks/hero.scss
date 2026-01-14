@@ -73,6 +73,12 @@
         }        
     }
 
+    &--min-720{
+        .hero-next__container{
+            min-height: rem(720);
+        }
+    }
+
     @include laptop{
         &__gallery{
             &-content{
@@ -83,6 +89,10 @@
     }
 
     @include mobile{
-
+        &--phone-img-left.hero-next--long{
+            .hero-next__img{
+                object-position: left;
+            }
+        }
     }
 }
