@@ -224,6 +224,23 @@
                 width: rem(216);
             }
         }
+
+        &--long-start{
+            .hero-next__container{
+                padding-top: rem(144);
+                padding-bottom: rem(64);
+            }
+
+            .page__item-color::after{
+                border-radius: 0 0 var(--border-radius-24) var(--border-radius-24);
+            }
+
+            .hero-next__small{
+                font-size: rem(14);
+                font-weight: 400;
+                line-height: 135%;
+            }
+        }
     }
 
     @include mobile{
