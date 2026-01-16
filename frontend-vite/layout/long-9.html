@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./src/styles/main.scss">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="/" class="header__logo">
+                    <img src="./public/assets/svg/Logo.svg" alt="" width="117" height="32">
+                </a>
+
+                <menu class="header__menu" data-da=".header__phone-menu-wrapper,1023.98,0">
+                    <ul>
+                        <li>
+                            <a href="">Тренажер</a>
+                        </li>
+
+                        <li>
+                            <a href="">Жизнь в России</a>
+                        </li>
+
+                        <li>
+                            <a href="">О проекте</a>
+                        </li>
+
+                        <li>
+                            <a href="">Как сдать экзамен</a>
+                        </li>
+                    </ul>
+                </menu>
+
+                <div class="header__setting">
+                    <div class="header__lang" data-js-lang>
+                        <button class="header__lang-open btn" data-js-lang-btn>
+                            <span class="icon">
+                                <img src="./public/assets/svg/lang-Icon.svg" alt="world" width="18" height="18">
+                            </span>
+
+                            ru
+
+                            <span class="icon">
+                                <img src="./public/assets/svg/arrow.svg" alt="arrow" width="7" height="4">
+                            </span>
+                        </button>
+
+                        <div class="header__lang-wrapper" data-js-lang-wrapper>
+                            <div class="header__lang-content" data-js-lang-content>
+                                <ul>
+                                    <li>
+                                        <a href="">ENG</a>
+                                    </li>
+                                    <li>
+                                        <a href="">FN</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--base btn--orange">
+                        Войти
+                    </button>
+
+                    <div class="header__open-menu">
+                        <button class="btn btn--orange btn--phone" data-js-open-menu>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__phone-menu" data-js-menu-wrapper>
+            <div class="header__phone-menu-wrapper" data-js-menu-content>
+                <div class="header__phone-menu-footer">
+                    <button class="btn btn--orange btn--add-phone">Начать обучение</button>
+                    <button class="btn btn--white btn--add-phone">Войти</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page__item-first">
+            <div class="hero-next hero-next--long">
+                <div class="container">
+                    <div class="hero-next__container">
+                        <div class="hero-next__main">
+                            <h1 class="hero-next__title hero-next__title--phone-small">
+                                На одной волне с россиянами<div class="br"></div> Как быстрее адаптироваться в России?
+                            </h1>
+                        </div>
+
+                        <img src="./public/assets/img/long/nine/first.png" alt="" class="hero-next__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container container--wrapper-phone">
+            <div class="long-item long-item--phone-none">
+                <div class="long-links">
+                    <p class="long-links__title">
+                        Навигация по странице:
+                    </p>
+
+                    <div class="long-links__main no-scroll">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#адаптация" class="long-links__item">Пути адаптации. Как справиться со стрессом из-за разлуки с близкими?</a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#праздники" class="long-links__item">Поход в гости, праздники</a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#общение" class="long-links__item">Невербальные элементы общения</a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#этикет" class="long-links__item">Правила этикета в России</a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="page__item--wrapper">
+            <div class="container">
+                <div class="long-item long-item--content-bottom-72">
+                    <div class="long-block long-block--gap-48">
+                        <h3 class="long-title">
+                            Пути адаптации. Как справиться со стрессом из-за разлуки с близкими?
+                        </h3>
+
+                        <p class="long-text-big">
+                            Что я знаю о России? Найду ли я здесь свое место? Чем будет наполнена моя жизнь? Эти и многие другие вопросы задают себе иностранцы еще на Родине. Известно, что, когда вы приезжаете в новую страну, помимо массы впечатлений и опыта, вас ждет этап психологической (внутренней) и социокультурной (внешней) адаптации. На успешность и скорость вашей социокультурной адаптации влияют разные факторы. Приведем несколько примеров:
+                        </p>
+
+                        <div class="long-box-border" style="border-color: var(--Background-Blue);">
+                            <ul class="long-list-number long-list-number--phone-gap-2">
+                                <li>Молодые люди легче, чем более взрослые, адаптируются в новой среде.</li>
+                                <li>Если причина миграции добровольная — работа, образование, желание реализовать свой потенциал в другой стране, адаптация пройдет быстрее, ведь вы и ваши спутники будут включены в различные коллективы в России: коллеги, одногруппники или одноклассники, соседи.</li>
+                                <li>Знание языка облегчает адаптацию.</li>
+                                <li>Чем меньше культурная дистанция (родная культура, быт, устройство государства и общества похожи на российские), тем проще проходит адаптация.</li>
+                                <li>Самый сложный аспект — установки, отношение к мигрантам вообще и мигрантам из вашей страны в частности. Российское общество многонационально и поликультурно, а значит довольно дружелюбно и открыто к мигрантам, поэтому адаптация здесь проходит довольно органично.</li>
+                            </ul>
+                        </div>
+
+                        <img src="./public/assets/img/long/nine/adaptation.png" alt="" class="long-img-big long-img-big--full long-img-big--margin-16 long-img-big--phone-min-height-220">
+
+                        <div class="long-border long-border--gap-32 long-border--phone-gap-24">
+                            <p class="long-text-bold">
+                                Культурный шок
+                            </p>
+
+                            <p class="long-text-big">
+                                Даже если вы учли все факторы, которые способствуют быстрой адаптации в России, психологический комфорт наступит только после того, как вы преодолеете культурный шок. У разных людей он может продолжаться разное время.
+                            </p>
+
+                            <div class="long-block long-block--phone-gap-24">
+                                <div class="long-block-color long-block-color--padding-40">
+                                    <div class="long-border__text">
+                                        <p class="long-text-bold long-text-bold--phone-16-600">
+                                            Как понять, что я переживаю культурный шок, когда нахожусь в России?
+                                        </p>
+
+                                        <p class="long-text-big">
+                                            Вы замечаете у себя частую смену настроения от радости и эйфории от того, что вы прибыли в Россию, о чем давно мечтали до неприятия, стресса, боязни контактировать с россиянами. Эти чувства возникают из-за неизбежной разницы между ожиданиями и реальностью, из-за смены уклада жизни, окружения и отсутствия близких людей рядом. Культурный шок может проявиться, даже если вы многое знаете о России и россиянах, бывали здесь раньше.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="long-box-border long-box-border--flex-column long-box-border--phone-gap-16 long-box-border--padding-40" style="border-color: var(--Background-Blue);">
+                                    <div class="long-border__text">
+                                        <p class="long-text-bold long-text-bold--phone-16-600">
+                                            Как понять, что культурный шок закончился?
+                                        </p>
+
+                                        <p class="long-text-big">
+                                            Вы почувствуете удовлетворенность и полноту жизни в ваших новых условиях, а также усвоите социальные навыки, интегрируетесь в российское общество и сможете эффективно взаимодействовать с людьми. Ваше знание языка улучшится, вы начнете понимать культурные ценности. Выбор вариантов поведения в большинстве ситуаций станет естественным, у вас появятся друзья и новые привычки. Это сформирует прочную эмоциональную привязанность к обществу и любовь к России.
+                                        </p>
+
+                                        <p class="long-text-big">
+                                            Обрести позитивный настрой, работоспособность, желание общаться и воспринимать все новое, что вы встретили в России, вам помогут следующие правила.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="long-box-border long-box-border--flex-column long-box-border--gap-32 long-box-border--phone-gap-16" style="border-color: var(--background-orange);">
+                                    <p class="long-text-bold long-text-bold--phone-16-600">
+                                        Как легко адаптироваться в новой стране?
+                                    </p>
+
+                                    <ul class="long-block__list long-block__list--margin-none">
+                                        <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                            <div class="item-number">1</div>
+                                            <p class="item-text long-text-big">
+                                                Познакомьтесь с Россией до приезда в страну. Энциклопедии, блоги, журналы, видеоматериалы практически на любую тему помогут вам сформировать образ страны, дадут вам знание реалий.
+                                            </p>
+                                        </li>
+
+                                        <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                            <div class="item-number">2</div>
+                                            <p class="item-text long-text-big">
+                                                Выучите русский язык, хотя бы на элементарном уровне. Вы будете лучше понимать культуру и обычаи страны, это облегчит общение с россияна
+                                            </p>
+                                        </li>
+
+                                        <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                            <div class="item-number">3</div>
+                                            <p class="item-text long-text-big">
+                                                Найдите новых друзей. Присоединитесь к клубам, группам или сообществам на месте вашего проживания или работы, которые соответствуют вашим интересам. Так вы расширите свой круг общения.
+                                            </p>
+                                        </li>
+
+                                        <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                            <div class="item-number">4</div>
+                                            <p class="item-text long-text-big">
+                                                Будьте в социуме. Попробуйте познакомиться с местными жителями. Посещайте мероприятия, парки, кафе, где вы можете встретить людей и завести новые знакомства.
+                                            </p>
+                                        </li>
+
+                                        <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                            <div class="item-number">5</div>
+                                            <p class="item-text long-text-big">
+                                                Не стесняйтесь обращаться за помощью к представителям вашей диаспоры. Они могут поделиться своим опытом и дать полезные советы.
+                                            </p>
+                                        </li>
+
+                                        <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                            <div class="item-number">6</div>
+                                            <p class="item-text long-text-big">
+                                                Не забывайте о своих хобби и увлечениях. Занимайтесь тем, что вам нравится, чтобы сохранить положительный взгляд на мир и не чувствовать себя одиноким.
+                                            </p>
+                                        </li>
+
+                                        <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                            <div class="item-number">7</div>
+                                            <p class="item-text long-text-big">
+                                                Поддерживайте связь с друзьями и семьей на родине. Общение с близкими людьми послужит опорой в трудные моменты.
+                                            </p>
+                                        </li>
+
+                                        <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                            <div class="item-number">8</div>
+                                            <p class="item-text long-text-big">
+                                                Не забывайте о своем здоровье. Регулярные физические упражнения, здоровое питание и достаточный сон помогут вам сохранить оптимистичный настрой и чувствовать себя лучше.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="attention-block" style="background-color: var(--Background-Blue);">
+                                    <div class="attention-block__mark">
+                                        <img src="./public/assets/svg/alert-icon-blue.svg" alt="Восклицательный знак">
+                                    </div>
+
+                                    <div class="long-border__text">
+                                        <p class="attention-block__text">
+                                            Всем известно, что адаптация после переезда в новую страну — это процесс, который требует времени и терпения. Не стесняйтесь обращаться за помощью и поддержкой, если вам это нужно.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="long-video long-video--phone-margin-top-none">
+                                    <video src="./public/assets/video/video.mp4"></video>
+
+                                    <div class="long-video__banner">
+                                        <button class="long-video__banner-button btn">
+                                            <img src="./public/assets/svg/play.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="long-item long-item--content-bottom-72">
+                    <div class="long-block long-block--gap-48">
+                        <h3 class="long-title">
+                            Поход в гости, Праздники
+                        </h3>
+
+                        <div class="long-border__text">
+                            <p class="long-text-big">
+                                Россияне — очень гостеприимная нация, поэтому не удивляйтесь, если очень скоро после знакомства с людьми вас начнут приглашать в гости без повода или на семейные праздники, например, на день рождения. Посещение этого мероприятия — это отличная возможность расширить круг связей и узнать больше о русской культуре и традициях.
+                            </p>
+
+                            <p class="long-text-big">
+                                В России принято приходить в гости (или на место празднования) с подарком для именинника. Подарок зависит от того, кому он предназначен. Взрослым принято дарить цветы (женщинам), книги, предметы интерьера, парфюмерию, электронику и другие полезные вещи, а также предметы, связанные с хобби или интересами одаряемого. Детям дарят игры, игрушки, спортивный инвентарь.
+                            </p>
+                        </div>
+
+                        <div class="attention-block" style="background-color: var(--Background-Blue);">
+                            <div class="attention-block__mark">
+                                <img src="./public/assets/svg/alert-icon-blue.svg" alt="Восклицательный знак">
+                            </div>
+
+                            <div class="long-border__text">
+                                <p class="attention-block__text">
+                                    В России есть пословица: «В чужой монастырь со своим уставом не ходят». Ее смысл заключается в том, что не следует навязывать свои правила и порядки в чужом коллективе или обществе. Каждые страна и сообщество имеют уникальную культуру, традиции и нормы поведения, и важно уважать их, не пытаться навязать свою точку зрения. При взаимодействии с другими людьми важно быть открытыми к их правилам и вести себя так, как принято в данном коллективе, чтобы общение было доброжелательным.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="long-border long-border--gap-32 long-border--phone-gap-24">
+                            <div class="long-border__text">
+                                <p class="long-text-bold">
+                                    Правила поведения на дне рождения
+                                </p>
+
+                                <p class="long-text-big">
+                                    На праздник нужно приходить вовремя. Если хозяева еще готовят помещение и накрывают на стол, можно предложить свою помощь. При входе в дом нужно снять обувь и оставить ее в прихожей, поздороваться, поблагодарить за приглашение. Хозяева познакомят вас с семьей и другими гостями. Как иностранец вы, скорее всего, будете в центре внимания. Расскажите о себе и своей стране, если вас попросят.
+                                </p>
+
+                                <p class="long-text-big">
+                                    Во время праздника в России принято общаться с другими гостями, участвовать в играх и конкурсах, танцевать и петь песни, есть и пить за здоровье именинника. Общепринято произносить поздравления и тосты за успехи, благополучие и исполнение желаний.
+                                </p>
+                            </div>
+
+                            <div class="long-banner long-banner--big-width long-banner--margin-16 long-banner--phone-min-height-210">
+                                <img src="./public/assets/img/long/nine/birthday.png" alt="" class="long-banner__img">
+                            </div>
+                            
+
+                            <p class="long-text-big">
+                                После мероприятия важно поблагодарить хозяев за гостеприимство и уйти домой вовремя. В России не принято задерживаться надолго после окончания праздника, чтобы не мешать хозяевам приводить дом в порядок. В целом, посещение дня рождения, как и других семейных или личных праздников, может помочь влиться в российское общество, если вы будете следовать правилам поведения.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="long-item long-item--content-bottom-72">
+                    <div class="long-block long-block--gap-48">
+                        <h3 class="long-title">
+                            Невербальные элементы общения
+                        </h3>
+
+                        <div class="long-border long-border--gap-32 long-border--phone-gap-24">
+                            <div class="long-border__text">
+                                <p class="long-text-bold long-text-bold--phone-16-600">
+                                    Дистанция общения
+                                </p>
+
+                                <p class="long-text-big">
+                                    Для психологического комфорта, личной безопасности и предотвращения распространения инфекций необходимо соблюдать расстояние между людьми. Дистанция зависит от близости вашего знакомства, возраста, пола, социальных ролей и ситуации общения.
+                                </p>
+
+                                <p class="long-text-big">
+                                    Рисунок демонстрирует рекомендуемое расстояние в четырех ситуациях общения.
+                                </p>
+                            </div>
+
+                            <img src="./public/assets/img/long/nine/fon.png" alt="" class="long-img long-img--height-auto">
+
+                            <div class="long-border__text">
+                                <p class="long-text-big">
+                                    Интимная зона является наиболее охраняемой для человека. Вход в нее разрешен только самым близким людям: детям, родителям, возлюбленным. Личная зона представляет собой расстояние, которое используется при повседневном общении с друзьями и знакомыми. 
+                                </p>
+
+                                <p class="long-text-big">
+                                    Социальная зона должна соблюдаться на официальных мероприятиях, переговорах, при знакомстве с новыми людьми или в разговоре с людьми, чей статус выше вашего. Соблюдение социальной зоны в деловой среде составляет часть корпоративной культуры и этикета.
+                                </p>
+                            </div>
+
+                            <div class="long-block-color">
+                                <div class="long-border__text long-border__text--gap-32">
+                                    <p class="long-text-bold long-text-bold--phone-normal-big-145">
+                                        Кроме того, соблюдение социальной дистанции важно в следующих ситуациях:
+                                    </p>
+
+                                    <div class="long-column-two">
+                                        <ul class="long-list-dot">
+                                            <li>В общественных местах (магазины, аптеки, общественный транспорт), где может быть большое скопление людей.</li>
+                                        </ul>
+
+                                        <ul class="long-list-dot">
+                                            <li>При посещении культурных, спортивных и других мероприятий.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="long-border__text">
+                                <p class="long-text-big">
+                                    Многие могут почувствовать неловкость, когда находятся на концерте в толпе людей, едут в лифте, на эскалаторе, где сложно сохранять приемлемую дистанцию. Если знакомство не входит в ваши планы, в таких случаях рекомендуется не начинать разговор. Даже если вы встретились взглядом, не смотрите в упор, займите такую позу, чтобы ваши движения и вещи не мешали, не задевали окружающих, ограничьте эмоции и громкость голоса. 
+                                </p>
+
+                                <p class="long-text-big">
+                                    Публичная зона максимально комфортна, однако встречается не так часто. Например, на публичных выступлениях спикер (лектор) находится на значительном расстоянии от аудитории.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="long-border long-border--gap-48 long-border--phone-gap-24">
+                            <div class="long-border__text">
+                                <p class="long-text-bold long-text-bold--phone-16-600">
+                                    Жесты
+                                </p>
+
+                                <p class="long-text-big">
+                                    Жесты в коммуникативной традиции россиян играют важную роль в общении. Они могут выражать различные эмоции и чувства, а также дополнять и усиливать вербальную коммуникацию. Россияне довольно активно жестикулируют и выражают эмоции лицом и телом.
+                                </p>
+                            </div>
+
+                            <div class="long-slider-necessary swiper--height-item swiper--pagination swiper--controller swiper--controller-grey swiper--controller--adapt-orange">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-1.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Большой палец вверх — отлично, одобряю.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-2.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Большой палец вниз — плохо.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-3.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Махать рукой — приветствие.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-4.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Указание пальцем — туда или ты (указание на кого-то или на что-то).
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-5.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Манить рукой (пальцем) — иди сюда.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-6.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Рука к виску — будет сделано.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-7.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Заткнуть нос — дурно пахнет.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-8.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Крутить пальцем у виска: «Ты сошел с ума?!».
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-9.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Чесать голову — надо подумать.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-10.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Жест «ОК» — согласен, договорились.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-11.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Жест пальцами «немного» — небольшое количество, чуть-чуть.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-12.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Скрестить пальцы — надеяться на удачу.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-13.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Открытая ладонь (горизонтально) — дай.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-14.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Открытая ладонь (вертикально) — прекрати, замолчи, стоп.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-15.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Дай пять — одобрение.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-slider-necessary__item">
+                                            <img src="./public/assets/img/long/nine/gestures-16.png" alt="" class="">
+
+                                            <p class="long-slider-necessary__text">
+                                                Сердечко двумя руками — любовь.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+
+                                <div class="swiper-button-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                        <path d="M14.8 6.69111C15.2419 6.69111 15.6 6.33294 15.6 5.89111C15.6 5.44929 15.2419 5.09111 14.8 5.09111L14.8 5.89111L14.8 6.69111ZM0.234363 5.32543C-0.0780563 5.63785 -0.0780564 6.14438 0.234363 6.4568L5.32553 11.548C5.63795 11.8604 6.14448 11.8604 6.4569 11.548C6.76932 11.2355 6.76932 10.729 6.4569 10.4166L1.93142 5.89111L6.4569 1.36563C6.76932 1.05321 6.76932 0.546678 6.4569 0.234258C6.14448 -0.078161 5.63795 -0.0781611 5.32553 0.234258L0.234363 5.32543ZM14.8 5.89111L14.8 5.09111L0.800048 5.09111L0.800048 5.89111L0.800048 6.69111L14.8 6.69111L14.8 5.89111Z" fill="#020202"/>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                        <path d="M0.800049 5.09111C0.358221 5.09111 4.88162e-05 5.44929 4.88162e-05 5.89111C4.88162e-05 6.33294 0.358221 6.69111 0.800049 6.69111V5.89111V5.09111ZM15.3657 6.4568C15.6782 6.14438 15.6782 5.63785 15.3657 5.32543L10.2746 0.234259C9.96215 -0.0781603 9.45562 -0.0781603 9.1432 0.234259C8.83078 0.546679 8.83078 1.05321 9.1432 1.36563L13.6687 5.89111L9.1432 10.4166C8.83078 10.729 8.83078 11.2355 9.1432 11.548C9.45562 11.8604 9.96215 11.8604 10.2746 11.548L15.3657 6.4568ZM0.800049 5.89111V6.69111H14.8V5.89111V5.09111H0.800049V5.89111Z" fill="#020202"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="long-border long-border--gap-32 long-border--phone-gap-24">
+                            <div class="long-border__text">
+                                <p class="long-text-bold long-text-bold--phone-16-600">
+                                </p>
+
+                                <p class="long-text-big">
+                                </p>
+                            </div>
+
+                            <div class="long-fairy-tales swiper--pagination swiper--controller swiper--controller-add swiper--controller-orange">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="long-fairy-tales__item">
+                                            <div class="long-fairy-tales__item-text long-fairy-tales__item-text--gap-16">
+                                                <p class="long-text-bold">Рукопожатие</p>
+
+                                                <p class="long-text-big">
+                                                    Это один из самых распространенных жестов в России. Он используется чаще мужчинами при встрече, прощании и в других ситуациях. Рукопожатие может быть сильным или слабым, в зависимости от контекста и отношений между людьми.
+                                                </p>
+                                            </div>
+
+                                            <img src="./public/assets/img/long/nine/same-1.png" alt="" class="long-fairy-tales__item-img">
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-fairy-tales__item">
+                                            <div class="long-fairy-tales__item-text long-fairy-tales__item-text--gap-16">
+                                                <p class="long-text-bold">Пожимание плечами</p>
+
+                                                <p class="long-text-big">
+                                                    Этот жест выражает неопределенность, неуверенность или незнание, может сопровождаться словами «не знаю», «не уверен».
+                                                </p>
+                                            </div>
+
+                                            <img src="./public/assets/img/long/nine/same-2.png" alt="" class="long-fairy-tales__item-img">
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-fairy-tales__item">
+                                            <div class="long-fairy-tales__item-text long-fairy-tales__item-text--gap-16">
+                                                <p class="long-text-bold">Похлопывание по плечу</p>
+
+                                                <p class="long-text-big">
+                                                    Так мы выражаем поддержку, утешение или одобрение. Похлопывание по плечу может быть мягким или сильным, в зависимости от контекста.
+                                                </p>
+                                            </div>
+
+                                            <img src="./public/assets/img/long/nine/same-3.png" alt="" class="long-fairy-tales__item-img">
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-fairy-tales__item">
+                                            <div class="long-fairy-tales__item-text long-fairy-tales__item-text--gap-16">
+                                                <p class="long-text-bold">Улыбка</p>
+
+                                                <p class="long-text-big">
+                                                    Улыбка является универсальным жестом для выражения радости, удовлетворения или приветствия. Улыбка может быть широкой или сдержанной, в зависимости от ситуации.
+                                                </p>
+                                            </div>
+
+                                            <img src="./public/assets/img/long/nine/same-4.png" alt="" class="long-fairy-tales__item-img">
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-fairy-tales__item">
+                                            <div class="long-fairy-tales__item-text long-fairy-tales__item-text--gap-16">
+                                                <p class="long-text-bold">Объятия</p>
+
+                                                <p class="long-text-big">
+                                                    Так можно поприветствовать близкого человека, поддержать или поздравить его.
+                                                </p>
+                                            </div>
+
+                                            <img src="./public/assets/img/long/nine/same-5.png" alt="" class="long-fairy-tales__item-img">
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-fairy-tales__item">
+                                            <div class="long-fairy-tales__item-text">
+                                                <p class="long-text-big">
+                                                    Поднятие бровей означает удивление.
+                                                </p>
+                                            </div>
+
+                                            <img src="./public/assets/img/long/nine/same-6.png" alt="" class="long-fairy-tales__item-img">
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-fairy-tales__item">
+                                            <div class="long-fairy-tales__item-text">
+                                                <p class="long-text-big">
+                                                    Потирание подбородка свидетельствует о том, что человек размышляет или обдумывает что-то.
+                                                </p>
+                                            </div>
+
+                                            <img src="./public/assets/img/long/nine/same-7.png" alt="" class="long-fairy-tales__item-img">
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="long-fairy-tales__item">
+                                            <div class="long-fairy-tales__item-text">
+                                                <p class="long-text-big">
+                                                    Потирание ладоней помогает выразить ожидание или предвкушение приятного.
+                                                </p>
+                                            </div>
+
+                                            <img src="./public/assets/img/long/nine/same-8.png" alt="" class="long-fairy-tales__item-img">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+
+                                <div class="swiper-button-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                        <path d="M14.8 6.69111C15.2419 6.69111 15.6 6.33294 15.6 5.89111C15.6 5.44929 15.2419 5.09111 14.8 5.09111L14.8 5.89111L14.8 6.69111ZM0.234363 5.32543C-0.0780563 5.63785 -0.0780564 6.14438 0.234363 6.4568L5.32553 11.548C5.63795 11.8604 6.14448 11.8604 6.4569 11.548C6.76932 11.2355 6.76932 10.729 6.4569 10.4166L1.93142 5.89111L6.4569 1.36563C6.76932 1.05321 6.76932 0.546678 6.4569 0.234258C6.14448 -0.078161 5.63795 -0.0781611 5.32553 0.234258L0.234363 5.32543ZM14.8 5.89111L14.8 5.09111L0.800048 5.09111L0.800048 5.89111L0.800048 6.69111L14.8 6.69111L14.8 5.89111Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                        <path d="M0.800049 5.09111C0.358221 5.09111 4.88162e-05 5.44929 4.88162e-05 5.89111C4.88162e-05 6.33294 0.358221 6.69111 0.800049 6.69111V5.89111V5.09111ZM15.3657 6.4568C15.6782 6.14438 15.6782 5.63785 15.3657 5.32543L10.2746 0.234259C9.96215 -0.0781603 9.45562 -0.0781603 9.1432 0.234259C8.83078 0.546679 8.83078 1.05321 9.1432 1.36563L13.6687 5.89111L9.1432 10.4166C8.83078 10.729 8.83078 11.2355 9.1432 11.548C9.45562 11.8604 9.96215 11.8604 10.2746 11.548L15.3657 6.4568ZM0.800049 5.89111V6.69111H14.8V5.89111V5.09111H0.800049V5.89111Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="long-text-big">
+                                Все жесты, движения, передачу вещей большинство россиян делают правой рукой, использование левой руки встречается редко и, может быть, связано с тем, что человек левша. Использование левой руки не носит намерения вас оскорбить. В России население не придает значение выбору руки или использованию двух рук.
+                            </p>
+                        </div>
+
+                        <div class="long-video long-video--phone-margin-top-none">
+                            <video src="./public/assets/video/video.mp4"></video>
+
+                            <div class="long-video__banner">
+                                <button class="long-video__banner-button btn">
+                                    <img src="./public/assets/svg/play.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page__item">
+                    <div class="banner-width">
+                        <p class="banner__title">Хотите лучше понимать Россию и русский язык?</p>
+
+                        <p class="banner__text">
+                            На платформе “На русском” можно пройти короткий тест и получить бесплатный план обучения - с темами для вас.
+                        </p>
+
+                        <div class="banner__btn">
+                            <button class="btn btn--orange btn--page">
+                                Пройти тест
+                            </button>
+                        </div>
+
+                        <div class="banner__img">
+                            <img src="./public/assets/img/banner/Image-1.webp" alt="Баннер" class="banner__img"
+                                width="536" height="401">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="long-item long-item--content-bottom-72">
+                    <div class="long-block long-block--gap-48">
+                        <h3 class="long-title">
+                            Правила этикета в России
+                        </h3>
+
+                        <div class="long-border__text">
+                            <p class="long-text-big">
+                                Изучать особенности культуры общения в стране можно не только по книгам по этикету и путеводителям. Многие правила этикета и поведения ввы сможете узнать в обычных бытовых и рабочих ситуациях. При трудоустройстве вам обязательно дадут ознакомиться с правилами внутреннего трудового распорядка — это особый нормативный документ. При входе в лифт или транспорт вы увидите яркие информационные таблички (текст или картинки).
+                            </p>
+
+                            <p class="long-text-big">
+                                Это рекомендации для соблюдения порядка. Следование им поможет сделать поведение окружающих и ваше более предсказуемым и понятным.
+                            </p>
+                        </div>
+
+                        <img src="./public/assets/img/long/nine/etiquette.png" alt="" class="long-img-big long-img-big--full long-img-big--margin-16 long-img-big--phone-min-height-220">
+
+                        <p class="long-text-big">
+                            В России существуют правила этикета, которые предназначены для всех, а также правила, которые предназначены только для женщин или мужчин. Они касаются взаимодействия представителей разного пола в общественных местах. Прочитайте эти правила и старайтесь им следовать.
+                        </p>
+
+                        <div class="long-box-border long-box-border--flex-column long-box-border--gap-24 long-box-border--phone-gap-16" style="border-color: var(--Background-Blue);">
+                                <ul class="long-block__list long-block__list--margin-none">
+                                    <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                        <div class="item-number">1</div>
+                                        <p class="item-text long-text-big">
+                                            При встрече с женщиной у гардероба в любом заведении или учреждении мужчине следует помочь ей снять верхнюю одежду, а также открыть дверь, придержать ее и пропустить женщину вперед.
+                                        </p>
+                                    </li>
+
+                                    <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                        <div class="item-number">2</div>
+                                        <p class="item-text long-text-big">
+                                            В ресторане или кафе мужчина также должен помочь женщине снять верхнюю одежду, а также отодвинуть стул, чтобы она могла сесть. Женщине следует подождать, пока мужчина это сделает.
+                                        </p>
+                                    </li>
+
+                                    <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                        <div class="item-number">3</div>
+                                        <p class="item-text long-text-big">
+                                            В общественном транспорте мужчина должен уступить место женщине (а также людям старшего поколения и людям с особенностями здоровья), женщина — только людям старшего поколения и людям с особенностями здоровья.
+                                        </p>
+                                    </li>
+
+                                    <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                        <div class="item-number">4</div>
+                                        <p class="item-text long-text-big">
+                                            В России запрещено курить в общественных местах. Там, где курение допустимо, следует отказаться от курения в присутствии женщин и детей.
+                                        </p>
+                                    </li>
+
+                                    <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                        <div class="item-number">5</div>
+                                        <p class="item-text long-text-big">
+                                            При общении с коллегами или деловыми партнерами, мужчина и женщина должны проявлять профессионализм и быть дружелюбными. Называть коллег равного с вами возраста или младше вас можно по имени, если вы получили на это их согласие. Более старших коллег традиционно называют по имени и отчеству (если оно есть).
+                                        </p>
+                                    </li>
+
+                                    <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                        <div class="item-number">6</div>
+                                        <p class="item-text long-text-big">
+                                            Не принято шутить на темы, которые могут быть оскорбительными, особенно на темы расы, религии, пола и внешности.
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                        <div class="item-number">7</div>
+                                        <p class="item-text long-text-big">
+                                            Мужчины и женщины должны выглядеть аккуратно и опрятно, заботиться о гигиене и внешнем виде.
+                                        </p>
+                                    </li>
+
+                                    <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                        <div class="item-number">8</div>
+                                        <p class="item-text long-text-big">
+                                            Приходить на встречи необходимо вовремя — это признак уважения. На романтическое свидание женщина может позволить себе немного опоздать, это элемент флирта. О серьезном опоздании необходимо предупредить и извиниться.
+                                        </p>
+                                    </li>
+
+                                    <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                        <div class="item-number">9</div>
+                                        <p class="item-text long-text-big">
+                                            Выбор блюд по меню и в большинстве других ситуаций предоставляют первой делать женщине.
+                                        </p>
+                                    </li>
+
+                                    <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                        <div class="item-number">10</div>
+                                        <p class="item-text long-text-big">
+                                            За еду в кафе или ресторане обычно платит пригласивший. Это лучше оговорить заранее. Если этого не случилось, то перед расчетом нужно уточнить, не обидит ли это ваших визави.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        <div class="long-border__text">
+                            <p class="long-text-big">
+                                Понимание механизмов адаптации в новой культуре поможет вам избавиться от стресса, связанного с разлукой и ностальгией по дому, а также привыканием к принимающей стране. Взаимодействие с местными жителями через посещение друзей и участие в праздниках способствует успешной интеграции и созданию важных межличностных связей. Обращайте внимание на использование языка и невербальных сигналов. Так вы почувствуете себя увереннее и сможете поддерживать гармоничные отношения с окружающими.
+                            </p>
+
+                            <p class="long-text-big">
+                                Соблюдение правил этикета в общении, в том числе между мужчинами и женщинами, а также правил поведения и безопасности поможет вам почувствовать себя в России, как дома. Вы зарекомендуете себя культурным и воспитанным человеком, который уважает устои и ценности местного населения.
+                            </p>
+                        </div>
+
+                        <div class="long-video long-video--phone-margin-top-none">
+                            <video src="./public/assets/video/video.mp4"></video>
+
+                            <div class="long-video__banner">
+                                <button class="long-video__banner-button btn">
+                                    <img src="./public/assets/svg/play.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="long-item long-item--content-bottom-72">
+                    <div class="long-block long-block--gap-32">
+                        <p class="long-text-bold">
+                            Вместо послесловия
+                        </p>
+
+                        <p class="long-text-big">
+                            Россия встречает своих гостей разнообразием традиций, гостеприимством и удивительной культурой, что делает пребывание в стране незабываемым и обогащающим. Приглашаем вас открыть для себя Россию и совершить увлекательное путешествие в историю и современность нашей удивительной страны!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+        </div>
+        
+    </main>
+
+    <div class="page__item">
+        <footer class="footer">
+            <div class="container">
+                <div class="page__item-color">
+                    <div class="footer__container">
+                        <div class="footer__header">
+                            <div class="footer__header-left">
+                                <a href="" class="footer__logo">
+                                    <img src="./public/assets/svg/Logo-Footer.svg" alt="logo">
+                                </a>
+
+                                <p class="footer__slogan">
+                                    Говорите с Россией на одном языке — <br>
+                                    живите и работайте в России!
+                                </p>
+                            </div>
+
+                            <ul class="footer__header-menu">
+                                <li><a href="">Тренажер</a></li>
+                                <li><a href="">Как сдать эказмен?</a></li>
+                                <li><a href="">Жизнь в России</a></li>
+                                <li><a href="">О проекте</a></li>
+                            </ul>
+
+                            <div class="footer__header-right">
+                                <a href="" class="btn btn--base btn--white">Блог</a>
+
+                                <a href="" class="btn btn--base btn--orange">Войти</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__content">
+                            <p class="footer__content-tile">О проекте</p>
+
+                            <p class="footer__content-text">
+                                Материалы разработаны командой экспертов в области русского языка как иностранного и
+                                специалистами в
+                                области
+                                дистанционного образования Национального исследовательского Томского государственного
+                                университета
+                                совместно с
+                                EdTech-партнерами Enbisys (системы адаптивного обучения) и Palex (переводы и
+                                локализация) при
+                                государственной
+                                поддержке Министерства науки и высшего образования Российской Федерации.
+                            </p>
+                        </div>
+
+                        <div class="footer__footer">
+                            <a href="" class="footer__link">Политика использования cookie-файлов</a>
+
+                            <a href="" class="footer__link">Политика в отношении обработки персональных данных</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
