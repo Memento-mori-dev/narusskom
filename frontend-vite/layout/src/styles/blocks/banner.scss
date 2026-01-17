@@ -104,6 +104,17 @@
         }
     }
 
+    &--woman {
+        .banner__img {
+            width: rem(466) !important;
+   
+            @include mobile {
+               right: 50% !important;
+               transform: translate(calc(50% - 20px), 10px) !important;
+            }
+         }
+    }
+
     @include laptop{
         &-width{
             position: relative;

@@ -1,0 +1,701 @@
+{# HERO #}
+<section class="page__item-first">
+    <div class="hero-next hero-next--long hero--min-720 hero--phone-img-left">
+        <div class="container">
+            <div class="hero-next__container">
+
+                <div class="hero-next__main">
+                    <h1 class="hero-next__title hero-next__title--phone-small">
+                        {{ json.hero.title|raw }}
+                    </h1>
+
+                    <p class="hero-next__text">
+                        {{ json.hero.text }}
+                    </p>
+                </div>
+
+                <img src="{{ theme.link }}{{ json.hero.image.src }}" alt="{{ json.hero.image.alt }}" class="hero-next__img">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{# NAVIGATION #}
+<section class="container container--wrapper-phone">
+    <div class="long-item long-item--phone-none">
+        <div class="long-links">
+            <p class="long-links__title">
+                {{ json.navigation.title }}
+            </p>
+
+            <div class="long-links__main no-scroll">
+                <div class="swiper-wrapper">
+                    {% for item in json.navigation.items %}
+                        <div class="swiper-slide">
+                            <a href="{{ item.src }}" class="long-links__item">{{ item.title }}</a>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-3d5b6a87f7f101092c" aria-disabled="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                        <path d="M14.8 6.69111C15.2419 6.69111 15.6 6.33294 15.6 5.89111C15.6 5.44929 15.2419 5.09111 14.8 5.09111L14.8 5.89111L14.8 6.69111ZM0.234363 5.32543C-0.0780563 5.63785 -0.0780564 6.14438 0.234363 6.4568L5.32553 11.548C5.63795 11.8604 6.14448 11.8604 6.4569 11.548C6.76932 11.2355 6.76932 10.729 6.4569 10.4166L1.93142 5.89111L6.4569 1.36563C6.76932 1.05321 6.76932 0.546678 6.4569 0.234258C6.14448 -0.078161 5.63795 -0.0781611 5.32553 0.234258L0.234363 5.32543ZM14.8 5.89111L14.8 5.09111L0.800048 5.09111L0.800048 5.89111L0.800048 6.69111L14.8 6.69111L14.8 5.89111Z" fill="white"></path>
+                    </svg>
+                </div>
+                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-3d5b6a87f7f101092c" aria-disabled="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                        <path d="M0.800049 5.09111C0.358221 5.09111 4.88162e-05 5.44929 4.88162e-05 5.89111C4.88162e-05 6.33294 0.358221 6.69111 0.800049 6.69111V5.89111V5.09111ZM15.3657 6.4568C15.6782 6.14438 15.6782 5.63785 15.3657 5.32543L10.2746 0.234259C9.96215 -0.0781603 9.45562 -0.0781603 9.1432 0.234259C8.83078 0.546679 8.83078 1.05321 9.1432 1.36563L13.6687 5.89111L9.1432 10.4166C8.83078 10.729 8.83078 11.2355 9.1432 11.548C9.45562 11.8604 9.96215 11.8604 10.2746 11.548L15.3657 6.4568ZM0.800049 5.89111V6.69111H14.8V5.89111V5.09111H0.800049V5.89111Z" fill="white"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# SECTION 1: Россия и ее местоположение #}
+<section class="page__item--wrapper" id="Местоположение">
+    <div class="container">
+        <div class="long-item long-item--content-bottom-24">
+
+            <div class="page__item-color">
+                <div class="long-color long-color--auto">
+                    <div class="long-color__text">
+                        <h3 class="long-title long-title--small">
+                            {{ json.sections[0].blocks[0].color.title_small }}
+                        </h3>
+
+                        {% for p in json.sections[0].blocks[0].color.text %}
+                            <p class="long-text">{{ p|raw }}</p>
+                        {% endfor %}
+                    </div>
+
+                    <img src="{{ theme.link }}{{ json.sections[0].blocks[0].color.image.src }}" alt="{{ json.sections[0].blocks[0].color.image.alt }}" class="long-color__img" width="431">
+                </div>
+            </div>
+
+            <div class="long-block">
+                {% for p in json.sections[0].blocks[1].text.text_big %}
+                    <p class="long-text-big">
+                        {{ p }}
+                    </p>
+                {% endfor %}
+
+                <div class="long-video">
+                    <video src="{{ theme.link }}{{ json.sections[0].blocks[2].video.src }}"></video>
+
+                    <div class="long-video__banner">
+                        <button class="long-video__banner-button btn">
+                            <img src="{{ theme.link }}/assets/images/svg/play.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{# SECTION 2: Как устроена Российская Федерация #}
+<section class="page__item--wrapper" id="Федерация">
+    <div class="container">
+        <div class="long-item long-item--content-bottom-72 long-item--content-top-72">
+            <div class="long-block long-block--gap-48 long-block--no-top">
+                <h3 class="long-title">
+                    {{ json.sections[1].title }}
+                </h3>
+
+                {# box #}
+                <div class="long-box-color" style="background-color: #F6F7F9;">
+                    <p class="long-text-bold long-text-bold--phone-normal-big">
+                        {{ json.sections[1].blocks[0].box.title }}
+                    </p>
+
+                    {% for p in json.sections[1].blocks[0].box.text_big %}
+                        <p class="long-text-big">
+                            {{ p|raw }}
+                        </p>
+                    {% endfor %}
+
+                    <ul class="long-counter-list">
+                        {% for li in json.sections[1].blocks[0].box.list_counter %}
+                            <li>{{ li|raw }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                {# image_with_caption #}
+                <div class="long-author-wrapper long-author-wrapper--gap-24">
+                    <img src="{{ theme.link }}{{ json.sections[1].blocks[1].image_with_caption.image.src }}" alt="{{ json.sections[1].blocks[1].image_with_caption.image.alt }}" class="long-img long-img--no-border">
+
+                    <div class="long-author-sign">
+                        <p class="long-author-sign__name">
+                            {{ json.sections[1].blocks[1].image_with_caption.caption.title }}
+                        </p>
+
+                        <p class="long-author-sign__description">
+                            {{ json.sections[1].blocks[1].image_with_caption.caption.description }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="long-border long-border--gap-48 long-border--phone-gap-24">
+                    {# border #}
+                    <div class="long-border__text">
+                        <p class="long-text-bold">
+                            {{ json.sections[1].blocks[2].border.title }}
+                        </p>
+
+                        {% for p in json.sections[1].blocks[2].border.text_big %}
+                            <p class="long-text-big">
+                                {{ p|raw }}
+                            </p>
+                        {% endfor %}
+                    </div>
+
+                    {# card_with_caption #}
+                    <div class="long-author-wrapper">
+                        <div class="long-block-text long-block-text--height-640">
+                            <img src="{{ theme.link }}{{ json.sections[1].blocks[3].card_with_caption.image.src }}" alt="{{ json.sections[1].blocks[3].card_with_caption.image.alt }}" class="long-block-text__img">
+
+                            <p class="long-block-text__text long-text-bold-semi">
+                                {{ json.sections[1].blocks[3].card_with_caption.text_bold_semi }}
+                            </p>
+                        </div>
+
+                        <div class="long-author-sign">
+                            <p class="long-author-sign__name">
+                                {{ json.sections[1].blocks[3].card_with_caption.caption.title }}
+                            </p>
+
+                            <p class="long-author-sign__description">
+                                {{ json.sections[1].blocks[3].card_with_caption.caption.description }}
+                            </p>
+                        </div>
+                    </div>
+
+                    {# attention #}
+                    <div class="attention-block">
+                        <div class="attention-block__mark attention-block__text--phone-small">
+                            <img src="{{ theme.link }}{{ json.sections[1].blocks[4].attention.icon }}" alt="Восклицательный знак">
+                        </div>
+                        <p class="attention-block__text">
+                            {{ json.sections[1].blocks[4].attention.text }}
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{# SECTION 3: Что делает Россию узнаваемой #}
+<section class="page__item--wrapper" id="Узнаваемость">
+    <div class="container">
+        <div class="long-item long-item--content-bottom-72 long-item--content-top-72">
+            <div class="long-block long-block--gap-48 long-block--no-top">
+                <h3 class="long-title">
+                    {{ json.sections[2].title }}
+                </h3>
+
+                <div class="long-border long-border--gap-32 page__item--wrapper">
+
+                    {# border: символика #}
+                    <div class="long-border__text">
+                        <p class="long-text-bold">
+                            {{ json.sections[2].blocks[0].border.title }}
+                        </p>
+
+                        {% for p in json.sections[2].blocks[0].border.text_big %}
+                            <p class="long-text-big">
+                                {{ p|raw }}
+                            </p>
+                        {% endfor %}
+                    </div>
+
+                    {# flag block #}
+                    <div class="long-border long-border--gap-48 long-border--phone-gap-24 long-border--padding-bottom-0">
+                        <div class="long-border__text">
+                            <p class="long-text-bold">
+                                {{ json.sections[2].blocks[1].flag.title }}
+                            </p>
+
+                            <p class="long-text-big">
+                                {{ json.sections[2].blocks[1].flag.text_big[0]|raw }}
+                            </p>
+                        </div>
+
+                        <img src="{{ theme.link }}{{ json.sections[2].blocks[1].flag.image.src }}" alt="{{ json.sections[2].blocks[1].flag.image.alt }}" class="long-img-width">
+
+                        <p class="long-text-big">
+                            {{ json.sections[2].blocks[1].flag.text_big[1]|raw }}
+                        </p>
+
+                        <div class="long-img-two">
+                            <img src="{{ theme.link }}{{ json.sections[2].blocks[1].flag.images_two[0].src }}" alt="{{ json.sections[2].blocks[1].flag.images_two[0].alt }}">
+                            <img src="{{ theme.link }}{{ json.sections[2].blocks[1].flag.images_two[1].src }}" alt="{{ json.sections[2].blocks[1].flag.images_two[1].alt }}">
+                        </div>
+
+                        <div class="long-alert long-alert--width">
+                            <div class="long-alert__header">
+                                <img src="{{ theme.link }}{{ json.sections[2].blocks[1].flag.alert.icon }}" alt="" class="long-alert__header-img">
+
+                                <p class="long-text-bold">
+                                    {{ json.sections[2].blocks[1].flag.alert.title }}
+                                </p>
+                            </div>
+
+                            {% for p in json.sections[2].blocks[1].flag.alert.text %}
+                                <p class="long-text">{{ p|raw }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    {# arms block #}
+                    <div class="long-border long-border--gap-24 long-border--phone-gap-16 page__item--wrapper">
+                        <div class="long-border__text">
+                            <p class="long-text-bold">
+                                {{ json.sections[2].blocks[2].arms.title }}
+                            </p>
+
+                            <p class="long-text-big">
+                                {{ json.sections[2].blocks[2].arms.text_big[0] }}
+                            </p>
+
+                            <p class="long-text-big">
+                                {{ json.sections[2].blocks[2].arms.text_big[1] }}
+                            </p>
+                        </div>
+
+                        <img src="{{ theme.link }}{{ json.sections[2].blocks[2].arms.image.src }}" alt="{{ json.sections[2].blocks[2].arms.image.alt }}" class="long-img-center" width="550" height="550">
+
+                        <p class="long-text-big">
+                            {{ json.sections[2].blocks[2].arms.text_big[2] }}
+                        </p>
+
+                        <div class="long-box-color long-box-color--margin-top-16" style="background-color: #F6F7F9;">
+                            <p class="long-text-bold-semi long-text-bold--phone-normal">
+                                {{ json.sections[2].blocks[2].arms.note_bold|raw }}
+                            </p>
+                        </div>
+                    </div>
+
+                    {# anthem block #}
+                    <div class="long-border long-border--gap-24 long-border--phone-gap-16 page__item--wrapper">
+                        <div class="long-border__text">
+                            <p class="long-text-bold">
+                                {{ json.sections[2].blocks[3].anthem.title }}
+                            </p>
+
+                            {% for p in json.sections[2].blocks[3].anthem.text_big %}
+                                <p class="long-text-big">
+                                    {{ p|raw }}
+                                </p>
+                            {% endfor %}
+                            <p></p>
+                        </div>
+
+                        <div class="long-box-color long-box-color--gap-32 long-box-color--phone-gap-16" style="background-color: #FCF6E0;">
+                            <p class="long-text-bold long-text-bold--phone-bold">
+                                {{ json.sections[2].blocks[3].anthem.hymn_text.title }}
+                            </p>
+
+                            <div class="long-hymn">
+                                <p class="long-text-big">
+                                    {{ json.sections[2].blocks[3].anthem.hymn_text.text|raw  }}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="long-alert long-alert--orange long-alert--phone-gap-min">
+                            <div class="long-alert__header">
+                                <img src="{{ theme.link }}{{ json.sections[2].blocks[3].anthem.alert.icon }}" alt="" class="long-alert__header-img">
+
+                                <p class="long-text-bold long-text-bold--phone-weight-500">
+                                    {{ json.sections[2].blocks[3].anthem.alert.title }}
+                                </p>
+                            </div>
+
+                            <p class="long-text-big">
+                                {{ json.sections[2].blocks[3].anthem.alert.text_big|raw }}
+                            </p>
+                        </div>
+
+                        <div class="long-border long-border--phone-gap-16 ">
+                            <p class="long-text-bold long-text-bold--phone-bold">
+                                {{ json.sections[2].blocks[3].anthem.list_ul.title }}
+                            </p>
+
+                            <ul class="long-list-ul">
+                                {% for li in json.sections[2].blocks[3].anthem.list_ul.items %}
+                                    <li>{{ li|raw }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="long-video">
+                            <video src="{{ theme.link }}{{ json.sections[2].blocks[3].anthem.video.src }}"></video>
+
+                            <div class="long-video__banner">
+                                <button class="long-video__banner-button btn">
+                                    <img src="{{ theme.link }}/assets/images/svg/play.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{# BANNER between sections #}
+<div class="page__item page__item--margin-small-top">
+    <div class="container">
+        <div class="banner-width">
+            <p class="banner__title">{{ json.sections[3].banner.title }}</p>
+
+            <p class="banner__text">
+                {{ json.sections[3].banner.text|raw }}
+            </p>
+
+            <div class="banner__btn">
+                <button class="btn btn--orange btn--page">
+                    {{ json.sections[3].banner.button.text }}
+                </button>
+            </div>
+
+            <div class="banner__img">
+                <img src="{{ theme.link }}{{ json.sections[3].banner.image.src }}" alt="{{ json.sections[3].banner.image.alt }}" class="banner__img" width="536" height="401">
+            </div>
+        </div>
+    </div>
+</div>
+
+{# SECTION 5: Многоконфессиональная страна #}
+<section class="page__item--wrapper" id="Религия">
+    <div class="container">
+        <div class="long-item long-item--content-bottom-72 long-item--content-top-72">
+            <div class="long-block long-block--gap-48 long-block--no-top">
+                <h3 class="long-title long-title--phone-24">
+                    {{ json.sections[4].title }}
+                </h3>
+
+                <div class="long-border long-border--gap-32">
+                    {# border 1 #}
+                    <div class="long-border__text">
+                        <p class="long-text-bold">
+                            {{ json.sections[4].blocks[0].border.title }}
+                        </p>
+
+                        {% for p in json.sections[4].blocks[0].border.text_big %}
+                            <p class="long-text-big">
+                                {{ p|raw }}
+                            </p>
+                        {% endfor %}
+                    </div>
+
+                    <div class="long-line"></div>
+
+                    {# border 2 #}
+                    <div class="long-border__text">
+                        <p class="long-text-bold">
+                            {{ json.sections[4].blocks[1].border.title }}
+                        </p>
+
+                        {% for p in json.sections[4].blocks[1].border.text_big %}
+                            <p class="long-text-big">
+                                {{ p|raw }}
+                            </p>
+                        {% endfor %}
+                    </div>
+
+                    {# banner: Рождество #}
+                    <div class="long-banner long-banner--big-width long-banner--margin-16 long-banner--phone-full-color long-banner--phone-compact">
+                        <img src="{{ theme.link }}{{ json.sections[4].blocks[2].banner.image.src }}"
+                             alt="{{ json.sections[4].blocks[2].banner.image.alt }}"
+                             class="long-banner__img">
+
+                        <div class="long-banner__content">
+                            <h3 class="long-title">
+                                {{ json.sections[4].blocks[2].banner.title }}
+                            </h3>
+
+                            {% for p in json.sections[4].blocks[2].banner.text_big %}
+                                <p class="long-text-big">
+                                    {{ p|raw }}
+                                </p>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    {# plain text after banner #}
+                    {% for p in json.sections[4].blocks[3].text.text_big %}
+                        <p class="long-text-big">
+                            {{ p|raw }}
+                        </p>
+                    {% endfor %}
+
+                    {# slider #}
+                    <div class="long-fairy-tales long-fairy-tales--column swiper--pagination swiper--controller swiper--controller-add swiper--controller-orange">
+                        <div class="swiper-wrapper">
+                            {% for slide in json.sections[4].blocks[4].slider.items %}
+                                <div class="swiper-slide">
+                                    <div class="long-fairy-tales__item">
+                                        <div class="long-fairy-tales__item-text long-fairy-tales__item-text--phone-gap-24">
+                                            <p class="long-text-bold">
+                                                {{ slide.title }}
+                                            </p>
+
+                                            <p class="long-text-big">
+                                                {{ slide.text|raw }}
+                                            </p>
+                                        </div>
+
+                                        <img src="{{ theme.link }}{{ slide.img.src }}"
+                                             alt="{{ slide.img.alt }}"
+                                             class="long-fairy-tales__item-img long-fairy-tales__item-img--phone-height-210">
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                        
+                        <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-3d5b6a87f7f101092c" aria-disabled="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                <path d="M14.8 6.69111C15.2419 6.69111 15.6 6.33294 15.6 5.89111C15.6 5.44929 15.2419 5.09111 14.8 5.09111L14.8 5.89111L14.8 6.69111ZM0.234363 5.32543C-0.0780563 5.63785 -0.0780564 6.14438 0.234363 6.4568L5.32553 11.548C5.63795 11.8604 6.14448 11.8604 6.4569 11.548C6.76932 11.2355 6.76932 10.729 6.4569 10.4166L1.93142 5.89111L6.4569 1.36563C6.76932 1.05321 6.76932 0.546678 6.4569 0.234258C6.14448 -0.078161 5.63795 -0.0781611 5.32553 0.234258L0.234363 5.32543ZM14.8 5.89111L14.8 5.09111L0.800048 5.09111L0.800048 5.89111L0.800048 6.69111L14.8 6.69111L14.8 5.89111Z" fill="white"></path>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-3d5b6a87f7f101092c" aria-disabled="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                <path d="M0.800049 5.09111C0.358221 5.09111 4.88162e-05 5.44929 4.88162e-05 5.89111C4.88162e-05 6.33294 0.358221 6.69111 0.800049 6.69111V5.89111V5.09111ZM15.3657 6.4568C15.6782 6.14438 15.6782 5.63785 15.3657 5.32543L10.2746 0.234259C9.96215 -0.0781603 9.45562 -0.0781603 9.1432 0.234259C8.83078 0.546679 8.83078 1.05321 9.1432 1.36563L13.6687 5.89111L9.1432 10.4166C8.83078 10.729 8.83078 11.2355 9.1432 11.548C9.45562 11.8604 9.96215 11.8604 10.2746 11.548L15.3657 6.4568ZM0.800049 5.89111V6.69111H14.8V5.89111V5.09111H0.800049V5.89111Z" fill="white"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    {# boxes (2 колонки) #}
+                    <div class="long-block long-block--gap-10 long-block--no-top">
+                        {% for box in json.sections[4].blocks[5].boxes.items %}
+                            <div class="long-box-color long-box-color--gap-32 long-box-color--phone-gap-16" style="background-color: #FCF6E0;">
+                                {% for p in box.text_big %}
+                                    <p class="long-text-big">
+                                        {{ p|raw }}
+                                    </p>
+                                {% endfor %}
+
+                                <ul class="long-list-ul">
+                                    {% for li in box.list_ul %}
+                                        <li>{{ li|raw }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# SECTION 6: Сколько наций живет в России #}
+<section class="page__item--wrapper" id="Нации">
+    <div class="container">
+        <div class="long-item long-item--content-bottom-72 long-item--content-top-72">
+            <div class="long-block long-block--gap-48  long-block--no-top">
+                <h3 class="long-title long-title--phone-24">
+                    {{ json.sections[5].title }}
+                </h3>
+
+                <div class="long-border long-border--gap-32 long-border--phone-gap-24">
+                    <div class="long-border__text">
+                        <p class="long-text-bold">
+                            {{ json.sections[5].blocks[0].border.title }}
+                        </p>
+
+                        {% for p in json.sections[5].blocks[0].border.text_big %}
+                            <p class="long-text-big">
+                                {{ p|raw }}
+                            </p>
+                        {% endfor %}
+                    </div>
+
+                    <img src="{{ theme.link }}{{ json.sections[5].blocks[0].border.image.src }}"
+                         alt="{{ json.sections[5].blocks[0].border.image.alt }}"
+                         class="long-img long-img--margin-16">
+
+                    <div class="long-border__text long-border__text--gap-24">
+                        {% for p in json.sections[5].blocks[0].border.text_big_after %}
+                            <p class="long-text-big">
+                                {{ p|raw }}
+                            </p>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{# SECTION 7: Национальный характер — какой он #}
+<section class="page__item--wrapper" id="Характер">
+    <div class="container">
+        <div class="long-item long-item--content-bottom-72 long-item--content-top-72">
+            <div class="long-block long-block--gap-48 long-block--no-top">
+                <h3 class="long-title long-title--phone-24">
+                    {{ json.sections[6].title }}
+                </h3>
+
+                <div class="long-border long-border--gap-32">
+                    <div class="long-border__text">
+                        <p class="long-text-bold">
+                            {{ json.sections[6].blocks[0].border.title }}
+                        </p>
+
+                        {% for p in json.sections[6].blocks[0].border.text_big %}
+                            <p class="long-text-big">
+                                {{ p|raw }}
+                            </p>
+                        {% endfor %}
+                    </div>
+
+                    <img src="{{ theme.link }}{{ json.sections[6].blocks[0].border.image.src }}"
+                         alt="{{ json.sections[6].blocks[0].border.image.alt }}"
+                         class="long-img-big long-img-big--margin-16">
+
+                    {% for p in json.sections[6].blocks[0].border.text_big_after %}
+                        <p class="long-text-big">
+                            {{ p|raw }}
+                        </p>
+                    {% endfor %}
+
+                    <div class="long-block-color long-block-color--list">
+                        <ul class="long-block__list long-block__list--margin-none">
+                            {% for item in json.sections[6].blocks[0].border.list_numbered %}
+                                <li class="long-block__list-item long-block__list-item--mobile-columns-1">
+                                    <div class="item-number">{{ loop.index }}</div>
+
+                                    <p class="item-text long-text-big">
+                                        <span>{{ item.title|raw }}</span> {{ item.text|raw }}
+                                    </p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# SECTION 8: Стереотипы о русских #}
+<section class="page__item--wrapper" id="Стереотипы">
+    <div class="container">
+        <div class="long-item long-item--content-bottom-72 long-item--content-top-72">
+            <div class="long-block long-block--gap-48 long-block--no-top">
+                <h3 class="long-title long-title--phone-24">
+                    {{ json.sections[7].title }}
+                </h3>
+
+                <div class="long-border long-border--gap-56">
+                    <div class="long-border__text">
+                        <p class="long-text-bold">
+                            {{ json.sections[7].blocks[0].border.title }}
+                        </p>
+
+                        {% for p in json.sections[7].blocks[0].border.text_big %}
+                            <p class="long-text-big">
+                                {{ p|raw }}
+                            </p>
+                        {% endfor %}
+                    </div>
+
+                    {# slider #}
+                    <div class="long-fairy-tales swiper--pagination swiper--controller swiper--controller-add swiper--controller-orange">
+                        <div class="swiper-wrapper">
+                            {% for slide in json.sections[7].blocks[1].slider.items %}
+                                <div class="swiper-slide">
+                                    <div class="long-fairy-tales__item">
+                                        <div class="long-fairy-tales__item-text long-fairy-tales__item-text--phone-gap-24">
+                                            <p class="long-text-bold">
+                                                {{ slide.title }}
+                                            </p>
+
+                                            <p class="long-text-big">
+                                                {{ slide.text|raw }}
+                                            </p>
+                                        </div>
+
+                                        <img src="{{ theme.link }}{{ slide.img.src }}"
+                                             alt="{{ slide.img.alt }}"
+                                             class="long-fairy-tales__item-img long-fairy-tales__item-img--phone-height-210">
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                        
+                        <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-3d5b6a87f7f101092c" aria-disabled="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                <path d="M14.8 6.69111C15.2419 6.69111 15.6 6.33294 15.6 5.89111C15.6 5.44929 15.2419 5.09111 14.8 5.09111L14.8 5.89111L14.8 6.69111ZM0.234363 5.32543C-0.0780563 5.63785 -0.0780564 6.14438 0.234363 6.4568L5.32553 11.548C5.63795 11.8604 6.14448 11.8604 6.4569 11.548C6.76932 11.2355 6.76932 10.729 6.4569 10.4166L1.93142 5.89111L6.4569 1.36563C6.76932 1.05321 6.76932 0.546678 6.4569 0.234258C6.14448 -0.078161 5.63795 -0.0781611 5.32553 0.234258L0.234363 5.32543ZM14.8 5.89111L14.8 5.09111L0.800048 5.09111L0.800048 5.89111L0.800048 6.69111L14.8 6.69111L14.8 5.89111Z" fill="white"></path>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-3d5b6a87f7f101092c" aria-disabled="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                <path d="M0.800049 5.09111C0.358221 5.09111 4.88162e-05 5.44929 4.88162e-05 5.89111C4.88162e-05 6.33294 0.358221 6.69111 0.800049 6.69111V5.89111V5.09111ZM15.3657 6.4568C15.6782 6.14438 15.6782 5.63785 15.3657 5.32543L10.2746 0.234259C9.96215 -0.0781603 9.45562 -0.0781603 9.1432 0.234259C8.83078 0.546679 8.83078 1.05321 9.1432 1.36563L13.6687 5.89111L9.1432 10.4166C8.83078 10.729 8.83078 11.2355 9.1432 11.548C9.45562 11.8604 9.96215 11.8604 10.2746 11.548L15.3657 6.4568ZM0.800049 5.89111V6.69111H14.8V5.89111V5.09111H0.800049V5.89111Z" fill="white"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    {# video #}
+                    <div class="long-video">
+                        <video src="{{ theme.link }}{{ json.sections[7].blocks[2].video.src }}"></video>
+
+                        <div class="long-video__banner">
+                            <button class="long-video__banner-button btn">
+                                <img src="{{ theme.link }}/assets/images/svg/play.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# FINAL BANNER #}
+<section class="container">
+    <div class="long-item">
+        <div class="long-banner long-banner--width long-banner--full-gradient long-banner--phone-small">
+            <img src="{{ theme.link }}{{ json.sections[8].banner.image.src }}" alt="{{ json.sections[8].banner.image.alt }}" class="long-banner__img">
+
+            <div class="long-banner__content">
+                <h3 class="long-title long-title--phone-20">
+                    {{ json.sections[8].banner.title|raw }}
+                </h3>
+
+                {% for p in json.sections[8].banner.text_big %}
+                    <p class="long-text-big long-text-big--phone-weight-500">
+                        {{ p|raw }}
+                    </p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+Сделай twig шаблон и заполни от json пример как нужно делать выше
+вот json
+
+json
+
+вот html из которого делать шаблон:
+

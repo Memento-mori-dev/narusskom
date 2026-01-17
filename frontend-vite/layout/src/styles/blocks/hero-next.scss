@@ -67,6 +67,12 @@
         }
     }
 
+    &--min-720 {
+        .hero-next__container {
+            min-height: rem(720);
+        }
+    }
+
     &--about{
         .hero-next__container{
             overflow: visible;

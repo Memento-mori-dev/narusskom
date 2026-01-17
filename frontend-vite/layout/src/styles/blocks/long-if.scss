@@ -1262,3 +1262,27 @@
       margin-top: rem(24);
    }
 }
+
+.long-block__list.long-block__list--color-blue{
+   .long-block__list-item .item-number{
+      background: var(--Background-Blue) !important;
+   }
+}
+
+.long-block__list.long-block__list--phone-margin-small{
+   @include mobile{
+      .long-block__list-item.long-block__list-item--mobile-columns-1{
+         margin-bottom: rem(16);
+
+         .item-number{
+            margin: 0 0 rem(8) 0;
+         }
+      }
+   }
+}
+
+.long-block__list.long-block__list--margin-small{
+   .long-block__list-item{
+      margin-bottom: rem(16);
+   }
+}
