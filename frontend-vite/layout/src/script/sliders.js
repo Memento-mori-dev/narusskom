@@ -296,4 +296,44 @@ export function sliders(width) {
             });
         });
     }
+
+    if (document.querySelector('.author-page__certificates')) {
+        const swiperCertificates = new Swiper('.author-page__certificates', {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.controller-certificates .next',
+                prevEl: '.controller-certificates .prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                },
+                390: {
+                    slidesPerView: 1.55,
+                    spaceBetween: 10,
+                },
+                600: {
+                    slidesPerView: 2.6,
+                    spaceBetween: 10,
+                },
+                767.98: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 6,
+                    spaceBetween: 10,
+                },
+                1440: {
+                    slidesPerView: 5,
+                    spaceBetween: 10,
+                },
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    }
 }
