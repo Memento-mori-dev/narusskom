@@ -246,14 +246,31 @@
                 @include hover{
                     color: var(--Text-Orange);
                 }
+
+                & span:last-child{
+                    display: none;
+                }
             }
 
             & > input{
                 display: none;
 
-                &[type="checkbox"]:checked + .author-page__text-content{
-                    & p:nth-child(n + 1){
-                        display: block;
+                &[type="checkbox"]:checked{
+                    & + .author-page__text-content{
+                        & p:nth-child(n + 1){
+                            display: block;
+                        }
+                    }
+
+                    & ~ .author-page__text-open{
+                        & span{
+                            &:nth-child(1){
+                                display: none;
+                            }
+                            &:nth-child(2){
+                                display: block;
+                            }
+                        }
                     }
                 }
             }
