@@ -48,6 +48,19 @@
         line-height: 145%;
     }
 
+    &--white{
+        a,
+        p{
+            color: var(--Text-White);
+        }
+
+        li{
+            &::after{
+                color: var(--Text-White);
+            }
+        }
+    }
+
     @include mobile{
         & p{
             white-space: nowrap;      /* запрет переноса строки */
